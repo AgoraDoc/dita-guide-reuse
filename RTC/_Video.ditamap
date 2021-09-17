@@ -4,7 +4,6 @@
     <title>Video Call</title>
     <ditavalref href="config/filter-video.ditaval"/>
     <topichead navtitle="Configurations" toc="no">
-        <topicref href="conref/conref_api_metadata.dita" processing-role="resource-only"/>
         <topicref href="config/subject-scheme-rtc.ditamap" format="ditamap" type="subjectScheme"
             navtitle="Conditional processing attributes"/>
         <mapref href="config/keys-video.ditamap"/>
