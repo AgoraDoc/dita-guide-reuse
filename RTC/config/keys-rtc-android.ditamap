@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Android variables</title>
+    <keydef keys="platform">
+        <topicmeta>
+            <keywords>
+                <keyword>Android</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ide">
+        <topicmeta>
+            <keywords>
+                <keyword>Android Studio</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="run-button">
+        <topicmeta>
+            <keywords>
+                <keyword>Run 'app'</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="device">
+        <topicmeta>
+            <keywords>
+                <keyword>an Android device</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="IRtcEngine">
+        <topicmeta>
+            <keywords>
+                <keyword>RtcEngine</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>
