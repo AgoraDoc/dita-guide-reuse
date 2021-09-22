@@ -240,7 +240,7 @@ Now you have created the [product-name] functionality, start and stop the app. I
 
 2. When the user closes this app, clean up all the resources you created in `initializeAndJoinChannel`.
 
-   In `/app/java/com.example.<projectname>/MainActivity`, add `onDestroy` after the `onCreate`function.
+   In `/app/java/com.example.<projectname>/MainActivity`, add `onDestroy` after the `onCreate` function.
 
    ```java
     // Java
