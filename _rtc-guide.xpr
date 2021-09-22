@@ -18,19 +18,16 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>Markdown for review - Video Call - Android</String>
                                         <String>HTML5 for output - Video Call - Android</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>DITAMAP</String>
-                                        <String>DITAMAP</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
-                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -74,7 +71,7 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="outputDir">
-                                    <String>${cfd}/out/Live-Streaming/Android</String>
+                                    <String>${pd}/out/live-streaming/android</String>
                                 </field>
                                 <field name="tempDir">
                                     <String>${cfd}/temp/html5</String>
@@ -278,7 +275,7 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="outputDir">
-                                    <String>${cfd}/out/Video/Android</String>
+                                    <String>${pd}/out/video/android</String>
                                 </field>
                                 <field name="tempDir">
                                     <String>${cfd}/temp/html5</String>
@@ -482,7 +479,7 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="outputDir">
-                                    <String>${cfd}/review/Live-Streaming/Android</String>
+                                    <String>${pd}/review/live-streaming/android</String>
                                 </field>
                                 <field name="tempDir">
                                     <String>${cfd}/temp/markdown</String>
@@ -714,7 +711,7 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="outputDir">
-                                    <String>${cfd}/review/Video/Android</String>
+                                    <String>${pd}/review/video/android</String>
                                 </field>
                                 <field name="tempDir">
                                     <String>${cfd}/temp/markdown</String>
@@ -941,10 +938,10 @@
             </serialized>
         </options>
     </meta>
-    <projectTree name="rtc-guide.xpr">
+    <projectTree name="_rtc-guide.xpr">
         <folder masterFiles="true" name="Main Files">
-            <file name="_Live-Streaming-Premium.ditamap"/>
-            <file name="_Video.ditamap"/>
+            <file name="RTC/_Live-Streaming-Premium.ditamap"/>
+            <file name="RTC/_Video.ditamap"/>
         </folder>
         <folder path="."/>
     </projectTree>
