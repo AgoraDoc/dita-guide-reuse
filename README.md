@@ -161,11 +161,11 @@ For easier reading and writing, configure the profiling settings so that Oxygen 
 
 2. Click the filter button on the upper-right and select **Profiling Settings**.
 
-   ![image-20210922154732258](/Users/wangjie/dita-guide-reuse/images/image-20210922154732258.png)
+   ![image-20210922154732258](images/image-20210922154732258.png)
 
 3. Under the **Profiling Condition Sets** section, click **New**.
 
-   ![image-20210922154927087](/Users/wangjie/dita-guide-reuse/images/image-20210922154927087.png)
+   ![image-20210922154927087](images/image-20210922154927087.png)
 
 4. In the pop-up windows, give the condition set a name, and check the conditions you need. For example, if you are writing the guide for iOS Video Call, check `ios` and `video`, and click **OK**.
 
@@ -175,7 +175,7 @@ For easier reading and writing, configure the profiling settings so that Oxygen 
 
 Now you should see something like this:
 
-![image-20210922155417754](/Users/wangjie/dita-guide-reuse/images/image-20210922155417754.png)
+![image-20210922155417754](images/image-20210922155417754.png)
 
 The topics with red exclamation marks are the sections that only apply to the platfrom and need to be created. You can quickly create the topics as follows:
 
