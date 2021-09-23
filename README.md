@@ -13,6 +13,8 @@ All files are in the RTC folder. The following table lists the major files and f
 | Folder/File                       | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
 | **config**                        | Files for all the filter and variable settings.              |
+| `config/keys-android.ditamap`     | Definitions of variables that apply to the Android platform. |
+| `config/keys-video.ditamap`       | Definitions of variables that apply to the Video Call product. |
 | **conref**                        | Files for content that can be conrefed.                      |
 | `_Live-Streaming-Premium.ditamap` | The DITA map for the documentation of Live Streaming Premium. Use this map to organize topics and build outputs for Live Streaming Premium. |
 | `_Video.ditamap`                  | The DITA map for the documentation of Video Call. Use this map to organize topics and build outputs for Video Call. |
@@ -22,7 +24,7 @@ All files are in the RTC folder. The following table lists the major files and f
 
 ## Content reuse strategies 
 
-In LwDITA, we can use the following elements for reuse:
+This demo project uses the following elements for reuse:
 
 ### Keyrefs
 
@@ -99,7 +101,9 @@ Keyrefs support the following types of content:
 
 Apply conditions for content applicable to a specific product or platform.
 
-The markdown syntax does not support marking conditions, you need to write DITA tags for content to be marked and filtered.
+Conditions are set as an attribute, but the markdown syntax does not support attributes, you need to write XML tags for content to be marked and filtered.
+
+> Only use the `props` attribute for conditons.
 
 Example:
 
@@ -197,13 +201,11 @@ Apart from the regular markdown syntax that we are familiar with, we need to use
 
 - Keyrefs
   - `[key-name]` for phrases and links
-  - `![key-name]`for images. To set the alt text for the image, use the navtitle attribute in the key definition.
+  - `![key-name]`for images. To set the alt text for the image, use the `navtitle` attribute in the key definition.
 - Cross-references
   - Anchor point: `{#anchor-id}`
   - Link: `[link-text](parent-topic.md#anchor-id)`
   - Example: `[Other approches to intergrate the SDK](get-started.md#other)` creates a link to the section title `## Other approches to integrate the SDK {#other}`.
-
-
 
 ### Build the docs
 
