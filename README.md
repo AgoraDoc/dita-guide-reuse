@@ -188,9 +188,46 @@ Fill the created files with the markdown source, and note the following:
 
 - For each markdown file, start from heading one, and try to keep the headings to heading one and heading two. If you have heading threes in a topic, consider splitting the files.
 - Keep in mind that the topics should be reused by four RTC products, and use variables and conditions accordingly.
-   - For variables that can be used by one product for all platforms, define them in the key map for that product.
-   - For variables that can be used by one platform for all products, define them in the key map for that platform.
+   - For variables that can be used by one product, define them in the key map for that product.
+   - For variables that can be used by one platform, define them in the key map for that platform.
+
+### Syntax
+
+Apart from the regular markdown syntax that we are familiar with, we need to use the following syntax:
+
+- Keyrefs
+  - `[key-name]` for phrases and links
+  - `![key-name]`for images. To set the alt text for the image, use the navtitle attribute in the key definition.
+- Cross-references
+  - Anchor point: `{#anchor-id}`
+  - Link: `[link-text](parent-topic.md#anchor-id)`
+  - Example: `[Other approches to intergrate the SDK](get-started.md#other)` creates a link to the section title `## Other approches to integrate the SDK {#other}`.
+
+
 
 ### Build the docs
 
-WIP
+Before building the docs, configure the transformation scenarios in the project file in Oxygen:
+
+1. Open `_rtc-guide.xpr`.
+
+2. Under Main Files, right click the DITA map to be built and select **Transform** > **Configure Transformation Scenario(s)...**.
+
+   In the pop-up window, you can see the map is associated with two transformation scenarios for two output formats: HTML5 and markdown.
+
+3. To configure the transformation scenarios for your platform, do the following for each output format:
+
+   1. Click the transformation scenario for Android and click **Duplicate**.
+   2. Update the name of the scenario.
+   3. Switch to the **Filters** tab, and change the ditaval file according to your platform.
+   4. Switch to the **Output** tab, and change the output directory according to your platform.
+   5. Click **OK**, and then click **Save and close**.
+
+To generate the HTML and markdown outputs, do the following:
+
+1. Right click the DITA map and select **Transform > Transform with...**.
+2. In the pop-up window, select the scenarios you need (press cmd/ctrl for multi-select) and click **Apply selected scenarios**.
+
+If the build succeeds, the generated HTML file automatically opens in your browser.
+
+The output files are in the **out** folder of this repository.

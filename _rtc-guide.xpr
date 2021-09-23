@@ -14,32 +14,12 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>_Video.ditamap</String>
+                                    <String>RTC/_Video.ditamap</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>HTML5 for output - Video Call - Android</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>DITAMAP</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>_Live-Streaming-Premium.ditamap</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>HTML5 for output - Live Streaming - Android</String>
-                                        <String>Markdown for review - Live Streaming- Android</String>
+                                        <String>HTML5 - Video Call - Android</String>
+                                        <String>Markdown - Video Call - Android</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -71,7 +51,7 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="outputDir">
-                                    <String>${pd}/out/live-streaming/android</String>
+                                    <String>${pd}/out/html/live-streaming/android</String>
                                 </field>
                                 <field name="tempDir">
                                     <String>${cfd}/temp/html5</String>
@@ -186,7 +166,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>HTML5 for output - Live Streaming - Android</String>
+                                    <String>HTML5 - Live Streaming - Android</String>
                                 </field>
                                 <field name="baseURL">
                                     <null/>
@@ -275,7 +255,7 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="outputDir">
-                                    <String>${pd}/out/video/android</String>
+                                    <String>${pd}/out/html/video/android</String>
                                 </field>
                                 <field name="tempDir">
                                     <String>${cfd}/temp/html5</String>
@@ -390,7 +370,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>HTML5 for output - Video Call - Android</String>
+                                    <String>HTML5 - Video Call - Android</String>
                                 </field>
                                 <field name="baseURL">
                                     <null/>
@@ -479,7 +459,7 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="outputDir">
-                                    <String>${pd}/review/live-streaming/android</String>
+                                    <String>${pd}/out/markdown/live-streaming/android</String>
                                 </field>
                                 <field name="tempDir">
                                     <String>${cfd}/temp/markdown</String>
@@ -622,7 +602,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>Markdown for review - Live Streaming- Android</String>
+                                    <String>Markdown - Live Streaming- Android</String>
                                 </field>
                                 <field name="baseURL">
                                     <null/>
@@ -711,7 +691,7 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="outputDir">
-                                    <String>${pd}/review/video/android</String>
+                                    <String>${pd}/out/markdown/video/android</String>
                                 </field>
                                 <field name="tempDir">
                                     <String>${cfd}/temp/markdown</String>
@@ -854,7 +834,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>Markdown for review - Video Call - Android</String>
+                                    <String>Markdown - Video Call - Android</String>
                                 </field>
                                 <field name="baseURL">
                                     <null/>
