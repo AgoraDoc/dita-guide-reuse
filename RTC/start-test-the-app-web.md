@@ -69,4 +69,4 @@ A local web server automatically opens in your browser. You see the following pa
 
 Click **JOIN** to start a [feature]. However, being in a [feature] on your own is no fun. Ask a friend to join the same [feature] with you on the [start-demo-web].
 
-<div class="alert info"><li>Running the web app through a local server (localhost) is for testing purposes only. In production, ensure that you use the HTTPS protocol when deploying your project.</li><li>Due to security limits on HTTP addresses except 127.0.0.1, the Web SDK only supports HTTPS or http://localhost (http://127.0.0.1). If you deploy your project over HTTP, you can only visit your project at http://localhost (http://127.0.0.1).</li></div>
+<note><li>Running the web app through a local server (localhost) is for testing purposes only. In production, ensure that you use the HTTPS protocol when deploying your project.</li><li>Due to security limits on HTTP addresses except 127.0.0.1, the Web SDK only supports HTTPS or http://localhost (http://127.0.0.1). If you deploy your project over HTTP, you can only visit your project at http://localhost (http://127.0.0.1).</li></note>

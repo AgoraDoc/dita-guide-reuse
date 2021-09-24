@@ -16,4 +16,4 @@
     <script src="./AgoraRTC_N-4.7.1.js"></script>
     ```
 
-  > If you use the above methods, the SDK fully exports an `AgoraRTC` object. You can visit the `AgoraRTC` object to operate the Web SDK.
+    <note>If you use the above methods, the SDK fully exports an `AgoraRTC` object. You can visit the `AgoraRTC` object to operate the Web SDK.</note>
