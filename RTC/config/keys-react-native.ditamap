@@ -5,7 +5,7 @@
     <keydef keys="platform">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>React Native</keyword>
             </keywords>
         </topicmeta>
     </keydef>
@@ -33,7 +33,7 @@
     <keydef keys="IRtcEngine">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>RtcEngine</keyword>
             </keywords>
         </topicmeta>
     </keydef>

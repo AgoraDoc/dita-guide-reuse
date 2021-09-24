@@ -51,4 +51,12 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="start-sample-project-rn" href="https://github.com/AgoraIO-Community/Agora-RN-Quickstart"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora-RN-Quickstart</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
 </map>
