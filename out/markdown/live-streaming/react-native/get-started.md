@@ -30,6 +30,14 @@ For an app client to join a channel, you need the following information:
 
 ## Prerequisites {#prerequisites}
 
+Before proceeding, ensure that your development environment meets the following requirements:
+
+-   A valid [Agora account](https://console.agora.io/).
+-   An active Agora project with an App ID and a temporary token. For details, see [Get Started with Agora](https://docs.agora.io/en/Agora%20Platform/get_appid_token).
+-   A computer with access to the internet. If your network has a firewall, follow the instructions in [Firewall Requirements](https://docs.agora.io/en/Agora%20Platform/firewall).
+
+## Prerequisites {#unique_1488004521}
+
 Before proceeding, ensure that your development environment meets all the requirements necessary.
 
 ### Development environment {#development-environment}
@@ -74,7 +82,7 @@ For more information, see [Setting up the development environment](https://react
 
 ## Project setup {#project-setup}
 
-Follow the steps to create the environment necessary to add video call into your app.
+Follow the steps to create the environment necessary to add live streaming into your app.
 
 ### Create a React Native project {#create-a-react-native-project}
 
@@ -549,14 +557,12 @@ A moment later you will see the project installed on your device. Then, take the
 
 2.  When the app launches, you should be able to see yourself on the local view.
 
-3.  Ask a friend to join the video call with you on the [demo app](https://webdemo.agora.io/basicVideoCall/index.html). Enter the same App ID and channel name.
-
-4.  After your friend joins the channel, you should be able to see and hear each other.
+3.  Ask a friend to join the video call with you on the [demo app](https://webdemo.agora.io/basicVideoCall/index.html). Enter the same App ID and channel name. After your friend joins the channel, you should be able to see and hear each other.
 
 
 ## Next steps {#next-steps}
 
-Generating a token by hand is not helpful in a production context. [Authenticate Your Users with Tokens](https://docs.agora.io/en/Video/token_server?platform=Android) shows you how to start video calling with a token that you retrieve from your server.
+Generating a token by hand is not helpful in a production context. [Authenticate Your Users with Tokens](https://docs.agora.io/en/Video/token_server?platform=Android) shows you how to start the live streaming with a token that you retrieve from your server.
 
 ## See also {#see-also}
 
