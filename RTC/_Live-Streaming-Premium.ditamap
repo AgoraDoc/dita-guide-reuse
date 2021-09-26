@@ -22,7 +22,8 @@
     <topichead navtitle="Develop">
         <topicref href="get-started.md" format="mdita" chunk="to-content">
             <topicref href="start-understand-the-tech.md" format="markdown" toc="no"/>
-            <topicref href="start-prerequisites.md" format="markdown" toc="no" props="native"/>
+            <topicref href="start-prerequisites.md" format="markdown" toc="no"
+                props="ios mac windows android"/>
             <topicref href="start-prerequisites-react-native.md" format="markdown" toc="no" props="rn"/>
             <topicref href="start-project-setup-android.md" format="markdown" toc="no" props="android"/>
             <topicref href="start-project-setup-ios.md" format="markdown" toc="no" props="ios"/>
