@@ -1,6 +1,6 @@
 # Project setup
 
-Follow the steps to create the environment necessary to add video call into your app.
+Follow the steps to create the environment necessary to add [feature] into your app.
 
 ## Create a React Native project
 
@@ -38,15 +38,15 @@ If you use React Native 0.59.x, [Installing (React Native == 0.59.x](https://git
    ```shell
    npm i --save react-native-agora
    ```
-   
+
    Do not link native modules manually, as React Native 0.60.0 and later support automatically linking native modules. For details, see [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md).
-   
+
 2. If your target platform is iOS, you also need to run the following command:
 
    ```shell
    npx pod-install
    ```
-   
+
 3. The [sdk-name] for [platform] uses Swift in native modules. Therefore, your project must support compiling Swift; Otherwise, you get errors when building the iOS app. Do the following:
 
    a. Open `ios/ProjectName.xcworkspace` with Xcode.

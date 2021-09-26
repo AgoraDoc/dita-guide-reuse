@@ -24,7 +24,7 @@ If your target platform is Android, your development environment must meet the f
 
 For more information, see [Setting up the development environment](https://reactnative.dev/docs/environment-setup).
 
-### Other prerequisites
+## Other prerequisites
 
 <ul>
 <li>A valid <xref href="https://console.agora.io/" scope="external" format="html">Agora account</xref>.</li>

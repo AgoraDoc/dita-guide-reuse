@@ -65,7 +65,7 @@ If your target platform is Android, your development environment must meet the f
 
 For more information, see [Setting up the development environment](https://reactnative.dev/docs/environment-setup).
 
-#### Other prerequisites {#other-prerequisites}
+### Other prerequisites {#other-prerequisites}
 
 -   A valid [Agora account](https://console.agora.io/).
 -   An active Agora project with an App ID and a temporary token. For details, see [Get Started with Agora](https://docs.agora.io/en/Agora%20Platform/get_appid_token).
@@ -188,7 +188,7 @@ For more information, see [Using TypeScript](https://reactnative.dev/docs/typesc
 
 This section shows how to use the Agora Video SDK to implement the video call into your app step by step.
 
-### **1. Create the UI** {#1-create-the-ui}
+### 1. Create the UI {#1-create-the-ui}
 
 Create the user interface \(UI\) for Video Call in the layout file of your project.
 
@@ -356,9 +356,13 @@ Create and initialize the `RtcEngine` object before calling any other Agora APIs
 
 You can also listen for callback events, such as when the local user joins the channel, when a remote user joins the channel, and when a remote user leaves the channel.
 
+1.  Allow the user to set the role as `Broadcaster` or `Audience`.
+2.  Call `setClientRole` and pass in the client role set by the user.
+
 Add the following code after `// Other code` in `App.tsx`：
 
-```typescript
+```language-typescript
+// Typescript
 // Mount the App component into the DOM.
 componentDidMount() {
     this.init()
@@ -402,6 +406,7 @@ init = async () => {
         })
     })
 }
+   
 ```
 
 ### 6. Join a channel {#6-join-a-channel}
@@ -566,5 +571,5 @@ In addition to integrating the Agora Video SDK for React Native using npm, you c
     ```
 
 
-If your target platform is iOS, you need to do two more steps as described in [Integrate the SDK](get-started.md#)to install the SDK and add support for Swift.
+If your target platform is iOS, you need to do two more steps as described in [Integrate the SDK](get-started.md#) to install the SDK and add support for Swift.
 

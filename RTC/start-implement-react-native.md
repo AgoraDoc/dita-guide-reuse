@@ -2,7 +2,7 @@
 
 This section shows how to use the [sdk-name] to implement the [feature] into your app step by step.
 
-## **1. Create the UI**
+## 1. Create the UI
 
 Create the user interface (UI) for [product-name] in the layout file of your project.
 
@@ -166,53 +166,21 @@ Create and initialize the `RtcEngine` object before calling any other Agora APIs
 
 You can also listen for callback events, such as when the local user joins the channel, when a remote user joins the channel, and when a remote user leaves the channel.
 
+<p props="live">You need to call <code>setChannelProfile</code> to set the channel profile as live streaming.</p>
+
+<p props="live">A live-streaming channel has two user roles: <code>Broadcaster</code> and <code>Audience</code>, and the default role is <code>Audience</code>. The sample code in this section sets the role of all users as <code>Broadcaster</code>, but your app may use the following steps to set the client role:
+<ol>
+<li>Allow the user to set the role as <code>Broadcaster</code> or <code>Audience</code>.</li>
+<li>Call <code>setClientRole</code> and pass in the client role set by the user.</li></ol>
+</p>
+
+<p props="live">Note that in the interactive live streaming, only the host can be heard and seen. If you want to switch the user role after joining the channel, call the <code>setClientRole</code> method.</p>
+
 Add the following code after `// Other code` in `App.tsx`：
 
-```typescript
-// Mount the App component into the DOM.
-componentDidMount() {
-    this.init()
-}
-// Pass in your App ID through this.state, create and initialize an RtcEngine object.
-init = async () => {
-    const {appId} = this.state
-    this._engine = await RtcEngine.create(appId)
-    // Enable the video module.
-    await this._engine.enableVideo()
+<p props="video" conref="conref/get-started-sample-code-rn.dita#get-started-sample-code/init-video"/>
+<p props="live" conref="conref/get-started-sample-code-rn.dita#get-started-sample-code/init-live"/>
 
-    // Listen for the UserJoined callback.
-    // This callback occurs when the remote user successfully joins the channel.
-    this._engine.addListener('UserJoined', (uid, elapsed) => {
-        console.log('UserJoined', uid, elapsed)
-        const {peerIds} = this.state
-        if (peerIds.indexOf(uid) === -1) {
-            this.setState({
-                peerIds: [...peerIds, uid]
-            })
-        }
-    })
-
-    // Listen for the UserOffline callback.
-    // This callback occurs when the remote user leaves the channel or drops offline.
-    this._engine.addListener('UserOffline', (uid, reason) => {
-        console.log('UserOffline', uid, reason)
-        const {peerIds} = this.state
-        this.setState({
-            // Remove peer ID from state array
-            peerIds: peerIds.filter(id => id !== uid)
-        })
-    })
-
-    // Listen for the JoinChannelSuccess callback.
-    // This callback occurs when the local user successfully joins the channel.
-    this._engine.addListener('JoinChannelSuccess', (channel, uid, elapsed) => {
-        console.log('JoinChannelSuccess', channel, uid, elapsed)
-        this.setState({
-            joinSucceed: true
-        })
-    })
-}
-```
 
 ## 6. Join a channel
 
