@@ -26,10 +26,12 @@
             <topicref href="start-prerequisites.md" format="markdown" toc="no"
                 props="ios mac windows android"/>
             <topicref href="start-prerequisites-web.md" format="markdown" toc="no" props="web"/>
+            <topicref href="start-prerequisites-react-native.md" format="markdown" toc="no" props="rn"/>
             <topicref href="start-project-setup-android.md" format="markdown" toc="no" props="android"/>
             <topicref href="start-project-setup-ios.md" format="markdown" toc="no" props="ios"/>
             <topicref href="start-project-setup-mac.md" format="markdown" toc="no" props="mac"/>
-            <topicref href="start-project-setup-windows.md" format="markdown" toc="no" props="windows"/>
+            <topicref href="start-project-setup-windows.md" format="markdown" toc="no"
+                props="windows"/>
             <topicref href="start-project-setup-web.md" format="markdown" toc="no" props="web"/>
             <topicref href="start-project-setup-electron.md" format="markdown" toc="no" props="electron"/>
             <topicref href="start-project-setup-react-native.md" format="markdown" toc="no" props="rn"/>
