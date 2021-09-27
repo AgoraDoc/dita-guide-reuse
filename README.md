@@ -12,13 +12,13 @@ All files are in the RTC folder. The following table lists the major files and f
 
 | Folder/File                       | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
-| **config**                        | Files for all the filter and variable settings.              |
+| **config**                        | Configuration files, including all the filters, variables, and dita-ot project files. |
 | `config/keys-android.ditamap`     | Definitions of variables that apply to the Android platform. |
 | `config/keys-video.ditamap`       | Definitions of variables that apply to the Video Call product. |
+| `config/output-video-android.xml` | An [DITA-OT project file](https://www.dita-ot.org/dev/topics/using-project-files.html) for generating Android Video Call docs. |
 | **conref**                        | Files for content that can be conrefed.                      |
 | `_Live-Streaming-Premium.ditamap` | The DITA map for the documentation of Live Streaming Premium. Use this map to organize topics and build outputs for Live Streaming Premium. |
 | `_Video.ditamap`                  | The DITA map for the documentation of Video Call. Use this map to organize topics and build outputs for Video Call. |
-| `_rtc-guide.xpr`                  | The Oxygen project file that applies build configurations to the maps and organizes files in the DITA project. |
 | `get-started.md`                  | The parent topic for the Get Started guides. Contains the doc title and the introductory paragraph. |
 | All the `start-*.md` files        | All the sub topics in the Get Started guides. Each file is named after the section title. If the topic only applies to a specific platform, the filename is suffixed with the platform, for example `start-project-setup-android.md`. |
 
@@ -209,27 +209,57 @@ Apart from the regular markdown syntax that we are familiar with, we need to use
 
 ### Build the docs
 
-Before building the docs, configure the transformation scenarios in the project file in Oxygen:
+Before building the docs, create the DITA-OT project files.
 
-1. Open `_rtc-guide.xpr`.
+The following steps show how to create a DITA-OT project file to build the docs for Android Video Call:
 
-2. Under Main Files, right click the DITA map to be built and select **Transform** > **Configure Transformation Scenario(s)...**.
+1. Create an XML file and name it as `output-video-android.xml` in the **config** folder.
 
-   In the pop-up window, you can see the map is associated with two transformation scenarios for two output formats: HTML5 and markdown.
+2. Open the XML file in Oxygen.
 
-3. To configure the transformation scenarios for your platform, do the following for each output format:
+3. Copy the following code to the XML file:
 
-   1. Click the transformation scenario for Android and click **Duplicate**.
-   2. Update the name of the scenario.
-   3. Switch to the **Filters** tab, and change the ditaval file according to your platform.
-   4. Switch to the **Output** tab, and change the output directory according to your platform.
-   5. Click **OK**, and then click **Save and close**.
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <project xmlns="https://www.dita-ot.org/project">
+     <context name="Video Call Android" id="video">
+       <input href="../_Video.ditamap"/>
+       <profile>
+         <ditaval href="filter-android.ditaval"/>
+       </profile>
+     </context>
+     <deliverable name="Markdown">
+       <context idref="video"/>
+       <output href="../../out/markdown/video/android/"/>
+       <publication transtype="markdown">
+         <param name="clean.temp" value="yes"/>
+         <param name="force-unique" value="true"/>
+       </publication>
+     </deliverable>
+     <deliverable name="HTML">
+       <context idref="video"/>
+       <output href="../../out/html/video/android/"/>
+       <publication transtype="html5">
+         <param name="nav-toc" value="full"/>
+         <param name="clean.temp" value="yes"/>
+         <param name="force-unique" value="true"/>
+       </publication>
+     </deliverable>
+   </project>
+   ```
 
-To generate the HTML and markdown outputs, do the following:
+To create a DITA-OT project file for another platform, duplicate `output-video-android.xml` and update the context name, ditaval file, and output paths accordingly.
 
-1. Right click the DITA map and select **Transform > Transform with...**.
-2. In the pop-up window, select the scenarios you need (press cmd/ctrl for multi-select) and click **Apply selected scenarios**.
+To generate the HTML and markdown outputs for Android Video Call, do the following:
 
-If the build succeeds, the generated HTML file automatically opens in your browser.
+1. Open `config/output-video-android.xml` in Oxygen.
+
+2. Click the <img src="./images/image-20210927163000821.png" alt="build button" style="zoom:25%;" /> button in the toolbar.
+
+3. In the pop-up window, check **Publish DITA-OT Project (all deliverables)** and click **Apply associated**.
+
+   <img src="./images/apply-dita-ot-project.png" alt="apply-dita-ot-project" style="zoom:50%;" />
 
 The output files are in the **out** folder of this repository.
+
+Apart from building outputs, the DITA-OT project files have other benefits, see [DITA Open Toolkit Project](https://www.oxygenxml.com/doc/versions/22.0/ug-editor/topics/dita_open_toolkit_project.html#dita_open_toolkit_project_master) for more information.
