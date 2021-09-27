@@ -222,14 +222,14 @@ The following steps show how to create a DITA-OT project file to build the docs 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <project xmlns="https://www.dita-ot.org/project">
-     <context name="Video Call Android" id="video">
+     <context name="Video Call Android" id="video-android">
        <input href="../_Video.ditamap"/>
        <profile>
          <ditaval href="filter-android.ditaval"/>
        </profile>
      </context>
      <deliverable name="Markdown">
-       <context idref="video"/>
+       <context idref="video-android"/>
        <output href="../../out/markdown/video/android/"/>
        <publication transtype="markdown">
          <param name="clean.temp" value="yes"/>
@@ -237,7 +237,7 @@ The following steps show how to create a DITA-OT project file to build the docs 
        </publication>
      </deliverable>
      <deliverable name="HTML">
-       <context idref="video"/>
+       <context idref="video-android"/>
        <output href="../../out/html/video/android/"/>
        <publication transtype="html5">
          <param name="nav-toc" value="full"/>
@@ -248,7 +248,7 @@ The following steps show how to create a DITA-OT project file to build the docs 
    </project>
    ```
 
-To create a DITA-OT project file for another platform, duplicate `output-video-android.xml` and update the context name, ditaval file, and output paths accordingly.
+To create a DITA-OT project file for another platform, duplicate `output-video-android.xml` and update the context name, context id, context idref, ditaval file, and output paths accordingly.
 
 To generate the HTML and markdown outputs for Android Video Call, do the following:
 
