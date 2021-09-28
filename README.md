@@ -254,11 +254,11 @@ To generate the HTML and markdown outputs for Android Video Call, do the followi
 
 1. Open `config/output-video-android.xml` in Oxygen.
 
-2. Click the <img src="./images/image-20210927163000821.png" alt="build button" style="zoom:25%;" /> button in the toolbar.
+2. Click the <img src="./images/image-20210927163000821.png" alt="build button" width="5%" /> button in the toolbar.
 
 3. In the pop-up window, check **Publish DITA-OT Project (all deliverables)** and click **Apply associated**.
 
-   <img src="./images/apply-dita-ot-project.png" alt="apply-dita-ot-project" style="zoom:50%;" />
+   <img src="./images/apply-dita-ot-project.png" alt="apply-dita-ot-project" width="50%" />
 
 The output files are in the **out** folder of this repository.
 
