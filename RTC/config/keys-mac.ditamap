@@ -5,35 +5,83 @@
     <keydef keys="platform">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>macOS</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="ide">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Xcode</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="run-button">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Run</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="device">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>an macOS device</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="IRtcEngine">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>AgoraRtcEngineKit</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="cocoapods-library">
+        <topicmeta>
+            <keywords>
+                <keyword>AgoraRtcEngine_macOS</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="cocoapods-platform">
+        <topicmeta>
+            <keywords>
+                <keyword>macos, '10.11'</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="sdk-download">
+        <topicmeta>
+            <keywords>
+                <keyword props="audio">https://docs.agora.io/en/Voice/downloads?platform=macOS</keyword>
+                <keyword props="video">https://docs.agora.io/en/Video/downloads?platform=macOS</keyword>
+                <keyword props="live">https://docs.agora.io/en/Interactive%20Broadcast/downloads?platform=macOS</keyword>
+                <keyword props="lives">https://docs.agora.io/en/live-streaming/downloads?platform=macOS</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ui-library">
+        <topicmeta>
+            <keywords>
+                <keyword>&lt;AppKit/AppKit.h&gt;</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ui-vide">
+        <topicmeta>
+            <keywords>
+                <keyword>NSView</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="release-notes">
+        <topicmeta>
+            <keywords>
+                <keyword props="audio">https://docs.agora.io/en/Voice/release_mac_audio?platform=macOS</keyword>
+                <keyword props="video">https://docs.agora.io/en/Video/release_mac_video?platform=macOS</keyword>
+                <keyword props="live">https://docs.agora.io/en/Interactive%20Broadcast/release_mac_video?platform=macOS</keyword>
+                <keyword props="lives">https://docs.agora.io/en/live-streaming/release_mac_video?platform=macOS</keyword>
             </keywords>
         </topicmeta>
     </keydef>

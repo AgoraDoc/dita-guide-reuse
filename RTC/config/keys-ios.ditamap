@@ -5,35 +5,84 @@
     <keydef keys="platform">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>iOS</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="ide">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Xcode</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="run-button">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Run</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="device">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>an iOS device</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="IRtcEngine">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>AgoraRtcEngineKit</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="cocoapods-library">
+        <topicmeta>
+            <keywords>
+                <keyword props="audio">AgoraAudio_iOS</keyword>
+                <keyword props="video live lives">AgoraRtcEngine_iOS</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="cocoapods-platform">
+        <topicmeta>
+            <keywords>
+                <keyword>ios, '9.0'</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="sdk-download">
+        <topicmeta>
+            <keywords>
+                <keyword props="audio">https://docs.agora.io/en/Voice/downloads?platform=iOS</keyword>
+                <keyword props="video">https://docs.agora.io/en/Video/downloads?platform=iOS</keyword>
+                <keyword props="live">https://docs.agora.io/en/Interactive%20Broadcast/downloads?platform=iOS</keyword>
+                <keyword props="lives">https://docs.agora.io/en/live-streaming/downloads?platform=iOS</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ui-library">
+        <topicmeta>
+            <keywords>
+                <keyword>&lt;UIKit/UIKit.h&gt;</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ui-vide">
+        <topicmeta>
+            <keywords>
+                <keyword>UIView</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="release-notes">
+        <topicmeta>
+            <keywords>
+                <keyword props="audio">https://docs.agora.io/en/Voice/release_ios_audio?platform=iOS</keyword>
+                <keyword props="video">https://docs.agora.io/en/Video/release_ios_video?platform=iOS</keyword>
+                <keyword props="live">https://docs.agora.io/en/Interactive%20Broadcast/release_ios_video?platform=iOS</keyword>
+                <keyword props="lives">https://docs.agora.io/en/live-streaming/release_ios_video?platform=iOS</keyword>
             </keywords>
         </topicmeta>
     </keydef>

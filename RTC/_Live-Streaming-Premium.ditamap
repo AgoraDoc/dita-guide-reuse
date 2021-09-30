@@ -26,7 +26,7 @@
                 props="ios mac windows android"/>
             <topicref href="start-prerequisites-react-native.md" format="markdown" toc="no" props="rn"/>
             <topicref href="start-project-setup-android.md" format="markdown" toc="no" props="android"/>
-            <topicref href="start-project-setup-ios.md" format="markdown" toc="no" props="ios"/>
+            <topicref href="start-project-setup-apple.md" format="markdown" toc="no" props="apple"/>
             <topicref href="start-project-setup-mac.md" format="markdown" toc="no" props="mac"/>
             <topicref href="start-project-setup-windows.md" format="markdown" toc="no" props="windows"/>
             <topicref href="start-project-setup-web.md" format="markdown" toc="no" props="web"/>
@@ -37,7 +37,7 @@
             <topicref href="start-project-setup-cocos-creator.md" format="markdown" toc="no" props="cocos-creator"/>
             <topicref href="start-project-setup-unity.md" format="markdown" toc="no" props="unity"/>
             <topicref href="start-implement-android.md" format="markdown" toc="no" props="android"/>
-            <topicref href="start-implement-ios.md" format="markdown" toc="no" props="ios"/>
+            <topicref href="start-implement-apple.md" format="markdown" toc="no" props="apple"/>
             <topicref href="start-implement-mac.md" format="markdown" toc="no" props="mac"/>
             <topicref href="start-implement-windows.md" format="markdown" toc="no" props="windows"/>
             <topicref href="start-implement-web.md" format="markdown" toc="no" props="web"/>
@@ -57,7 +57,7 @@
             <topicref href="start-test-the-app-unity.md" format="markdown" toc="no" props="unity"/>
             <topicref href="start-next.md" format="markdown" toc="no"/>
             <topicref href="start-see-also-android.md" format="markdown" toc="no" props="android"/>
-            <topicref href="start-see-also-ios.md" format="markdown" toc="no" props="ios"/>
+            <topicref href="start-see-also-apple.md" format="markdown" toc="no" props="apple"/>
             <topicref href="start-see-also-mac.md" format="markdown" toc="no" props="mac"/>
             <topicref href="start-see-also-windows.md" format="markdown" toc="no" props="windows"/>
             <topicref href="start-see-also-web.md" format="markdown" toc="no" props="web"/>

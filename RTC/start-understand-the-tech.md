@@ -10,7 +10,7 @@ To start a [feature], you implement the following steps in your app:
 <li props="live">Set the client role</li>
 <li>Retrieve a token</li>
 <li>Join a channel</li>
-<li>Publish and subscribe to <ph keyref="media-type"/> in the channel</li>
+<li>Publish and subscribe to <ph keyref="mediatype"/> in the channel</li>
 </ol>
 
 For an app client to join a channel, you need the following information:
