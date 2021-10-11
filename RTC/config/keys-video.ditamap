@@ -58,6 +58,14 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="start-demo-web" href="https://webdemo.agora.io/basicVideoCall/index.html"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Basic-Video-Call</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
     <keydef keys="start-sample-project-rn" href="https://github.com/AgoraIO-Community/Agora-RN-Quickstart"
         scope="external" format="html">
         <topicmeta>

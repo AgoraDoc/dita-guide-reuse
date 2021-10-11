@@ -1,0 +1,26 @@
+# Implement the user interface
+
+To implement the user interface, copy the following code into `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agora Quickstart</title>
+    <!--
+      This line is used to refer to the bundle.js file packaged by webpack. A sample webpack configuration is shown in the later step of running your app.
+    -->
+    <script src="./dist/bundle.js"></script>
+</head>
+<body>
+    <h2 class="left-align">Agora Quickstart</h2>
+        <div class="row">
+            <div>
+                <button type="button" id="join">Join</button>
+                <button type="button" id="leave">Leave</button>
+            </div>
+        </div>
+</body>
+</html>
+```
