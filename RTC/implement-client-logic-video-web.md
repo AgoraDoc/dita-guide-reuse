@@ -14,7 +14,7 @@ The following figure shows the API call sequence of the basic one-to-one [featur
 
 ![](https://web-cdn.agora.io/docs-files/1617877136130)
 
-Copy the following code into `main.js` and then replace `appID` and `token` with [values from your Agora project](https://docs.agora.io/en/Agora%20Platform/get_appid_token?platform=Web).
+Copy the following code into `main.js` and then replace `appID` and `token` with [values from your Agora project](start-prerequisites-web.md).
 
 ```javascript
 import AgoraRTC from "agora-rtc-sdk-ng"
