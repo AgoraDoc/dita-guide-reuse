@@ -213,19 +213,19 @@ To implement Interactive Live Streaming Premium in your app using Objective-C:
 2.  Replace the contents in the `ViewController.m` file with the following:
 
     \[/dita/topic/topic/topic/body/topic/body/ol/li/codeblock \{"- topic/codeblock "\}\) \#import "ViewController.h" \#import     @interface ViewController \(\) @property \(nonatomic, strong\) \*localView; @property \(nonatomic, strong\) \*remoteView; @end
-    
+
         @implementation ViewController - \(void\)viewDidLoad \{ \[super viewDidLoad\]; \[self initViews\]; \[self initializeAndJoinChannel\]; \}
-    
+
         - \(void\)viewDidLayoutSubviews \{ \[super viewDidLayoutSubviews\]; self.remoteView.frame = self.view.bounds; self.localView.frame = CGRectMake\(self.view.bounds.size.width - 90, 0, 90, 160\); \}
-    
+
         - \(void\)initViews \{ self.remoteView = \[\[alloc\] init\]; \[self.view addSubview:self.remoteView\]; self.localView = \[\[alloc\] init\]; \[self.view addSubview:self.localView\]; \}
-    
+
         - \(void\)initializeAndJoinChannel \{ // Pass in your App ID here self.agoraKit = \[AgoraRtcEngineKit sharedEngineWithAppId:@"Your App ID" delegate:self\]; \[self.agoraKit setChannelProfile:AgoraChannelProfileLiveBroadcasting\]; \[self.agoraKit setClientRole:AgoraClientRoleBroadcaster\]; \[self.agoraKit enableVideo\]; AgoraRtcVideoCanvas \*videoCanvas = \[\[AgoraRtcVideoCanvas alloc\] init\]; videoCanvas.uid = 0; videoCanvas.renderMode = AgoraVideoRenderModeHidden; videoCanvas.view = self.localView; \[self.agoraKit setupLocalVideo:videoCanvas\]; // Pass in your token and channel name here \[self.agoraKit joinChannelByToken:@"Your token" channelId:@"Channel name" info:nil uid:0 joinSuccess:^\(NSString \* \_Nonnull channel, NSUInteger uid, NSInteger elapsed\) \{ \}\]; \}
-    
+
         - \(void\)rtcEngine:\(AgoraRtcEngineKit \*\)engine didJoinedOfUid:\(NSUInteger\)uid elapsed:\(NSInteger\)elapsed \{ AgoraRtcVideoCanvas \*videoCanvas = \[\[AgoraRtcVideoCanvas alloc\] init\]; videoCanvas.uid = uid; videoCanvas.renderMode = AgoraVideoRenderModeHidden; videoCanvas.view = self.remoteView; \[self.agoraKit setupRemoteVideo:videoCanvas\]; \}
-    
+
         - \(void\)viewDidDisappear:\(BOOL\)animated \{ \[super viewDidDisappear:animated\]; \[self.agoraKit leaveChannel:nil\]; \[AgoraRtcEngineKit destroy\]; \} @end
-    
+
     \(codeblock\]
 
 
@@ -245,11 +245,13 @@ Choose one of the following methods to integrate a version of the macOS SDK earl
 
 2.  In Terminal, navigate to the project path, and run the `pod init` command to create a `Podfile` in the project folder.
 
-3.  Open the `Podfile`, delete all contents, and input the following codes. Remember to replace `Your App` with the target name of your project and replace `version` with the version of the SDK that you want to integrate. For information about the SDK version, see 8.  Return to Terminal, and run the `pod install` command to install the Agora SDK. Once you successfully install the SDK, it shows `Pod installation complete!` in Terminal, and you can see an `xcworkspace` file in the project folder.
+3.  Open the `Podfile`, delete all contents, and input the following codes. Remember to replace `Your App` with the target name of your project and replace `version` with the version of the SDK that you want to integrate. For information about the SDK version, see [Release Notes](%5Brelease-notes%5D).
 
-9.  Open the generated `xcworkspace` file.
+    \[/dita/topic/topic/topic/topic/body/ol/li/codeblock \{"- topic/codeblock "\}\) \# platform :target 'Your App' do pod '', 'version' end\(codeblock\]
 
+4.  Return to Terminal, and run the `pod install` command to install the Agora SDK. Once you successfully install the SDK, it shows `Pod installation complete!` in Terminal, and you can see an `xcworkspace` file in the project folder.
 
+5.  Open the generated `xcworkspace` file.
 
 
 #### Method 2: Through your local storage {#method-2-through-your-local-storage}
