@@ -81,4 +81,12 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="start-demo-web" href="https://webdemo.agora.io/basicLive/index.html"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Basic-Live-Streaming</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
 </map>
