@@ -52,16 +52,6 @@
             </keywords>
         </topicmeta>
     </keydef>
-    <keydef keys="sdk-download">
-        <topicmeta>
-            <keywords>
-                <keyword props="audio">https://docs.agora.io/en/Voice/downloads?platform=iOS</keyword>
-                <keyword props="video">https://docs.agora.io/en/Video/downloads?platform=iOS</keyword>
-                <keyword props="live">https://docs.agora.io/en/Interactive%20Broadcast/downloads?platform=iOS</keyword>
-                <keyword props="lives">https://docs.agora.io/en/live-streaming/downloads?platform=iOS</keyword>
-            </keywords>
-        </topicmeta>
-    </keydef>
     <keydef keys="ui-library">
         <topicmeta>
             <keywords>
@@ -69,21 +59,20 @@
             </keywords>
         </topicmeta>
     </keydef>
-    <keydef keys="ui-vide">
+    <keydef keys="ui-lib">
+        <topicmeta>
+            <keywords>
+                <keyword>UIKit</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ui-video">
         <topicmeta>
             <keywords>
                 <keyword>UIView</keyword>
             </keywords>
         </topicmeta>
     </keydef>
-    <keydef keys="release-notes">
-        <topicmeta>
-            <keywords>
-                <keyword props="audio">https://docs.agora.io/en/Voice/release_ios_audio?platform=iOS</keyword>
-                <keyword props="video">https://docs.agora.io/en/Video/release_ios_video?platform=iOS</keyword>
-                <keyword props="live">https://docs.agora.io/en/Interactive%20Broadcast/release_ios_video?platform=iOS</keyword>
-                <keyword props="lives">https://docs.agora.io/en/live-streaming/release_ios_video?platform=iOS</keyword>
-            </keywords>
-        </topicmeta>
-    </keydef>
+    <keydef keys="release-notes-video-apple" href="https://docs.agora.io/en/Video/release_ios_video?platform=ios" scope="external" format="html"/>
+    <keydef keys="release-notes-live-apple" href="https://docs.agora.io/en/Interactive%20Broadcast/release_ios_video?platform=ios" scope="external" format="html"/>
 </map>

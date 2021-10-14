@@ -5,8 +5,8 @@
     <topichead navtitle="Figures">
         <keydef keys="start-api-sequence-android"
             href="https://web-cdn.agora.io/docs-files/1625208380588" scope="external" format="png"/>
-        <keydef keys="start-api-sequence-ios"
-            href="https://web-cdn.agora.io/docs-files/1617275439875" scope="external" format="png"/>
+        <keydef keys="start-api-sequence-apple"
+            href="https://web-cdn.agora.io/docs-files/1627888336100" scope="external" format="png"/>
         <keydef keys="start-basic-workflow" href="https://web-cdn.agora.io/docs-files/1625465916613"
             format="png" scope="external"/>
     </topichead>
@@ -57,6 +57,27 @@
         <topicmeta>
             <keywords>
                 <keyword>JoinChannelVideo</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-ios" href="https://github.com/AgoraIO/API-Examples/blob/master/iOS/APIExample/Examples/Basic/JoinChannelVideo/JoinChannelVideo.swift" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>JoinChannelVideo.swift</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-mac" href="https://github.com/AgoraIO/API-Examples/blob/master/macOS/APIExample/Examples/Basic/JoinChannelVideo/JoinChannelVideo.swift" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>JoinChannelVideo.swift</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="host">
+        <topicmeta>
+            <keywords>
+                <keyword>host</keyword>
             </keywords>
         </topicmeta>
     </keydef>
