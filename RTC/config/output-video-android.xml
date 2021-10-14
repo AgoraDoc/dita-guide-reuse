@@ -3,7 +3,7 @@
   <context name="Video Call Android" id="video-android">
     <input href="../_Video.ditamap"/>
     <profile>
-      <ditaval href="filter-electron.ditaval"/>
+      <ditaval href="filter-android.ditaval"/>
     </profile>
   </context>
   <deliverable name="Markdown">
