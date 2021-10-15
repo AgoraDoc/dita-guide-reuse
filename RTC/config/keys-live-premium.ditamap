@@ -7,6 +7,8 @@
             href="https://web-cdn.agora.io/docs-files/1625208380588" scope="external" format="png"/>
         <keydef keys="start-api-sequence-ios"
             href="https://web-cdn.agora.io/docs-files/1617275439875" scope="external" format="png"/>
+        <keydef keys="start-api-sequence-electron"
+            href="https://web-cdn.agora.io/docs-files/1628071244738" scope="external" format="png"/>
         <keydef keys="start-basic-workflow" href="https://web-cdn.agora.io/docs-files/1625465916613"
             format="png" scope="external"/>
     </topichead>

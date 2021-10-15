@@ -228,7 +228,8 @@ The API call sequence is shown in the following diagram:
 Copy the following code into `renderer.js` and fill in `APPID`, `token`, and `ChannelName` with [values from your Agora project](https://docs.agora.io/en/AgoraPlatform/get_appid_token):
 
 ```language-javascript
-window.addEventListener('DOMContentLoaded',() => {
+
+                    window.addEventListener('DOMContentLoaded',() => {
                     const AgoraRtcEngine = require('agora-electron-sdk').default
                     
                     
