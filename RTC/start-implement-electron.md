@@ -72,14 +72,14 @@ app.on('window-all-closed', function () {
 To implement the minimum client logic of Video Call, you need to do the following things:
 
 <ol>
-<li>Call <code>initialize</code> to create an <ph keyref="IRtcEngine"/> instance.</li>
+<li>Call <code>initialize</code> to create an <code>IRtcEngine</code> instance.</li>
 <li props="live">Call <code>setChannelProfile</code> to set the channel profile as live streaming.</li>
 <li props="live">Call <code>setClientRole</code> to set the user role as host or audience. The host publishes streams to the channel, and the audience subscribes to the streams.</li>
 <li>Call <code>enableVideo</code> to enable the video module.</li>
 <li>Call <code>joinChannel</code> to join a channel.</li>
 <li>Call <code>setupLocalVideo</code> to set up the local video frame.</li>
 <li>When another user joins the channel, call <code>setupRemoteVideo</code> to set up the remote video frame.</li>
-<li>Leave the channel and release all the resources used by <ph keyref="IRtcEngine"/>.</li>
+<li>Leave the channel and release all the resources used by <code>IRtcEngine</code>.</li>
 </ol>
 
 The API call sequence is shown in the following diagram:
