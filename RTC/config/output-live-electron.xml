@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://www.dita-ot.org/project">
+  <context name="Live Streaming Electron" id="live-electron">
+    <input href="../_Live-Streaming-Premium.ditamap"/>
+    <profile>
+      <ditaval href="filter-electron.ditaval"/>
+    </profile>
+  </context>
+  <deliverable name="Markdown">
+    <context idref="live-electron"/>
+    <output href="../../out/markdown/live-streaming/electron/"/>
+    <publication transtype="markdown">
+      <param name="clean.temp" value="yes"/>
+      <param name="force-unique" value="true"/>
+    </publication>
+  </deliverable>
+  <deliverable name="HTML">
+    <context idref="live-electron"/>
+    <output href="../../out/html/live-streaming/electron/"/>
+    <publication transtype="html5">
+      <param name="nav-toc" value="full"/>
+      <param name="clean.temp" value="yes"/>
+      <param name="force-unique" value="true"/>
+    </publication>
+  </deliverable>
+</project>

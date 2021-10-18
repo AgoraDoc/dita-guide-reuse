@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="get-started-sample-code">
+    <title>Get started sample code</title>
+    <body>
+        <section>
+            <title>Video</title>
+            <p id="impl-video">
+                <codeblock outputclass="language-javascript">window.addEventListener('DOMContentLoaded',() => {
+const AgoraRtcEngine = require('agora-electron-sdk').default
+
+
+const os = require('os')
+const path = require('path')
+
+// Pass your App ID here.
+const APPID = "Your App ID"
+// Pass your token here.
+const token = "Your token"
+
+const localVideoContainer = document.getElementById('join-channel-local-video')
+const remoteVideoContainer = document.getElementById('join-channel-remote-video')
+const sdkLogPath = path.resolve(os.homedir(), "./test.log")
+
+let rtcEngine = new AgoraRtcEngine()
+// Initialize AgoraRtcEngine.
+rtcEngine.initialize(APPID)
+
+
+// Listen for the "joinedChannel" event of the local user.
+rtcEngine.on('joinedChannel', (channel, uid, elapsed) => {
+    // If the local user joins the channel, set up the local video frame.
+    rtcEngine.setupLocalVideo(localVideoContainer)
+})
+
+rtcEngine.on('error', (err, msg) => {
+    console.log("Error!")
+})
+
+// Listen for the "userJoined" event of the remote user.
+rtcEngine.on('userJoined', (uid) => {
+     // If the remote user joins the channel, set up the remote video frame.
+    rtcEngine.setupRemoteVideo(uid, remoteVideoContainer)
+})
+
+// Enable the video module
+rtcEngine.enableVideo()
+
+rtcEngine.setLogFile(sdkLogPath)
+
+// Pass your channel name here, which must be the same as the channel name you filled in to generate the temporary token.
+// Join the channel.
+rtcEngine.joinChannel(token, "ChannelName", null, 123456)
+
+})
+   </codeblock>
+                </p>
+        </section>
+         <section>
+             <title>Live Streaming Premium</title>
+             <p id="impl-live">
+                 <codeblock outputclass="language-javascript">window.addEventListener('DOMContentLoaded',() => {
+const AgoraRtcEngine = require('agora-electron-sdk').default
+
+
+const os = require('os')
+const path = require('path')
+
+// Pass your App ID here.
+const APPID = "Your App ID"
+// Pass your token here.
+const token = "Your token"
+
+const localVideoContainer = document.getElementById('join-channel-local-video')
+const remoteVideoContainer = document.getElementById('join-channel-remote-video')
+const sdkLogPath = path.resolve(os.homedir(), "./test.log")
+
+let rtcEngine = new AgoraRtcEngine()
+// Initialize AgoraRtcEngine.
+rtcEngine.initialize(APPID)
+
+
+// Listen for the "joinedChannel" event of the local user.
+rtcEngine.on('joinedChannel', (channel, uid, elapsed) => {
+    // If the local user joins the channel, set up the local video frame.
+    rtcEngine.setupLocalVideo(localVideoContainer)
+})
+
+rtcEngine.on('error', (err, msg) => {
+    console.log("Error!")
+})
+
+// Listen for the "userJoined" event of the remote user.
+rtcEngine.on('userJoined', (uid) => {
+     // If the remote user joins the channel, set up the remote video frame.
+    rtcEngine.setupRemoteVideo(uid, remoteVideoContainer)
+})
+
+// For a live streaming scenario, set the channel profile as "1".
+rtcEngine.setChannelProfile(1)
+
+// Set the user role as "1"(host) or "2"(audience).
+rtcEngine.setClientRole(1)
+
+// Enable the video module
+rtcEngine.enableVideo()
+
+rtcEngine.setLogFile(sdkLogPath)
+
+// Pass your channel name here, which must be the same as the channel name you filled in to generate the temporary token.
+// Join the channel.
+rtcEngine.joinChannel(token, "ChannelName", null, 123456)
+
+})
+         </codeblock>
+                 </p>
+         </section>
+        
+
+    </body>
+</topic>

@@ -5,7 +5,7 @@
     <keydef keys="platform">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Electron</keyword>
             </keywords>
         </topicmeta>
     </keydef>
@@ -33,7 +33,7 @@
     <keydef keys="IRtcEngine">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>AgoraRtcEngine</keyword>
             </keywords>
         </topicmeta>
     </keydef>
