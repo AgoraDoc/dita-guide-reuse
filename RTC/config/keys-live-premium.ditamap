@@ -7,6 +7,8 @@
             href="https://web-cdn.agora.io/docs-files/1625208380588" scope="external" format="png"/>
         <keydef keys="start-api-sequence-apple"
             href="https://web-cdn.agora.io/docs-files/1627888336100" scope="external" format="png"/>
+        <keydef keys="start-api-sequence-electron"
+            href="https://web-cdn.agora.io/docs-files/1628071244738" scope="external" format="png"/>
         <keydef keys="start-basic-workflow" href="https://web-cdn.agora.io/docs-files/1625465916613"
             format="png" scope="external"/>
     </topichead>
@@ -86,6 +88,14 @@
         <topicmeta>
             <keywords>
                 <keyword>Basic-Live-Streaming</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-electron" href="https://github.com/AgoraIO-Community/Agora-Electron-Quickstart"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora-Electron-Quickstart</keyword>
             </keywords>
         </topicmeta>
     </keydef>

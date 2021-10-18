@@ -3,7 +3,9 @@
 <map>
     <title>Variables for Video Call</title>
     <topichead navtitle="Figures">
-    <keydef keys="start-api-sequence-android" href="https://web-cdn.agora.io/docs-files/1626420550447"
+        <keydef keys="start-api-sequence-electron" href="https://web-cdn.agora.io/docs-files/1628157460908"
+            scope="external" format="png" navtitle="API seqeunce of video call"/>
+        <keydef keys="start-api-sequence-android" href="https://web-cdn.agora.io/docs-files/1626420550447"
         scope="external" format="png" navtitle="API seqeunce of video call"/>
         <keydef keys="start-api-sequence-apple" href="https://web-cdn.agora.io/docs-files/1627887317273"
             scope="external" format="png" navtitle="API seqeunce of video call"/>
@@ -94,6 +96,14 @@
         <topicmeta>
             <keywords>
                 <keyword>user</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-electron" href="https://github.com/AgoraIO-Community/Agora-Electron-Quickstart"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora-Electron-Quickstart</keyword>
             </keywords>
         </topicmeta>
     </keydef>
