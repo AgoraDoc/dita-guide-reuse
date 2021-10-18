@@ -94,7 +94,7 @@ Keyrefs support the following types of content:
   The definition of the `start-basic-workflow` key  in `keys-video.ditamap`:
 
   ```xml
-  <keydef keys="start-basic-workflow" href="https://web-cdn.agora.io/docs-files/1627550978702"format="png" scope="external"/>
+  <keydef keys="start-basic-workflow" href="https://web-cdn.agora.io/docs-files/1627550978702" format="png" scope="external"/>
   ```
 
 ### Conditions
