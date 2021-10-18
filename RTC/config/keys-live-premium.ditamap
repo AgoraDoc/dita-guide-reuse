@@ -70,4 +70,12 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="start-sample-project-electron" href="https://github.com/AgoraIO-Community/Agora-Electron-Quickstart"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora-Electron-Quickstart</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
 </map>
