@@ -28,6 +28,7 @@
             <topicref href="start-prerequisites-web.md" format="markdown" toc="no" props="web"/>
             <topicref href="start-prerequisites-react-native.md" format="markdown" toc="no" props="rn"/>
             <topicref href="start-prerequisites-electron.md" format="markdown" toc="no" props="electron"/>
+            <topicref href="start-prerequisites-flutter.md" format="markdown" toc="no" props="flutter"/>
             <topicref href="start-project-setup-android.md" format="markdown" toc="no" props="android"/>
             <topicref href="start-project-setup-ios.md" format="markdown" toc="no" props="ios"/>
             <topicref href="start-project-setup-mac.md" format="markdown" toc="no" props="mac"/>
@@ -72,7 +73,7 @@
             <topicref href="start-see-also-electron.md" format="markdown" toc="no" props="electron"/>
             <topicref href="start-see-also-react-native.md" format="markdown" toc="no" props="rn"/>
             <topicref href="start-see-also-cocos2d.md" format="markdown" toc="no" props="cocos2d"/>
-            <topicref href="start-see-also-flutter.md" format="markdown" toc="no" props="flutter"/>
+            <topicref href="start-common-issues-flutter.md" format="markdown" toc="no" props="flutter"/>
             <topicref href="start-see-also-cocos-creator.md" format="markdown" toc="no" props="cocos-creator"/>
             <topicref href="start-see-also-unity.md" format="markdown" toc="no" props="unity"/>
         </topicref>
