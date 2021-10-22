@@ -13,7 +13,7 @@ To implement the client logic of [feature], we need to do the following things:
 
 The following figure shows the API call sequence of the basic one-to-one [feature].
 
-![](https://web-cdn.agora.io/docs-files/1617877252660)
+![start-api-sequence-web]
 
 Copy the following code into `main.js` and then replace `appID` and `token` with [values from your Agora project](start-prerequisites-web.md).
 

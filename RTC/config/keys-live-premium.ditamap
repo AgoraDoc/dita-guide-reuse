@@ -4,13 +4,15 @@
     <title>Variables for Live Streaming Premium</title>
     <topichead navtitle="Figures">
         <keydef keys="start-api-sequence-android"
-            href="https://web-cdn.agora.io/docs-files/1625208380588" scope="external" format="png"/>
+            href="https://web-cdn.agora.io/docs-files/1625208380588" scope="external" format="png" navtitle="API seqeunce of live streaming"/>
         <keydef keys="start-api-sequence-ios"
-            href="https://web-cdn.agora.io/docs-files/1617275439875" scope="external" format="png"/>
+            href="https://web-cdn.agora.io/docs-files/1617275439875" scope="external" format="png" navtitle="API seqeunce of live streaming"/>
         <keydef keys="start-api-sequence-electron"
-            href="https://web-cdn.agora.io/docs-files/1628071244738" scope="external" format="png"/>
+            href="https://web-cdn.agora.io/docs-files/1628071244738" scope="external" format="png" navtitle="API seqeunce of live streaming"/>
+        <keydef keys="start-api-sequence-web" href="https://web-cdn.agora.io/docs-files/1617877252660"
+        scope="external" format="png" navtitle="API seqeunce of live streaming"/>
         <keydef keys="start-basic-workflow" href="https://web-cdn.agora.io/docs-files/1625465916613"
-            format="png" scope="external"/>
+            format="png" scope="external" navtitle="Basic workflow"/>
     </topichead>
     <keydef keys="product-name">
         <topicmeta>
