@@ -16,6 +16,7 @@ If your target platform is iOS, your development environment must meet the follo
 If your target platform is Android, your development environment must meet the following requirements:
 
 - Flutter 1.0.0 or later
+- Dart 2.12.0 or later
 - macOS or Windows
 - Android Studio (latest version recommended)
 
