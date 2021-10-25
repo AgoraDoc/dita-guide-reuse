@@ -65,7 +65,7 @@ This quickstart uses [webpack](https://webpack.js.org/) to package the project a
 
 A local web server automatically opens in your browser. You see the following page:
 
-![](https://web-cdn.agora.io/docs-files/1619428543085)
+<image href="https://web-cdn.agora.io/docs-files/1619428543085" scope="external"></image>
 
 Click **JOIN** to start a [feature]. However, being in a [feature] on your own is no fun. Ask a friend to join the same [feature] with you on the [start-demo-web].
 

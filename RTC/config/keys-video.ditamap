@@ -7,6 +7,8 @@
             scope="external" format="png" navtitle="API seqeunce of video call"/>
         <keydef keys="start-api-sequence-android" href="https://web-cdn.agora.io/docs-files/1626420550447"
         scope="external" format="png" navtitle="API seqeunce of video call"/>
+        <keydef keys="start-api-sequence-web" href="https://web-cdn.agora.io/docs-files/1617877136130"
+        scope="external" format="png" navtitle="API seqeunce of video call"/>
         <keydef keys="start-basic-workflow" href="https://web-cdn.agora.io/docs-files/1627550978702"
             format="png" scope="external" navtitle="Basic workflow"/>
         <keydef keys="start-api-sequence-cocos-creator" href="https://web-cdn.agora.io/docs-files/1606315461579"
