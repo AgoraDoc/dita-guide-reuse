@@ -53,7 +53,10 @@
             <topicref href="start-implement-react-native.md" format="markdown" toc="no" props="rn"/>
             <topicref href="start-implement-cocos2d.md" format="markdown" toc="no" props="cocos2d"/>
             <topicref href="start-implement-flutter.md" format="markdown" toc="no" props="flutter"/>
-            <topicref href="start-implement-cocos-creator.md" format="markdown" toc="no" props="cocos-creator"/>
+            <topicref href="start-implement-cocos-creator.md" format="markdown" toc="no" props="cocos-creator">
+                <topicref href="initialize-cocos-creator.md" format="markdown" toc="no"/>
+                <topicref href="settings-after-channelprofile-cocos-creator.md" format="markdown" toc="no"/>
+            </topicref>
             <topicref href="start-implement-unity.md" format="markdown" toc="no" props="unity"/>
             <topicref href="start-test-the-app-native.md" format="markdown" toc="no" props="ios mac windows android"/>
             <topicref href="start-test-the-app-web.md" format="markdown" toc="no" props="web"/>
