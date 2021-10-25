@@ -97,7 +97,8 @@ After setting the local video view, do the following to join a channel:
     ```
 
 6. Return to **Cocos Creator**, and click **Canvas** on the **Node Tree** panel. On the **Properties** panel, find the **HelloWorld** component script, and add the **Label** of the **button** component to the script to dynamically modify the label of the button.
-    <image href="https://web-cdn.agora.io/docs-files/1634869842263" format="png" scope="external"></image>
+    
+   <image href="https://web-cdn.agora.io/docs-files/1634869842263" format="png" scope="external"></image>
 
 7. On the **Node Tree** panel, click **button**, find **Button** > **Check Events** on the **Properties** panel, and add a check event.
 

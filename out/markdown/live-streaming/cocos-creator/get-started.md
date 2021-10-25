@@ -67,7 +67,7 @@ You can use core APIs of the Agora Cocos Creator SDK in the `Script/HelloWorld.j
 
 ![](https://web-cdn.agora.io/docs-files/1606314149803)
 
-## Initialize the Agora engine {#initialize-the-agora-engine}
+### Initialize the Agora engine {#initialize-the-agora-engine}
 
 Initialize the Agora engine before calling any other Agora APIs. You need to pass in the Agora App ID obtained from the Agora Console.
 
@@ -255,7 +255,9 @@ After setting the local video view, do the following to join a channel:
     });
     ```
 
-6.  Return to **Cocos Creator**, and click **Canvas** on the **Node Tree** panel. On the **Properties** panel, find the **HelloWorld** component script, and add the **Label** of the **button** component to the script to dynamically modify the label of the button. ![](https://web-cdn.agora.io/docs-files/1634869842263)
+6.  Return to **Cocos Creator**, and click **Canvas** on the **Node Tree** panel. On the **Properties** panel, find the **HelloWorld** component script, and add the **Label** of the **button** component to the script to dynamically modify the label of the button.
+
+    ![](https://web-cdn.agora.io/docs-files/1634869842263)
 
 7.  On the **Node Tree** panel, click **button**, find **Button** \> **Check Events** on the **Properties** panel, and add a check event.
 

@@ -66,7 +66,7 @@ You can use core APIs of the Agora Cocos Creator SDK in the `Script/HelloWorld.j
 
 ![](https://web-cdn.agora.io/docs-files/1606315461579)
 
-## Initialize the Agora engine {#initialize-the-agora-engine}
+### Initialize the Agora engine {#initialize-the-agora-engine}
 
 Initialize the Agora engine before calling any other Agora APIs. You need to pass in the Agora App ID obtained from the Agora Console.
 
@@ -93,7 +93,7 @@ cc.Class({
 
 ```
 
-## Set the local video view {#set-the-local-video-view}
+### Set the local video view {#set-the-local-video-view}
 
 To make the user see the local video before starting a video call, you need to set the local video view before joining a channel. Use the following steps:
 
@@ -121,7 +121,7 @@ To make the user see the local video before starting a video call, you need to s
 2.  In Cocos Creator, navigate to **Node Library** \> **Cloud Nodes**, and add **AgoraVideoRender** to the **Scene**. Once added successfully, in the **assets** folder of the **Assets** panel, you can see **cloud-component** folder which contains `AgoraVideoRender.js` and `AgoraVideoRender.prefab` files.
 
 
-## Join a channel {#join-a-channel}
+### Join a channel {#join-a-channel}
 
 After setting the local video view, do the following to join a channel:
 
@@ -192,14 +192,16 @@ After setting the local video view, do the following to join a channel:
     });
     ```
 
-6.  Return to **Cocos Creator**, and click **Canvas** on the **Node Tree** panel. On the **Properties** panel, find the **HelloWorld** component script, and add the **Label** of the **button** component to the script to dynamically modify the label of the button. ![](https://web-cdn.agora.io/docs-files/1634869842263)
+6.  Return to **Cocos Creator**, and click **Canvas** on the **Node Tree** panel. On the **Properties** panel, find the **HelloWorld** component script, and add the **Label** of the **button** component to the script to dynamically modify the label of the button.
+
+    ![](https://web-cdn.agora.io/docs-files/1634869842263)
 
 7.  On the **Node Tree** panel, click **button**, find **Button** \> **Check Events** on the **Properties** panel, and add a check event.
 
 8.  Add the **Canvas** to the **cc.Node** property box of the check event. In the two drop-down boxes following the **cc.Node** property box, select the scene \(**HelloWorld**\) and the check event \(**clickButton**\) in turn.
 
 
-## Set the remote video view {#set-the-remote-video-view}
+### Set the remote video view {#set-the-remote-video-view}
 
 During the video call, you should be able to see all users.
 
@@ -263,7 +265,7 @@ Shortly after a remote user joins the channel, the SDK gets the user's user ID i
     ![](https://web-cdn.agora.io/docs-files/1634869889573)
 
 
-## Leave the channel {#leave-the-channel}
+### Leave the channel {#leave-the-channel}
 
 Call the `leaveChannel` method to leave the current channel according to your scenario, for example, when the Video Call ends, when you need to close the app, or when your app runs in the background.
 
