@@ -46,7 +46,7 @@
             <topicref href="start-implement-web.md" format="markdown" toc="no" props="web">
                 <topicref href="integrate-sdk-npm-web.md" format="markdown" props="web"/>
                 <topicref href="implement-user-interface-web.md" format="markdown"/>
-                <topicref href="implement-client-logic-live-streaming-premium-web.md.md"
+                <topicref href="implement-client-logic-live-streaming-premium-web.md"
                     format="markdown"/>
             </topicref>
             <topicref href="start-implement-electron.md" format="markdown" toc="no" props="electron"/>
