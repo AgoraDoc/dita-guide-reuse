@@ -29,7 +29,7 @@ If your target platform is Android, your development environment must meet the f
 ## Other prerequisites
 
 <ul>
-<li conref="conref/agora-prerequisites.dita#agora-pre/account"/>
-<li conref="conref/agora-prerequisites.dita#agora-pre/appid"/>
-<li conref="conref/agora-prerequisites.dita#agora-pre/internet"/>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/account"/></li>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/appid-token"/></li>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/internet"/></li>
 </ul>

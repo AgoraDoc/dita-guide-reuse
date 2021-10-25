@@ -9,7 +9,7 @@ Before proceeding, ensure that your development environment meets the following 
 <li props="android">A mobile device that runs Android 4.1 or later.</li>
 <li props="ios mac">Xcode 9.0 or later.</li>
 <li props="ios">An iOS device running iOS 8.0 or later.</li>
-<li conref="conref/agora-prerequisites.dita#agora-pre/account"/>
-<li conref="conref/agora-prerequisites.dita#agora-pre/appid"/>
-<li conref="conref/agora-prerequisites.dita#agora-pre/internet"/>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/account"/></li>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/appid-token"/></li>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/internet"/></li>
 </ul>
