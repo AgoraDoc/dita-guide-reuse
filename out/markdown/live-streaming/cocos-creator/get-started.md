@@ -390,3 +390,7 @@ When the interactive live video streaming starts successfully, hosts can see the
 
 Generating a token by hand is not helpful in a production context. [Authenticate Your Users with Tokens](https://docs.agora.io/en/Video/token_server?platform=Android) shows you how to start the live streaming with a token that you retrieve from your server.
 
+## See also {#see-also}
+
+Agora provides an open-source [Agora-Cocos-Quickstart/CocosCreator](https://github.com/AgoraIO-Community/Agora-Cocos-Quickstart/tree/master/CocosCreator) sample project on GitHub that implements a basic one-to-one video call. You can download the demo project as a code source reference.
+
