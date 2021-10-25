@@ -48,9 +48,9 @@ After setting the channel profile to `LIVE_BROADCASTING`, your app may use the f
       });
    ```
 
-4. Return to Cocos Creator, and click **toggle1**. In the **Properties** panel, find **Toggle** > **Check Events**, and add a check event.<span id="step4">
+4. Return to Cocos Creator, and click **toggle1**. In the **Properties** panel, find **Toggle** > **Check Events**, and add a check event.
 
-5. On the **Node Tree** panel, find and add the **Canvas** to the **cc.Node** property box of the check event. In the two drop-down boxes following the **cc.Node** property box, select the scene (**HelloWorld**) and the check event (**setClientRole**) in turn, and enter **1** in **CustomEventData**.<span id="step5">
+5. On the **Node Tree** panel, find and add the **Canvas** to the **cc.Node** property box of the check event. In the two drop-down boxes following the **cc.Node** property box, select the scene (**HelloWorld**) and the check event (**setClientRole**) in turn, and enter **1** in **CustomEventData**.
 
 6. Click **Add Component** > **Renderer Component** > **Label** to add a label for **toggle1**. navigate to **Label** > **String**, and enter **Audience**.
 

@@ -8,7 +8,7 @@ This page shows the minimum code you need to add live streaming into your app by
 
 The following figure shows the workflow of a live streaming implemented by the Agora SDK.
 
-![](https://web-cdn.agora.io/docs-files/1625465916613)
+![Basic workflow](https://web-cdn.agora.io/docs-files/1625465916613)
 
 To start a live streaming, you implement the following steps in your app:
 
@@ -67,7 +67,7 @@ You can use core APIs of the Agora Cocos Creator SDK in the `Script/HelloWorld.j
 
 ![](https://web-cdn.agora.io/docs-files/1606314149803)
 
-### Initialize the Agora engine {#initialize-the-agora-engine}
+## Initialize the Agora engine {#initialize-the-agora-engine}
 
 Initialize the Agora engine before calling any other Agora APIs. You need to pass in the Agora App ID obtained from the Agora Console.
 
@@ -147,18 +147,14 @@ After setting the channel profile to `LIVE_BROADCASTING`, your app may use the f
 
 4.  Return to Cocos Creator, and click **toggle1**. In the **Properties** panel, find **Toggle** \> **Check Events**, and add a check event.
 
-        1.  On the **Node Tree** panel, find and add the **Canvas** to the **cc.Node** property box of the check event. In the two drop-down boxes following the **cc.Node** property box, select the scene \(**HelloWorld**\) and the check event \(**setClientRole**\) in turn, and enter **1** in **CustomEventData**.
-    
-                    1.  Click **Add Component** \> **Renderer Component** \> **Label** to add a label for **toggle1**. navigate to **Label** \> **String**, and enter **Audience**.
-            
-                    2.  Repeat step 3 step 4, and step 5 to configure the **toggle2**. Note that you need to enter **2** in **CustomEventData** and **Host** in **Label** \> **String**.
-            
-            
-    
-    
+5.  On the **Node Tree** panel, find and add the **Canvas** to the **cc.Node** property box of the check event. In the two drop-down boxes following the **cc.Node** property box, select the scene \(**HelloWorld**\) and the check event \(**setClientRole**\) in turn, and enter **1** in **CustomEventData**.
 
-    During the live streaming, only the host can be seen. If you want to switch the client role after joining the channel, call the `setClientRole` method.
+6.  Click **Add Component** \> **Renderer Component** \> **Label** to add a label for **toggle1**. navigate to **Label** \> **String**, and enter **Audience**.
 
+7.  Repeat step 3 step 4, and step 5 to configure the **toggle2**. Note that you need to enter **2** in **CustomEventData** and **Host** in **Label** \> **String**.
+
+
+During the live streaming, only the host can be seen. If you want to switch the client role after joining the channel, call the `setClientRole` method.
 
 ### Set the local video view {#set-the-local-video-view}
 
