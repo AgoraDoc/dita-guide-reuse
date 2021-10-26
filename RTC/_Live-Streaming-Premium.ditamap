@@ -59,11 +59,10 @@
                 <topicref href="settings-after-channelprofile-cocos-creator.md" format="markdown" toc="no"/>   
             </topicref>   
             <topicref href="start-implement-unity.md" format="markdown" toc="no" props="unity"/>
-            <topicref href="start-test-the-app-native.md" format="markdown" toc="no" props="ios mac windows android"/>
+            <topicref href="start-test-the-app-native.md" format="markdown" toc="no" props="ios mac windows android cocos2d-x-android"/>
             <topicref href="start-test-the-app-web.md" format="markdown" toc="no" props="web"/>
             <topicref href="start-test-the-app-electron.md" format="markdown" toc="no" props="electron"/>
             <topicref href="start-test-the-app-react-native.md" format="markdown" toc="no" props="rn"/>
-            <topicref href="start-test-the-app-cocos2d-x-android.md" format="markdown" toc="no" props="cocos2d-x-android"/>
             <topicref href="start-test-the-app-flutter.md" format="markdown" toc="no" props="flutter"/>
             <topicref href="start-test-the-app-cocos-creator.md" format="markdown" toc="no" props="cocos-creator"/>
             <topicref href="start-test-the-app-unity.md" format="markdown" toc="no" props="unity"/>
