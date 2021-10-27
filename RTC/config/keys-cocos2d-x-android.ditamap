@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
-    <title>Cocos2d Variables</title>
+    <title>Cocos2d-x-android Variables</title>
     <keydef keys="platform">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Cocos2d-x</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="ide">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Android Studio</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="run-button">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Build and run</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="device">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>an Android device</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="IRtcEngine">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>IRtcEngine</keyword>
             </keywords>
         </topicmeta>
     </keydef>
