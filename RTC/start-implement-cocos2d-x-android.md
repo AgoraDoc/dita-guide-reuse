@@ -149,7 +149,7 @@ auto leaveButton = ui::Button::create("Button.png", "ButtonPressed.png", "Button
 
 ## Implement the [product-name] logic
 
-Take the following steps to initialize `IRtcEngine` and join a [PRODUCT]
+Take the following steps to initialize `IRtcEngine` and join a [product-name]
  channel.
 
 ### Create and initialize the `IRtcEngine` object

@@ -6,23 +6,20 @@
         <section>
             <title>Video</title>
             <p id="join-call-channel">
-                <codeblock outputclass="language-java">
-void HelloWorld::onJoinChannelClicked() {
+                <codeblock outputclass="language-java">void HelloWorld::onJoinChannelClicked() {
   if (editBox == nullptr || strlen(editBox->getText()) == 0) {
     return;
   }
     // Pass in your token and channel name to join the channel.
     // Set uid as 0, and the SDK assigns a user ID for the local user.
     engine->joinChannel(AGORA_TOKEN, editBox->getText(), "Cocos2d", 0);
-}
-                </codeblock>
+}</codeblock>
             </p>
         </section>
         <section>
             <title>Live Streaming Premium</title>
             <p id="join-live-channel">
-                <codeblock outputclass="language-jave">
-void HelloWorld::onJoinChannelClicked() {
+                <codeblock outputclass="language-jave">void HelloWorld::onJoinChannelClicked() {
   if (editBox == nullptr || strlen(editBox->getText()) == 0) {
     return;
   }
@@ -36,8 +33,7 @@ void HelloWorld::onJoinChannelClicked() {
     // Pass in your token and channel name to join the channel.
     // Set uid as 0, and the SDK assigns a user ID for the local user.
     engine->joinChannel(AGORA_TOKEN, editBox->getText(), "Cocos2d", 0);
-}
-                 </codeblock>
+}</codeblock>
             </p>
         </section>
     </body>

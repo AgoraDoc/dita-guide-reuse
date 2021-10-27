@@ -381,7 +381,7 @@ auto leaveButton = ui::Button::create("Button.png", "ButtonPressed.png", "Button
 
 ### Implement the Video Call logic {#implement-the-product-name-logic}
 
-Take the following steps to initialize `IRtcEngine` and join a  channel.
+Take the following steps to initialize `IRtcEngine` and join a Video Call channel.
 
 #### Create and initialize the `IRtcEngine` object {#create-and-initialize-the-irtcengine-object}
 
@@ -435,8 +435,7 @@ void HelloWorld::onEnter() {
 
 Call the `joinChannel` method, pass the token, user ID, and channel name to join a video call channel.
 
-```java
-
+```language-java
 void HelloWorld::onJoinChannelClicked() {
   if (editBox == nullptr || strlen(editBox->getText()) == 0) {
     return;
@@ -445,7 +444,6 @@ void HelloWorld::onJoinChannelClicked() {
     // Set uid as 0, and the SDK assigns a user ID for the local user.
     engine->joinChannel(AGORA_TOKEN, editBox->getText(), "Cocos2d", 0);
 }
-                
 ```
 
 #### Get and render raw data {#get-and-render-raw-data}
