@@ -15,7 +15,7 @@ To start a live streaming, you implement the following steps in your app:
 1.  Set the client role
 2.  Retrieve a token
 3.  Join a channel
-4.  Publish and subscribe to in the channel
+4.  Publish and subscribe to audio and video in the channel.
 
 For an app client to join a channel, you need the following information:
 
@@ -58,7 +58,15 @@ For new projects, in **Xcode**, follow the steps to create the environment neces
 
     1.  Install CocoaPods if you have not. See [Getting Started with CocoaPods](https://guides.cocoapods.org/using/getting-started.html#getting-started).
     2.  In Terminal, navigate to the root of your project folder, and run the \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)pod init\(codeph\] command to create a \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)Podfile\(codeph\] in the project folder.
-    3.  Open the \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)Podfile\(codeph\], and replace all contents with the following code. Remember to replace \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)Your App\(codeph\] with the target name of your project.
+    3.  Open the \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)Podfile\(codeph\], and replace all contents with the following code. Remember to replace \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)Your App\(codeph\] with the target name of your project and replace \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)version\(codeph\] with the version of the SDK that you want to integrate. For information about the SDK version, see [Release Notes](https://docs.agora.io/en/Interactive%20Broadcast/release_mac_video?platform=macOS).
+
+        ```language-swift
+        # platform :macos, '10.11'
+        target 'Your App' do
+        pod 'AgoraRtcEngine_macOS', 'version'
+        end
+        ```
+
     4.  In Terminal, run the \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)pod install\(codeph\] command to install the SDK. When the SDK is installed successfully, you can see \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)Pod installation complete!\(codeph\] in Terminal and an \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)xcworkspace\(codeph\] file in the project folder.
     5.  Open the \[/dita/topic/topic/body/ol/li/ol/li/codeph \{"- topic/codeph "\}\)xcworkspace\(codeph\] file for any further steps.
 3.  [Enable automatic signing](https://help.apple.com/xcode/mac/current/#/dev23aab79b4) for your project.
@@ -107,7 +115,7 @@ To implement this logic, take the following steps:
 
 1.  Import the Agora kit and add the `agoraKit` variable. Modify your `ViewController.swift` as follows:
 
-    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)import // Add this line to import the Agora kit import AgoraRtcKit class ViewController: Controller \{ var localView: ! var remoteView: ! // Add this linke to add the agoraKit variable var agoraKit: AgoraRtcEngineKit? \} override func viewDidLoad\(\) \{ super.viewDidLoad\(\) initView\(\) \}\(codeblock\]
+    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)import AppKit // Add this line to import the Agora kit import AgoraRtcKit class ViewController: NSViewController \{ var localView: NSView! var remoteView: NSView! // Add this linke to add the agoraKit variable var agoraKit: AgoraRtcEngineKit? \} override func viewDidLoad\(\) \{ super.viewDidLoad\(\) initView\(\) \}\(codeblock\]
 
 2.  Initialize the app and join the channel.
 
@@ -115,13 +123,33 @@ To implement this logic, take the following steps:
 
     In `ViewController.swift`, add the following lines after the `initView` function, and fill in your App ID, temporary token, and channel name:
 
-    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)func initializeAndJoinChannel\(\) \{ // Pass in your App ID here agoraKit = AgoraRtcEngineKit.sharedEngine\(withAppId: "Your App ID", delegate: self\) // For a live streaming scenario, set the channel profile as liveBroadcasting. agoraKit?.setChannelProfile\(.liveBroadcasting\) // Set the client role as broadcaster or audience. agoraKit?.setClientRole\(.broadcaster\) // Video is disabled by default. You need to call enableVideo to start a video stream. agoraKit?.enableVideo\(\) // Create a videoCanvas to render the local video let videoCanvas = AgoraRtcVideoCanvas\(\) videoCanvas.uid = 0 videoCanvas.renderMode = .hidden videoCanvas.view = localView agoraKit?.setupLocalVideo\(videoCanvas\) // Join the channel with a token. Pass in your token and channel name here agoraKit?.joinChannel\(byToken: "Your token", channelId: "Channel name", info: nil, uid: 0, joinSuccess: \{ \(channel, uid, elapsed\) in \}\) \}\(codeblock\]
+    ```language-swift
+    func initializeAndJoinChannel() {
+      // Pass in your App ID here
+      agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: "Your App ID", delegate: self)
+      // For a live streaming scenario, set the channel profile as liveBroadcasting.
+      agoraKit?.setChannelProfile(.liveBroadcasting)
+      // Set the client role as broadcaster or audience.
+      agoraKit?.setClientRole(.broadcaster)
+      // Video is disabled by default. You need to call enableVideo to start a video stream.
+      agoraKit?.enableVideo()
+      // Create a videoCanvas to render the local video
+      let videoCanvas = AgoraRtcVideoCanvas()
+      videoCanvas.uid = 0
+      videoCanvas.renderMode = .hidden
+      videoCanvas.view = localView
+      agoraKit?.setupLocalVideo(videoCanvas)
+      // Join the channel with a token. Pass in your token and channel name here
+      agoraKit?.joinChannel(byToken: "Your token", channelId: "Channel name", info: nil, uid: 0, joinSuccess: { (channel, uid, elapsed) in
+      })
+    }
+    ```
 
 3.  Add the remote interface when a remote host joins the channel.
 
     In `ViewController.swift`, add the following lines after the `ViewController` class:
 
-    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)extension ViewController: AgoraRtcEngineDelegate \{ // This callback is triggered when a remote \[host\] joins the channel func rtcEngine\(\_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int\) \{ let videoCanvas = AgoraRtcVideoCanvas\(\) videoCanvas.uid = uid videoCanvas.renderMode = .hidden videoCanvas.view = remoteView agoraKit?.setupRemoteVideo\(videoCanvas\) \} \}\(codeblock\]
+    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)extension ViewController: AgoraRtcEngineDelegate \{ // This callback is triggered when a remote host joins the channel func rtcEngine\(\_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int\) \{ let videoCanvas = AgoraRtcVideoCanvas\(\) videoCanvas.uid = uid videoCanvas.renderMode = .hidden videoCanvas.view = remoteView agoraKit?.setupRemoteVideo\(videoCanvas\) \} \}\(codeblock\]
 
 
 ### Start and stop your app {#start-and-stop-your-app}
@@ -179,11 +207,15 @@ Generating a token by hand is not helpful in a production context. [Authenticate
 
 This section provides additional information for your reference:
 
+### Listening for audience events {#audience-event}
+
+The Agora Video SDK does not report events of an audience member in a live streaming channel. Refer to [How can I listen for an audience joining or leaving an interactive live streaming channel](https://docs.agora.io/en/Interactive%20Broadcast/faq/audience_event) if your scenario requires so.
+
 ### Sample project {#sample-project}
 
-Agora provides an open source sample project
+Agora provides an open source sample project [JoinChannelVideo.swift](https://github.com/AgoraIO/API-Examples/blob/master/macOS/APIExample/Examples/Basic/JoinChannelVideo/JoinChannelVideo.swift) on GitHub that implements live streaming for your reference.
 
-#### Other approaches to integrate the SDK {#othermethods}
+### Other approaches to integrate the SDK {#othermethods}
 
 In addition to integrating the Agora Video SDK for macOS through CocoaPods, you can also import the SDK into your project by manually copying the SDK files.
 
@@ -193,7 +225,7 @@ In addition to integrating the Agora Video SDK for macOS through CocoaPods, you 
 
 2.  From the `libs` folder of the downloaded SDK package, copy the files or subfolders you need to the root of your project folder.
 
-    **Attention:** Certain files and subfolders under the `libs` folder are optional. See [extension libraries](https://docs.agora.io/en/Voice/faq/reduce_app_size_rtc?platform=iOS#extension_libraries) for details.
+    **Attention:** Certain files and subfolders under the \[/dita/topic/topic/topic/body/ol/li/p/note/codeph \{"- topic/codeph "\}\)libs\(codeph\] folder are optional. See [extension libraries](https://docs.agora.io/en/Voice/faq/reduce_app_size_rtc?platform=iOS#extension_libraries) for details.
 
 3.  In Xcode, [link your target to the frameworks or libraries](https://help.apple.com/xcode/mac/current/#/dev51a648b07) you have copied. Be sure to choose **Embed & Sign** from the pop-up menu in the Embed column.
 
@@ -202,38 +234,18 @@ In addition to integrating the Agora Video SDK for macOS through CocoaPods, you 
     -   Apple does not allow an app extension to contain any dynamic library. If you are integrating the Agora SDK to an app extension, choose **Do Not Embed** in the Embed column.
     -   The Agora SDK uses libc++ \(LLVM\) by default. Contact [support@agora.io](mailto:support@agora.io) if you want to use libstdc++ \(GNU\). The SDK provides FAT image libraries with multi-architecture support for both 32/64-bit audio emulators and 32/64-bit audio and video real devices.
 
-#### Objective-C code sample {#objective-c-code-sample}
+### Objective-C code sample {#objective-c-code-sample}
 
 To implement Interactive Live Streaming Premium in your app using Objective-C:
 
 1.  Replace the contents in the `ViewController.h` file with the following:
 
-    \[/dita/topic/topic/topic/body/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\) \#import <AppKit/AppKit.h\> \#import <AgoraRtcKit/AgoraRtcEngineKit.h\> @interface ViewController : NSViewController <AgoraRtcEngineDelegate\> @property \(strong, nonatomic\) AgoraRtcEngineKit \*agoraKit; @end \(codeblock\]
+    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\) \#import <AppKit/AppKit.h\> \#import <AgoraRtcKit/AgoraRtcEngineKit.h\> @interface ViewController : NSViewController <AgoraRtcEngineDelegate\> @property \(strong, nonatomic\) AgoraRtcEngineKit \*agoraKit; @end \(codeblock\]
 
 2.  Replace the contents in the `ViewController.m` file with the following:
 
-    \[/dita/topic/topic/topic/body/topic/body/ol/li/codeblock \{"- topic/codeblock "\}\) \#import "ViewController.h" \#import     @interface ViewController \(\) @property \(nonatomic, strong\) \*localView; @property \(nonatomic, strong\) \*remoteView; @end
+    \[/dita/topic/topic/topic/body/ol/li/codeblock \{"- topic/codeblock "\}\) \#import "ViewController.h" \#import <AppKit/AppKit.h\> @interface ViewController \(\) @property \(nonatomic, strong\) NSView \*localView; @property \(nonatomic, strong\) NSView \*remoteView; @end @implementation ViewController - \(void\)viewDidLoad \{ \[super viewDidLoad\]; \[self initViews\]; \[self initializeAndJoinChannel\]; \} - \(void\)viewDidLayoutSubviews \{ \[super viewDidLayoutSubviews\]; self.remoteView.frame = self.view.bounds; self.localView.frame = CGRectMake\(self.view.bounds.size.width - 90, 0, 90, 160\); \} - \(void\)initViews \{ self.remoteView = \[\[alloc\] init\]; \[self.view addSubview:self.remoteView\]; self.localView = \[\[alloc\] init\]; \[self.view addSubview:self.localView\]; \} - \(void\)initializeAndJoinChannel \{ // Pass in your App ID here self.agoraKit = \[AgoraRtcEngineKit sharedEngineWithAppId:@"Your App ID" delegate:self\]; \[self.agoraKit setChannelProfile:AgoraChannelProfileLiveBroadcasting\]; \[self.agoraKit setClientRole:AgoraClientRoleBroadcaster\]; \[self.agoraKit enableVideo\]; AgoraRtcVideoCanvas \*videoCanvas = \[\[AgoraRtcVideoCanvas alloc\] init\]; videoCanvas.uid = 0; videoCanvas.renderMode = AgoraVideoRenderModeHidden; videoCanvas.view = self.localView; \[self.agoraKit setupLocalVideo:videoCanvas\]; // Pass in your token and channel name here \[self.agoraKit joinChannelByToken:@"Your token" channelId:@"Channel name" info:nil uid:0 joinSuccess:^\(NSString \* \_Nonnull channel, NSUInteger uid, NSInteger elapsed\) \{ \}\]; \} - \(void\)rtcEngine:\(AgoraRtcEngineKit \*\)engine didJoinedOfUid:\(NSUInteger\)uid elapsed:\(NSInteger\)elapsed \{ AgoraRtcVideoCanvas \*videoCanvas = \[\[AgoraRtcVideoCanvas alloc\] init\]; videoCanvas.uid = uid; videoCanvas.renderMode = AgoraVideoRenderModeHidden; videoCanvas.view = self.remoteView; \[self.agoraKit setupRemoteVideo:videoCanvas\]; \} - \(void\)viewDidDisappear:\(BOOL\)animated \{ \[super viewDidDisappear:animated\]; \[self.agoraKit leaveChannel:nil\]; \[AgoraRtcEngineKit destroy\]; \} @end\(codeblock\]
 
-        @implementation ViewController - \(void\)viewDidLoad \{ \[super viewDidLoad\]; \[self initViews\]; \[self initializeAndJoinChannel\]; \}
-
-        - \(void\)viewDidLayoutSubviews \{ \[super viewDidLayoutSubviews\]; self.remoteView.frame = self.view.bounds; self.localView.frame = CGRectMake\(self.view.bounds.size.width - 90, 0, 90, 160\); \}
-
-        - \(void\)initViews \{ self.remoteView = \[\[alloc\] init\]; \[self.view addSubview:self.remoteView\]; self.localView = \[\[alloc\] init\]; \[self.view addSubview:self.localView\]; \}
-
-        - \(void\)initializeAndJoinChannel \{ // Pass in your App ID here self.agoraKit = \[AgoraRtcEngineKit sharedEngineWithAppId:@"Your App ID" delegate:self\]; \[self.agoraKit setChannelProfile:AgoraChannelProfileLiveBroadcasting\]; \[self.agoraKit setClientRole:AgoraClientRoleBroadcaster\]; \[self.agoraKit enableVideo\]; AgoraRtcVideoCanvas \*videoCanvas = \[\[AgoraRtcVideoCanvas alloc\] init\]; videoCanvas.uid = 0; videoCanvas.renderMode = AgoraVideoRenderModeHidden; videoCanvas.view = self.localView; \[self.agoraKit setupLocalVideo:videoCanvas\]; // Pass in your token and channel name here \[self.agoraKit joinChannelByToken:@"Your token" channelId:@"Channel name" info:nil uid:0 joinSuccess:^\(NSString \* \_Nonnull channel, NSUInteger uid, NSInteger elapsed\) \{ \}\]; \}
-
-        - \(void\)rtcEngine:\(AgoraRtcEngineKit \*\)engine didJoinedOfUid:\(NSUInteger\)uid elapsed:\(NSInteger\)elapsed \{ AgoraRtcVideoCanvas \*videoCanvas = \[\[AgoraRtcVideoCanvas alloc\] init\]; videoCanvas.uid = uid; videoCanvas.renderMode = AgoraVideoRenderModeHidden; videoCanvas.view = self.remoteView; \[self.agoraKit setupRemoteVideo:videoCanvas\]; \}
-
-        - \(void\)viewDidDisappear:\(BOOL\)animated \{ \[super viewDidDisappear:animated\]; \[self.agoraKit leaveChannel:nil\]; \[AgoraRtcEngineKit destroy\]; \} @end
-
-    \(codeblock\]
-
-
-
-
-#### Listening for audience events {#listening-for-audience-events}
-
-The Agora Video SDK does not report events of an audience member in a live streaming channel. Refer to [How can I listen for an audience joining or leaving an interactive live streaming channel](https://docs.agora.io/en/Interactive%20Broadcast/faq/audience_event) if your scenario requires so.
 
 ## Integrate earlier versions of the SDK {#integrate-earlier-versions-of-the-sdk}
 
@@ -242,23 +254,24 @@ Choose one of the following methods to integrate a version of the macOS SDK earl
 ### Method 1: Through CocoaPods {#method-1-through-cocoapods}
 
 1.  Ensure that you have installed CocoaPods before performing the following steps. See the installation guide in [Getting Started with CocoaPods](https://guides.cocoapods.org/using/getting-started.html#getting-started).
+2.  In Terminal, navigate to the root of your project folder, and run the \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)pod init\(codeph\] command to create a \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)Podfile\(codeph\] in the project folder.
+3.  Open the \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)Podfile\(codeph\], and replace all contents with the following code. Remember to replace \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)Your App\(codeph\] with the target name of your project and replace \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)version\(codeph\] with the version of the SDK that you want to integrate. For information about the SDK version, see [Release Notes](https://docs.agora.io/en/Interactive%20Broadcast/release_mac_video?platform=macOS).
 
-2.  In Terminal, navigate to the project path, and run the `pod init` command to create a `Podfile` in the project folder.
+    ```language-swift
+    # platform :macos, '10.11'
+    target 'Your App' do
+    pod 'AgoraRtcEngine_macOS', 'version'
+    end
+    ```
 
-3.  Open the `Podfile`, delete all contents, and input the following codes. Remember to replace `Your App` with the target name of your project and replace `version` with the version of the SDK that you want to integrate. For information about the SDK version, see [Release Notes](%5Brelease-notes%5D).
+4.  In Terminal, run the \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)pod install\(codeph\] command to install the SDK. When the SDK is installed successfully, you can see \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)Pod installation complete!\(codeph\] in Terminal and an \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)xcworkspace\(codeph\] file in the project folder.
+5.  Open the \[/dita/topic/topic/topic/body/ol/li/codeph \{"- topic/codeph "\}\)xcworkspace\(codeph\] file for any further steps.
 
-    \[/dita/topic/topic/topic/topic/body/ol/li/codeblock \{"- topic/codeblock "\}\) \# platform :target 'Your App' do pod '', 'version' end\(codeblock\]
-
-4.  Return to Terminal, and run the `pod install` command to install the Agora SDK. Once you successfully install the SDK, it shows `Pod installation complete!` in Terminal, and you can see an `xcworkspace` file in the project folder.
-
-5.  Open the generated `xcworkspace` file.
-
-
-#### Method 2: Through your local storage {#method-2-through-your-local-storage}
+### Method 2: Through your local storage {#method-2-through-your-local-storage}
 
 You need to use different integration methods to integrate different versions of the SDK.
 
-##### From v3.2.0 to v3.2.1 {#from-v320-to-v321}
+#### From v3.2.0 to v3.2.1 {#from-v320-to-v321}
 
 1.  Copy the `AgoraRtcKit.framework`, `Agorafdkaac.framework`, `Agoraffmpeg.framework`,and `AgoraSoundTouch.framework` dynamic libraries to the `./project_name` folder in your project \(`project_name` is an example of your project name\).
 
@@ -273,7 +286,7 @@ You need to use different integration methods to integrate different versions of
     -   According to the official requirements of Apple, the Extension of an app cannot contain the dynamic library. If you need to integrate the SDK with the dynamic library in the Extension, change the file status to **Do Not Embed**.
     -   The Agora SDK uses libc++ \(LLVM\) by default. Contact support@agora.io if you want to use libstdc++ \(GNU\). The SDK provides FAT image libraries with multi-architecture support for both 32/64-bit audio emulators and 32/64-bit audio/video real devices.
 
-##### From v3.0.1 to v3.1.2 {#from-v301-to-v312}
+#### From v3.0.1 to v3.1.2 {#from-v301-to-v312}
 
 1.  Copy the `AgoraRtcKit.framework` dynamic library to the `./project_name` folder in your project \(`project_name` is an example of your project name\).
 
@@ -286,7 +299,7 @@ You need to use different integration methods to integrate different versions of
     -   According to the official requirements of Apple, the Extension of an app cannot contain the dynamic library. If you need to integrate the SDK with the dynamic library in the Extension, change the file status to **Do Not Embed**.
     -   The Agora SDK uses libc++ \(LLVM\) by default. Contact support@agora.io if you want to use libstdc++ \(GNU\). The SDK provides FAT image libraries with multi-architecture support for both 32/64-bit audio emulators and 32/64-bit audio/video real devices.
 
-##### v3.0.0 {#v300}
+#### v3.0.0 {#v300}
 
 In v3.0.0, the SDK package contains an `AgoraRtcKit.framework` dynamic library and an `AgoraRtcKit.framework` static library. Choose which of these libraries to add according to your needs. The paths of the two libraries in the SDK package are as follows:
 
@@ -295,12 +308,12 @@ In v3.0.0, the SDK package contains an `AgoraRtcKit.framework` dynamic library a
 -   The path of the static library: `./Agora_Native_SDK_for_macOS_.../libs`.
 
 
-**Attention:** If you need to check the type of a library, run the following command: \[/dita/topic/topic/topic/body/topic/topic/body/p/note/codeph \{"- topic/codeph "\}\)file /path/xxx.framework/xxx\(codeph\] \(\[/dita/topic/topic/topic/body/topic/topic/body/p/note/codeph \{"- topic/codeph "\}\)xxx\(codeph\] refers to the library name\).
+**Attention:** If you need to check the type of a library, run the following command: \[/dita/topic/topic/topic/topic/body/p/note/codeph \{"- topic/codeph "\}\)file /path/xxx.framework/xxx\(codeph\] \(\[/dita/topic/topic/topic/topic/body/p/note/codeph \{"- topic/codeph "\}\)xxx\(codeph\] refers to the library name\).
 
--   When Terminal returns \[/dita/topic/topic/topic/body/topic/topic/body/p/ul/li/codeph \{"- topic/codeph "\}\)dynamically linked shared library\(codeph\], the library is a dynamic library.
--   When Terminal returns \[/dita/topic/topic/topic/body/topic/topic/body/p/ul/li/codeph \{"- topic/codeph "\}\)current ar archive random library\(codeph\], the library is a static library.
+-   When Terminal returns \[/dita/topic/topic/topic/topic/body/ul/li/codeph \{"- topic/codeph "\}\)dynamically linked shared library\(codeph\], the library is a dynamic library.
+-   When Terminal returns \[/dita/topic/topic/topic/topic/body/ul/li/codeph \{"- topic/codeph "\}\)current ar archive random library\(codeph\], the library is a static library.
 
-###### Integrate the dynamic library {#integrate-the-dynamic-library}
+##### Integrate the dynamic library {#integrate-the-dynamic-library}
 
 1.  Copy the `AgoraRtcKit.framework` dynamic library from the `./libs` path of the SDK package to the `./project_name` folder in your project \(`project_name` is an example of your project name\).
 
@@ -313,7 +326,7 @@ In v3.0.0, the SDK package contains an `AgoraRtcKit.framework` dynamic library a
     -   According to the official requirements of Apple, the Extension of an app cannot contain the dynamic library. If you need to integrate the SDK with the dynamic library in the Extension, change the file status to **Do Not Embed**.
     -   The Agora SDK uses libc++ \(LLVM\) by default. Contact support@agora.io if you want to use libstdc++ \(GNU\). The SDK provides FAT image libraries with multi-architecture support for both 32/64-bit audio emulators and 32/64-bit audio/video real devices.
 
-###### Integrate the static library {#integrate-the-static-library}
+##### Integrate the static library {#integrate-the-static-library}
 
 1.  Copy the `AgoraRtcKit.framework` static library from the `./libs` path of the SDK package to the `./project_name` folder in your project \(`project_name` is an example of your project name\).
 
@@ -340,7 +353,7 @@ In v3.0.0, the SDK package contains an `AgoraRtcKit.framework` dynamic library a
     **Attention:** The Agora SDK uses libc++ \(LLVM\) by default. Contact [support@agora.io](mailto:support@agora.io) if you want to use libstdc++ \(GNU\). The SDK provides FAT image libraries with multi-architecture support for both 32/64-bit audio emulators and 32/64-bit audio/video real devices.
 
 
-###### Earlier than v3.0.0 {#earlier-than-v300}
+#### Earlier than v3.0.0 {#earlier-than-v300}
 
 1.  Copy the `AgoraRtcEngineKit.framework` static library from the `./libs` path of the SDK package to the `./project_name` folder in your project \(`project_name` is an example of your project name\).
 

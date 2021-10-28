@@ -11,30 +11,24 @@ For new projects, in **Xcode**, follow the steps to create the environment neces
 
 2. Integrate the [sdk-name] into your project:
 
-   <p props="ios">Go to <b>File</b> > <b>Swift Packages</b> > <b>Add Package Dependencies...</b>, and paste the following URL:
+   <p props="ios">Go to <b>File</b> &gt; <b>Swift Packages</b> &gt; <b>Add Package Dependencies...</b>, and paste the following URL:
    <codeph>https://github.com/AgoraIO/AgoraRtcEngine_iOS</codeph>. In <b>Choose Package Options</b>, specify the <ph keyref="sdk-name"/> version you want to use. You need to fill in x.y.z for version x.y.z and x.y.z-r.a for version x.y.z.a. For example, fill in 3.5.0 for version 3.5.0 and 3.5.0-r.2 for version 3.5.0.2.
    </p>
    <note props="ios" type="attention">
    <ul>
    <li>For the <ph keyref="sdk-name"/>, Agora provides Swift Packages for 3.4.3 or later versions.</li>
-   <li>If you have issues installing this Swift Package, try going to <b>File</b> > <b>Swift Packages</b> > <b>Reset Package Caches</b>.</li>
-   <li>For more integration methods, see <xref href="start-see-also-mac.md#othermethods">Other approaches to integrate the SDK</xref>.</li>
+   <li>If you have issues installing this Swift Package, try going to <b>File</b> &gt; <b>Swift Packages</b> &gt; <b>Reset Package Caches</b>.</li>
+   <li>For more integration methods, see <xref href="get-started.md#othermethods">Other approaches to integrate the SDK</xref>.</li>
    </ul>
    </note>
    
    <ol props="mac">
    <li>Install CocoaPods if you have not. See <xref href="https://guides.cocoapods.org/using/getting-started.html#getting-started" scope="external" format="html">Getting Started with CocoaPods</xref>.</li>
    <li>In Terminal, navigate to the root of your project folder, and run the <codeph>pod init</codeph> command to create a <codeph>Podfile</codeph> in the project folder.</li>
-   <li>Open the <codeph>Podfile</codeph>, and replace all contents with the following code. Remember to replace <codeph>Your App</codeph> with the target name of your project.</li>
-   <codeblock>
-   # platform :macos, '10.11'
-   target 'Your App' do
-       pod 'AgoraRtcEngine_macOS'
-   end
-   </codeblock>
-   <note props="mac" type="attention">For more integration methods, see <xref href="start-see-also-mac.md#othermethods">Other approaches to integrate the SDK</xref>.</note>
+   <li>Open the <codeph>Podfile</codeph>, and replace all contents with the following code. Remember to replace <codeph>Your App</codeph> with the target name of your project and replace <codeph>version</codeph> with the version of the SDK that you want to integrate. For information about the SDK version, see <xref keyref="release-notes-ios" props="ios"></xref><xref keyref="release-notes-mac" props="mac"></xref>.<p props="mac" conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/cocoapods-mac"></p></li>
    <li>In Terminal, run the <codeph>pod install</codeph> command to install the SDK. When the SDK is installed successfully, you can see  <codeph>Pod installation complete!</codeph> in Terminal and an <codeph>xcworkspace</codeph> file in the project folder.</li>
    <li>Open the <codeph>xcworkspace</codeph> file for any further steps.</li>
+   <note props="mac" type="attention">For more integration methods, see <xref href="get-started.md#othermethods">Other approaches to integrate the SDK</xref>.</note>
    </ol>
 
 
@@ -48,9 +42,9 @@ For new projects, in **Xcode**, follow the steps to create the environment neces
    - Privacy - Microphone Usage Description
    - Privacy - Camera Usage Description
    
-   <p props="mac">Navigate to <b>TARGETS > Project Name > Signing & Capabilities</b>, and add the following permissions in <b>App Sandbox</b> and <b>Hardened Runtime</b>:
+   <p props="mac">Navigate to <b>TARGETS &gt; Project Name &gt; Signing & Capabilities</b>, and add the following permissions in <b>App Sandbox</b> and <b>Hardened Runtime</b>:
    <ul props="mac">
-   <li>App Sandbox > Network: Incoming Connections (Server) and Outgoing Connections (Client)</li>
-   <li>App Sandbox > Hardware: Camera and Audio Input</li>
-   <li>Hardened Runtime > Resource Access: Camera and Audio Input</li>
+   <li>App Sandbox &gt; Network: Incoming Connections (Server) and Outgoing Connections (Client)</li>
+   <li>App Sandbox &gt; Hardware: Camera and Audio Input</li>
+   <li>Hardened Runtime &gt; Resource Access: Camera and Audio Input</li>
    </p>

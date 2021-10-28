@@ -65,12 +65,12 @@ To implement this logic, take the following steps:
 
 1. Import the Agora kit and add the `agoraKit` variable. Modify your  `ViewController.swift` as follows:
    
-   <p><codeblock outputclass="language-swift">import <ph keyref="ui-lib"/>
+   <p><codeblock outputclass="language-swift">import <ph keyref="ui-lib"></ph>
    // Add this line to import the Agora kit 
    import AgoraRtcKit
-   class ViewController: <ph keyref="ui-video"/>Controller {
-      var localView: <ph keyref="ui-video"/>!
-      var remoteView: <ph keyref="ui-video"/>!
+   class ViewController: <ph keyref="ui-view"></ph>Controller {
+      var localView: <ph keyref="ui-view"></ph>!
+      var remoteView: <ph keyref="ui-view"></ph>!
       // Add this linke to add the agoraKit variable
       var agoraKit: AgoraRtcEngineKit?
    }
@@ -85,32 +85,15 @@ To implement this logic, take the following steps:
 
    In `ViewController.swift`, add the following lines after the `initView` function, and fill in your App ID, temporary token, and channel name:
 
-   <p><codeblock outputclass="language-swift">func initializeAndJoinChannel() {
-      // Pass in your App ID here
-      agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: "Your App ID", delegate: self)
-      <ph props="live">// For a live streaming scenario, set the channel profile as liveBroadcasting.
-      agoraKit?.setChannelProfile(.liveBroadcasting)
-      // Set the client role as broadcaster or audience.
-      agoraKit?.setClientRole(.broadcaster)</ph>
-      // Video is disabled by default. You need to call enableVideo to start a video stream.
-      agoraKit?.enableVideo()
-           // Create a videoCanvas to render the local video
-           let videoCanvas = AgoraRtcVideoCanvas()
-           videoCanvas.uid = 0
-           videoCanvas.renderMode = .hidden
-           videoCanvas.view = localView
-           agoraKit?.setupLocalVideo(videoCanvas)
-      // Join the channel with a token. Pass in your token and channel name here
-      agoraKit?.joinChannel(byToken: "Your token", channelId: "Channel name", info: nil, uid: 0, joinSuccess: { (channel, uid, elapsed) in
-      })
-   }</codeblock></p>
+   <p props="video" conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/init-video"/>
+   <p props="live" conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/init-live"/>
    
 3. Add the remote interface when a remote [host] joins the channel.
 
    In `ViewController.swift`, add the following lines after the `ViewController` class:
 
    <p><codeblock outputclass="language-swift">extension ViewController: AgoraRtcEngineDelegate {
-        // This callback is triggered when a remote [host] joins the channel
+        // This callback is triggered when a remote <ph keyref="host"></ph> joins the channel
         func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
             let videoCanvas = AgoraRtcVideoCanvas()
             videoCanvas.uid = uid

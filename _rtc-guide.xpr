@@ -10,10 +10,10 @@
                         <Boolean>true</Boolean>
                     </entry>
                     <entry>
-<<<<<<< HEAD
                         <String>keys.context</String>
                         <String>${pdu}/RTC/_Live-Streaming-Premium.ditamap</String>
-=======
+                    </entry>
+                    <entry>
                         <String>scenario.associations</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
@@ -37,7 +37,6 @@
                                 </field>
                             </scenarioAssociation>
                         </scenarioAssociation-array>
->>>>>>> main
                     </entry>
                     <entry>
                         <String>scenarios</String>

@@ -107,4 +107,18 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="release-notes-ios" href="https://docs.agora.io/en/Video/release_ios_video?platform=ios" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Release Notes</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="release-notes-mac" href="https://docs.agora.io/en/Video/release_mac_video?platform=macOS" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Release Notes</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
 </map>

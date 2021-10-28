@@ -5,24 +5,13 @@ Choose one of the following methods to integrate a version of the [platform] SDK
 
 ## Method 1: Through CocoaPods
 
-1. Ensure that you have installed CocoaPods before performing the following steps. See the installation guide in [Getting Started with CocoaPods](https://guides.cocoapods.org/using/getting-started.html#getting-started).
-
-2. In Terminal, navigate to the project path, and run the `pod init` command to create a `Podfile` in the project folder.
-
-3. Open the `Podfile`, delete all contents, and input the following codes. Remember to replace `Your App` with the target name of your project and replace `version` with the version of the SDK that you want to integrate. For information about the SDK version, see <ph props="video" keyref="release-notes-video-apple"/><ph props="live" keyref="release-notes-live-apple"/>.
-
-   <p>
-   <codeblock>
-   # platform :<ph keyref="cocoapods-platform"/>
-   target 'Your App' do
-       pod '<ph keyref="cocoapods-library"/>', 'version'
-   end
-   </codeblock>
-   </p>
-
-4. Return to Terminal, and run the `pod install` command to install the Agora SDK. Once you successfully install the SDK, it shows `Pod installation complete!` in Terminal, and you can see an `xcworkspace` file in the project folder.
-
-5. Open the generated `xcworkspace` file.
+<ol>
+<li>Ensure that you have installed CocoaPods before performing the following steps. See the installation guide in <xref href="https://guides.cocoapods.org/using/getting-started.html#getting-started" scope="external" format="html">Getting Started with CocoaPods</xref>.</li>
+<li>In Terminal, navigate to the root of your project folder, and run the <codeph>pod init</codeph> command to create a <codeph>Podfile</codeph> in the project folder.</li>
+<li>Open the <codeph>Podfile</codeph>, and replace all contents with the following code. Remember to replace <codeph>Your App</codeph> with the target name of your project and replace <codeph>version</codeph> with the version of the SDK that you want to integrate. For information about the SDK version, see <xref keyref="release-notes-ios" props="ios"></xref><xref keyref="release-notes-mac" props="mac"></xref>.<p props="mac" conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/cocoapods-mac"></p></li>
+<li>In Terminal, run the <codeph>pod install</codeph> command to install the SDK. When the SDK is installed successfully, you can see <codeph>Pod installation complete!</codeph> in Terminal and an <codeph>xcworkspace</codeph> file in the project folder.</li>
+<li>Open the <codeph>xcworkspace</codeph> file for any further steps.</li>
+</ol>
 
 ## Method 2: Through your local storage
 
@@ -32,9 +21,9 @@ You need to use different integration methods to integrate different versions of
 
 1. Copy the `AgoraRtcKit.framework`, `Agorafdkaac.framework`, <ph props="video live lives">`Agoraffmpeg.framework`, </ph>and `AgoraSoundTouch.framework` dynamic libraries to the `./project_name` folder in your project (`project_name` is an example of your project name).
 
-2. Open Xcode, and navigate to **TARGETS > Project Name > General > Frameworks, Libraries, and Embedded Content**.
+2. Open Xcode, and navigate to **TARGETS &gt; Project Name &gt; General &gt; Frameworks, Libraries, and Embedded Content**.
 
-3. Click **+** > **Add Other…** > **Add Files** to add the `AgoraRtcKit.framework`, `Agorafdkaac.framework`, <ph props="video live lives">`Agoraffmpeg.framework`, </ph>and `AgoraSoundTouch.framework` dynamic libraries. Ensure that the **Embed** attribute of these dynamic libraries is **Embed & Sign**.
+3. Click **+** &gt; **Add Other…** &gt; **Add Files** to add the `AgoraRtcKit.framework`, `Agorafdkaac.framework`, <ph props="video live lives">`Agoraffmpeg.framework`, </ph>and `AgoraSoundTouch.framework` dynamic libraries. Ensure that the **Embed** attribute of these dynamic libraries is **Embed & Sign**.
 
    Once these dynamic libraries are added, the project automatically links to other system libraries.
 
@@ -48,8 +37,8 @@ You need to use different integration methods to integrate different versions of
 ### From v3.0.1 to v3.1.2
 
 1. Copy the `AgoraRtcKit.framework` dynamic library to the `./project_name` folder in your project (`project_name` is an example of your project name).
-2. Open Xcode, and navigate to **TARGETS > Project Name > General > Frameworks, Libraries, and Embedded Content**.
-3. Click **+ > Add Other… > Add Files** to add the `AgoraRtcKit.framework` dynamic library. Ensure that the **Embed** attribute of the dynamic library is **Embed & Sign**. Once the dynamic library is added, the project automatically links to other system libraries.
+2. Open Xcode, and navigate to **TARGETS &gt; Project Name &gt; General &gt; Frameworks, Libraries, and Embedded Content**.
+3. Click **+ &gt; Add Other… &gt; Add Files** to add the `AgoraRtcKit.framework` dynamic library. Ensure that the **Embed** attribute of the dynamic library is **Embed & Sign**. Once the dynamic library is added, the project automatically links to other system libraries.
  
    <note type="attention">
    <ul>
@@ -78,8 +67,8 @@ The paths of the two libraries in the SDK package are as follows:
 #### Integrate the dynamic library
 
 1. Copy the `AgoraRtcKit.framework` dynamic library from the `./libs` path of the SDK package to the `./project_name` folder in your project (`project_name` is an example of your project name).
-2. Open Xcode, and navigate to **TARGETS > Project Name > General > Frameworks, Libraries, and Embedded Content**.
-3. Click **+ > Add Other… > Add Files** to add the `AgoraRtcKit.framework` dynamic library. Ensure that the **Embed** attribute of the dynamic library is **Embed & Sign**. 
+2. Open Xcode, and navigate to **TARGETS &gt; Project Name &gt; General &gt; Frameworks, Libraries, and Embedded Content**.
+3. Click **+ &gt; Add Other… &gt; Add Files** to add the `AgoraRtcKit.framework` dynamic library. Ensure that the **Embed** attribute of the dynamic library is **Embed & Sign**. 
  Once the dynamic library is added, the project automatically links to other system libraries.
  
    <note type="attention">
@@ -92,7 +81,7 @@ The paths of the two libraries in the SDK package are as follows:
 #### Integrate the static library
 
 1. Copy the `AgoraRtcKit.framework` static library from the `./libs` path of the SDK package to the `./project_name` folder in your project (`project_name` is an example of your project name).
-2. Open **Xcode**, navigate to **TARGETS > Project Name > Build Phases > Link Binary with Libraries**, and click **+** to add the following libraries. To add the `AgoraRtcKit.framework` static library, you need to click **+**, and then click **Add Other...**.
+2. Open **Xcode**, navigate to **TARGETS &gt; Project Name &gt; Build Phases &gt; Link Binary with Libraries**, and click **+** to add the following libraries. To add the `AgoraRtcKit.framework` static library, you need to click **+**, and then click **Add Other...**.
 
    | SDK | Library |
    | ---------------- | ---------------- |
@@ -104,7 +93,7 @@ The paths of the two libraries in the SDK package are as follows:
 ### Earlier than v3.0.0
 
 1. Copy the `AgoraRtcEngineKit.framework` static library from the `./libs` path of the SDK package to the `./project_name` folder in your project (`project_name` is an example of your project name).
-2. Open **Xcode**, navigate to **TARGETS > Project Name > Build Phases > Link Binary with Libraries**, and click **+** to add the following libraries. To add the `AgoraRtcEngineKit.framework` static library, you need to click **+**, and then click **Add Other...**.
+2. Open **Xcode**, navigate to **TARGETS &gt; Project Name &gt; Build Phases &gt; Link Binary with Libraries**, and click **+** to add the following libraries. To add the `AgoraRtcEngineKit.framework` static library, you need to click **+**, and then click **Add Other...**.
 
    | SDK | Library |
    | ---------------- | ---------------- |

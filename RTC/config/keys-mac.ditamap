@@ -37,20 +37,6 @@
             </keywords>
         </topicmeta>
     </keydef>
-    <keydef keys="cocoapods-library">
-        <topicmeta>
-            <keywords>
-                <keyword>AgoraRtcEngine_macOS</keyword>
-            </keywords>
-        </topicmeta>
-    </keydef>
-    <keydef keys="cocoapods-platform">
-        <topicmeta>
-            <keywords>
-                <keyword>macos, '10.11'</keyword>
-            </keywords>
-        </topicmeta>
-    </keydef>
     <keydef keys="ui-library">
         <topicmeta>
             <keywords>
@@ -65,13 +51,11 @@
             </keywords>
         </topicmeta>
     </keydef>
-    <keydef keys="ui-vide">
+    <keydef keys="ui-view">
         <topicmeta>
             <keywords>
                 <keyword>NSView</keyword>
             </keywords>
         </topicmeta>
     </keydef>
-    <keydef keys="release-notes-video-apple" href="https://docs.agora.io/en/Video/release_mac_video?platform=macOS" scope="external" format="html"/>
-    <keydef keys="release-notes-live-apple" href="https://docs.agora.io/en/Interactive%20Broadcast/release_mac_video?platform=macOS" scope="external" format="html"/>
 </map>
