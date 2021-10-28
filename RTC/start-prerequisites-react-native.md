@@ -27,7 +27,7 @@ For more information, see [Setting up the development environment](https://react
 ## Other prerequisites
 
 <ul>
-<li>A valid <xref href="https://console.agora.io/" scope="external" format="html">Agora account</xref>.</li>
-<li>An active Agora project with an App ID and a temporary token. For details, see <xref href="https://docs.agora.io/en/Agora%20Platform/get_appid_token" scope="external" format="html">Get Started with Agora</xref>.</li>
-<li>A computer with access to the internet. If your network has a firewall, follow the instructions in <xref href="https://docs.agora.io/en/Agora%20Platform/firewall" format="html" scope="external">Firewall Requirements</xref>.</li>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/account"/></li>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/appid-token"/></li>
+<li><p conref="conref/agora-prerequisites.dita#agora-pre/internet"/></li>
 </ul>

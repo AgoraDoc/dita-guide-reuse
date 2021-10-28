@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://www.dita-ot.org/project">
+  <context name="Live Streaming Cocos2d-x-Android" id="live-cocos2d-x-android">
+    <input href="../_Live-Streaming-Premium.ditamap"/>
+    <profile>
+      <ditaval href="filter-cocos2d-x-android.ditaval"/>
+    </profile>
+  </context>
+  <deliverable name="Markdown">
+    <context idref="live-cocos2d-x-android"/>
+    <output href="../../out/markdown/live-streaming/cocos2d-x-android/"/>
+    <publication transtype="markdown">
+      <param name="clean.temp" value="yes"/>
+      <param name="force-unique" value="true"/>
+    </publication>
+  </deliverable>
+  <deliverable name="HTML">
+    <context idref="live-cocos2d-x-android"/>
+    <output href="../../out/html/live-streaming/cocos2d-x-android/"/>
+    <publication transtype="html5">
+      <param name="nav-toc" value="full"/>
+      <param name="clean.temp" value="yes"/>
+      <param name="force-unique" value="true"/>
+    </publication>
+  </deliverable>
+</project>

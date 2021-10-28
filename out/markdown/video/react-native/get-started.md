@@ -14,7 +14,7 @@ To start a video call, you implement the following steps in your app:
 
 1.  Retrieve a token
 2.  Join a channel
-3.  Publish and subscribe to in the channel
+3.  Publish and subscribe to audio and video in the channel.
 
 For an app client to join a channel, you need the following information:
 
@@ -28,14 +28,6 @@ For an app client to join a channel, you need the following information:
 
 
 ## Prerequisites {#prerequisites}
-
-Before proceeding, ensure that your development environment meets the following requirements:
-
--   A valid [Agora account](https://console.agora.io/).
--   An active Agora project with an App ID and a temporary token. For details, see [Get Started with Agora](https://docs.agora.io/en/Agora%20Platform/get_appid_token).
--   A computer with access to the internet. If your network has a firewall, follow the instructions in [Firewall Requirements](https://docs.agora.io/en/Agora%20Platform/firewall).
-
-## Prerequisites {#unique_417001628}
 
 Before proceeding, ensure that your development environment meets all the requirements necessary.
 
@@ -76,8 +68,11 @@ For more information, see [Setting up the development environment](https://react
 ### Other prerequisites {#other-prerequisites}
 
 -   A valid [Agora account](https://console.agora.io/).
+
 -   An active Agora project with an App ID and a temporary token. For details, see [Get Started with Agora](https://docs.agora.io/en/Agora%20Platform/get_appid_token).
+
 -   A computer with access to the internet. If your network has a firewall, follow the instructions in [Firewall Requirements](https://docs.agora.io/en/Agora%20Platform/firewall).
+
 
 ## Project setup {#project-setup}
 
