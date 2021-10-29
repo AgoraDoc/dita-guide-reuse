@@ -88,4 +88,20 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="start-sample-project-windows" href="https://github.com/AgoraIO/Basic-Video-Call/tree/master/One-to-One-Video/Agora-Windows-Tutorial-1to1"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora-Windows-Tutorial-1to1</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-windows-mfc" href="https://github.com/AgoraIO/Basic-Video-Call/tree/master/Group-Video/OpenVideoCall-Windows-MFC"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>GroupVideoCall-Windows-MFC</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
 </map>
