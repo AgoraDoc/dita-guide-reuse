@@ -58,4 +58,18 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="downloads" href="https://docs.agora.io/en/All/downloads?platform=macOS" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>SDK Downloads</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="recommended-method">
+        <topicmeta>
+            <keywords>
+                <keyword>macOS through CocoaPods</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
 </map>

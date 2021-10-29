@@ -13,28 +13,15 @@ Agora provides an open source sample project <xref keyref="start-sample-project-
 
 ## Other approaches to integrate the SDK {#othermethods}
 
-In addition to integrating the [sdk-name] for <ph props="ios">iOS through Swift Package</ph><ph props="mac">macOS through CocoaPods</ph>, you can also import the SDK into your project 
+In addition to integrating the [sdk-name] for <ph keyref="recommended-method"></ph>, you can also import the SDK into your project 
 <ph props="ios">through CocoaPods or </ph>by manually copying the SDK files.
 
-<p props="ios">
-<b>Automatically integrate the SDK with CocoaPods</b>
-<ol props="ios">
-<li>Install CocoaPods if you have not. See <xref href="https://guides.cocoapods.org/using/getting-started.html#getting-started" scope="external" format="html">Getting Started with CocoaPods</xref>.</li>
-<li>In Terminal, navigate to the root of your project folder, and run the <codeph>pod init</codeph> command to create a <codeph>Podfile</codeph> in the project folder.</li>
-<li>Open the <codeph>Podfile</codeph>, and replace all contents with the following code. Remember to replace <codeph>Your App</codeph> with the target name of your project and replace <codeph>version</codeph> with the version of the SDK that you want to integrate. For information about the SDK version, see <xref keyref="release-notes-ios" props="ios"></xref>.
-<p props="video live" conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/video-cocoapods-ios"></p>
-<p props="audio" conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/audio-cocoapods-ios"></p>
-</li>
-<li>In Terminal, run the <codeph>pod install</codeph> command to install the SDK. When the SDK is installed successfully, you can see <codeph>Pod installation complete!</codeph> in Terminal and an <codeph>xcworkspace</codeph> file in the project folder.</li>
-<li>Open the <codeph>xcworkspace</codeph> file for any further steps.</li>
-<ol>
-<p>
+<b props="ios">Automatically integrate the SDK with CocoaPods</b>
+<p props="ios" conref="conref/integrate-the-sdk-apple.dita#integrate-the-sdk/cocoapods-ios"></p>
 
 <b>Manually copy the SDK files</b>
 
-1. Go to <xref href="https://docs.agora.io/en/All/downloads?platform=iOS" scope="external" format="html" props="ios">SDK Downloads</xref>
-   <xref href="https://docs.agora.io/en/All/downloads?platform=macOS" scope="external" format="html" props="mac">SDK Downloads</xref>, 
-   download the latest version of the [sdk-name], and extract the files from the downloaded SDK package.
+1. Go to <xref keyref="downloads">SDK Downloads</ph>, download the latest version of the [sdk-name], and extract the files from the downloaded SDK package.
 
 2. From the `libs` folder of the downloaded SDK package, copy the files or subfolders you need to the root of your project folder.
    

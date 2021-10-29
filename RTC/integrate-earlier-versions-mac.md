@@ -5,13 +5,7 @@ Choose one of the following methods to integrate a version of the [platform] SDK
 
 ## Method 1: Through CocoaPods
 
-<ol>
-<li>Ensure that you have installed CocoaPods before performing the following steps. See the installation guide in <xref href="https://guides.cocoapods.org/using/getting-started.html#getting-started" scope="external" format="html">Getting Started with CocoaPods</xref>.</li>
-<li>In Terminal, navigate to the root of your project folder, and run the <codeph>pod init</codeph> command to create a <codeph>Podfile</codeph> in the project folder.</li>
-<li>Open the <codeph>Podfile</codeph>, and replace all contents with the following code. Remember to replace <codeph>Your App</codeph> with the target name of your project and replace <codeph>version</codeph> with the version of the SDK that you want to integrate. For information about the SDK version, see <xref keyref="release-notes-ios" props="ios"></xref><xref keyref="release-notes-mac" props="mac"></xref>.<p props="mac" conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/cocoapods-mac"></p></li>
-<li>In Terminal, run the <codeph>pod install</codeph> command to install the SDK. When the SDK is installed successfully, you can see <codeph>Pod installation complete!</codeph> in Terminal and an <codeph>xcworkspace</codeph> file in the project folder.</li>
-<li>Open the <codeph>xcworkspace</codeph> file for any further steps.</li>
-</ol>
+<p conref="conref/integrate-the-sdk-apple.dita#integrate-the-sdk/cocoapods-mac"></p>
 
 ## Method 2: Through your local storage
 
@@ -56,10 +50,10 @@ The paths of the two libraries in the SDK package are as follows:
 - The path of the static library: `./Agora_Native_SDK_for_macOS_.../libs`.
 
 <p>
-<note type="attention">If you need to check the type of a library, run the following command: <codeph>file /path/xxx.framework/xxx</codeph> (<codeph>xxx</codeph> refers to the library name).
+<note type="attention">If you need to check the type of a library, run the following command: <code>file /path/xxx.framework/xxx</code> (<code>xxx</code> refers to the library name).
 <ul>
-<li>When Terminal returns <codeph>dynamically linked shared library</codeph>, the library is a dynamic library.</li>
-<li>When Terminal returns <codeph>current ar archive random library</codeph>, the library is a static library.</li>
+<li>When Terminal returns <code>dynamically linked shared library</code>, the library is a dynamic library.</li>
+<li>When Terminal returns <code>current ar archive random library</code>, the library is a static library.</li>
 </ul>
 </note>
 </p>
