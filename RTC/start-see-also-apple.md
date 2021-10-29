@@ -2,10 +2,10 @@
 
 This section provides additional information for your reference:
 
-<topic id="audience-event" props="live lives">
+<section id="audience-event" props="live lives">
 <title>Listening for audience events</title>
-<section id="detailed_desc"><p>The <ph keyref="sdk-name"></ph> does not report events of an audience member in a live streaming channel. Refer to <xref href="https://docs.agora.io/en/Interactive%20Broadcast/faq/audience_event" scope="external" format="html">How can I listen for an audience joining or leaving an interactive live streaming channel</xref> if your scenario requires so.</p></section>
-</topic>
+<p>The <ph keyref="sdk-name"></ph> does not report events of an audience member in a live streaming channel. Refer to <xref href="https://docs.agora.io/en/Interactive%20Broadcast/faq/audience_event" scope="external" format="html">How can I listen for an audience joining or leaving an interactive live streaming channel</xref> if your scenario requires so.</p>
+</section>
 
 ## Sample project
 
@@ -38,7 +38,7 @@ In addition to integrating the [sdk-name] for <ph props="ios">iOS through Swift 
 
 2. From the `libs` folder of the downloaded SDK package, copy the files or subfolders you need to the root of your project folder.
    
-   <note type="attention">Certain files and subfolders under the <codeph>libs</codeph> folder are optional. See <xref href="https://docs.agora.io/en/Voice/faq/reduce_app_size_rtc?platform=iOS#extension_libraries" scope="external" format="html">extension libraries</xref> for details.</note>
+   <note type="attention">Certain files and subfolders under the <code>libs</code> folder are optional. See <xref href="https://docs.agora.io/en/Voice/faq/reduce_app_size_rtc?platform=iOS#extension_libraries" scope="external" format="html">extension libraries</xref> for details.</note>
    
 3. In Xcode, [link your target to the frameworks or libraries](https://help.apple.com/xcode/mac/current/#/dev51a648b07) you have copied. Be sure to choose **Embed & Sign** from the pop-up menu in the Embed column.
 
@@ -55,77 +55,9 @@ To implement [product-name] in your app using Objective-C:
 
 1. Replace the contents in the  `ViewController.h` file with the following:
 
-   <p props="ios">
-   <codeblock>
-   #import &lt;UIKit/UIKit.h&gt;
-   #import &lt;AgoraRtcKit/AgoraRtcEngineKit.h&gt;
-   @interface ViewController : UIViewController &lt;AgoraRtcEngineDelegate&gt;
-   @property (strong, nonatomic) AgoraRtcEngineKit *agoraKit;
-   @end
-   </codeblock>
-   </p>
-   <p props="mac">
-   <codeblock>
-   #import &lt;AppKit/AppKit.h&gt;
-   #import &ltAgoraRtcKit/AgoraRtcEngineKit.h&gt
-   @interface ViewController : NSViewController &ltAgoraRtcEngineDelegate&gt
-   @property (strong, nonatomic) AgoraRtcEngineKit *agoraKit;
-   @end
-   </codeblock>
-   </p>
+   <p conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/oc-1"/>
 
 2. Replace the contents in the `ViewController.m` file with the following:
 
-   <codeblock>
-   #import "ViewController.h"
-   #import <ph keyref="ui-library"></ph>
-   @interface ViewController ()
-   @property (nonatomic, strong) <ph keyref="ui-view"></ph> *localView;
-   @property (nonatomic, strong) <ph keyref="ui-view"></ph> *remoteView;
-   @end
-   @implementation ViewController
-   - (void)viewDidLoad {
-       [super viewDidLoad];
-       [self initViews];
-       [self initializeAndJoinChannel];
-   }
-   - (void)viewDidLayoutSubviews {
-       [super viewDidLayoutSubviews];
-       self.remoteView.frame = self.view.bounds;
-       self.localView.frame = CGRectMake(self.view.bounds.size.width - 90, 0, 90, 160);
-   }
-   - (void)initViews {
-       self.remoteView = [[<ph keyref="ui-view"/> alloc] init];
-       [self.view addSubview:self.remoteView];
-       self.localView = [[<ph keyref="ui-view"/> alloc] init];
-       [self.view addSubview:self.localView];
-   }
-   - (void)initializeAndJoinChannel {
-       // Pass in your App ID here
-       self.agoraKit = [AgoraRtcEngineKit sharedEngineWithAppId:@"Your App ID" delegate:self];
-       <ph props="live">[self.agoraKit setChannelProfile:AgoraChannelProfileLiveBroadcasting];
-       [self.agoraKit setClientRole:AgoraClientRoleBroadcaster];</ph>
-       [self.agoraKit enableVideo];
-       AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
-       videoCanvas.uid = 0;
-       videoCanvas.renderMode = AgoraVideoRenderModeHidden;
-       videoCanvas.view = self.localView;
-       [self.agoraKit setupLocalVideo:videoCanvas];
-       // Pass in your token and channel name here
-       [self.agoraKit joinChannelByToken:@"Your token" channelId:@"Channel name" info:nil uid:0 joinSuccess:^(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed) {
-       }];
-   }
-   - (void)rtcEngine:(AgoraRtcEngineKit *)engine didJoinedOfUid:(NSUInteger)uid elapsed:(NSInteger)elapsed {
-       AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
-       videoCanvas.uid = uid;
-       videoCanvas.renderMode = AgoraVideoRenderModeHidden;
-       videoCanvas.view = self.remoteView;
-       [self.agoraKit setupRemoteVideo:videoCanvas];
-   }
-   - (void)viewDidDisappear:(BOOL)animated {
-     [super viewDidDisappear:animated];
-     [self.agoraKit leaveChannel:nil];
-     [AgoraRtcEngineKit destroy];
-   }
-   @end
-   </codeblock>
+   <p conref="conref/get-started-sample-code-apple.dita#get-started-sample-code/oc-2"/>
+ 

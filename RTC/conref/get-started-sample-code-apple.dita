@@ -74,5 +74,83 @@ pod 'AgoraRtcEngine_macOS', 'version'
 end</codeblock>
             </p>
         </section>
+        <section>
+            <title>Obejctive-C</title>
+            <p id="oc-1">
+                   <codeblock props="ios" outputclass="objc">#import &lt;UIKit/UIKit.h>
+
+#import &lt;AgoraRtcKit/AgoraRtcEngineKit.h>
+
+@interface ViewController : UIViewController &lt;AgoraRtcEngineDelegate>
+@property (strong, nonatomic) AgoraRtcEngineKit *agoraKit;
+
+@end</codeblock>
+
+   <codeblock props="mac" outputclass="objc">#import &lt;AppKit/AppKit.h>
+
+#import &lt;AgoraRtcKit/AgoraRtcEngineKit.h>
+
+@interface ViewController : NSViewController &lt;AgoraRtcEngineDelegate>
+@property (strong, nonatomic) AgoraRtcEngineKit *agoraKit;
+
+@end</codeblock>
+            </p>
+            <p id="oc-2">
+                   <codeblock outputclass="language-objectivec">#import "ViewController.h"
+<ph props="ios">#import &amp;lt;UIKit/UIKit.h></ph>
+<ph props="mac">#import &amp;lt;AppKit/AppKit.h></ph>
+@interface ViewController ()
+<ph props="ios">@property (nonatomic, strong) UIView *localView;
+@property (nonatomic, strong) UIView *remoteView;</ph>
+<ph props="mac">@property (nonatomic, strong) NSView *localView;
+@property (nonatomic, strong) NSView *remoteView;</ph>
+@end
+@implementation ViewController
+- (void)viewDidLoad {
+   [super viewDidLoad];
+   [self initViews];
+   [self initializeAndJoinChannel];
+}
+- (void)viewDidLayoutSubviews {
+   [super viewDidLayoutSubviews];
+   self.remoteView.frame = self.view.bounds;
+   self.localView.frame = CGRectMake(self.view.bounds.size.width - 90, 0, 90, 160);
+}
+- (void)initViews {
+   self.remoteView = [[<ph keyref="ui-view"/> alloc] init];
+   [self.view addSubview:self.remoteView];
+   self.localView = [[<ph keyref="ui-view"/> alloc] init];
+   [self.view addSubview:self.localView];
+}
+- (void)initializeAndJoinChannel {
+   // Pass in your App ID here
+   self.agoraKit = [AgoraRtcEngineKit sharedEngineWithAppId:@"Your App ID" delegate:self];
+   <ph props="live">[self.agoraKit setChannelProfile:AgoraChannelProfileLiveBroadcasting];
+   [self.agoraKit setClientRole:AgoraClientRoleBroadcaster];</ph>
+   [self.agoraKit enableVideo];
+   AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
+   videoCanvas.uid = 0;
+   videoCanvas.renderMode = AgoraVideoRenderModeHidden;
+   videoCanvas.view = self.localView;
+   [self.agoraKit setupLocalVideo:videoCanvas];
+   // Pass in your token and channel name here
+   [self.agoraKit joinChannelByToken:@"Your token" channelId:@"Channel name" info:nil uid:0 joinSuccess:^(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed) {
+   }];
+}
+- (void)rtcEngine:(AgoraRtcEngineKit *)engine didJoinedOfUid:(NSUInteger)uid elapsed:(NSInteger)elapsed {
+   AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
+   videoCanvas.uid = uid;
+   videoCanvas.renderMode = AgoraVideoRenderModeHidden;
+   videoCanvas.view = self.remoteView;
+   [self.agoraKit setupRemoteVideo:videoCanvas];
+}
+- (void)viewDidDisappear:(BOOL)animated {
+ [super viewDidDisappear:animated];
+ [self.agoraKit leaveChannel:nil];
+ [AgoraRtcEngineKit destroy];
+}
+@end</codeblock>
+            </p>
+        </section>
     </body>
 </topic>
