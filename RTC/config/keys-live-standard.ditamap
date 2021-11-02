@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Variables for Live Streaming Standard</title>
+    <topichead navtitle="Figures">
+       
+
+    </topichead>
+    <keydef keys="product-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Interactive Live Streaming Standard</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="sdk-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora Video SDK</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="host">
+        <topicmeta>
+            <keywords>
+                <keyword>host</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="media-type">
+        <topicmeta>
+            <keywords>
+                <keyword>audio and video</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="feature">
+        <topicmeta>
+            <keywords>
+                <keyword>live streaming</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="view">
+        <topicmeta>
+            <keywords>
+                <keyword>the user interface we created</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-android" href="https://github.com/AgoraIO/API-Examples/blob/master/Android/APIExample/app/src/main/java/io/agora/api/example/examples/basic/JoinChannelVideo.java"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>JoinChannelVideo</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-demo-web" href="https://webdemo.agora.io/basicLive/index.html"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Basic-Live-Streaming</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-electron" href="https://github.com/AgoraIO-Community/Agora-Electron-Quickstart"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora-Electron-Quickstart</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>
