@@ -6,8 +6,7 @@ This section shows how to use the [sdk-name] to implement [feature] in your app 
 
 In the interface, you should have one frame for local video and another for remote video. In `ViewController.swift`, replace any existing content with the following:
 
-<p>
-<codeblock props="ios" outputclass="language-swift">import UIKit
+<pre props="ios" outputclass="language-swift">import UIKit
 class ViewController: UIViewController {
     var localView: UIView!
     var remoteView: UIView!
@@ -26,9 +25,9 @@ class ViewController: UIViewController {
         localView = UIView()
         self.view.addSubview(localView)
     }
-}</codeblock>
+}</pre>
 
-<codeblock props="mac" outputclass="language-swift">import AppKit
+<pre props="mac" outputclass="language-swift">import AppKit
 class ViewController: NSViewController {
      var localView: NSView!
      var remoteView: NSView!
@@ -47,8 +46,7 @@ class ViewController: NSViewController {
         localView = NSView()
         self.view.addSubview(localView)
     }
-}</codeblock>
-</p>
+}</pre>
 
 ## Implement the [product-name] logic
 
@@ -65,7 +63,7 @@ To implement this logic, take the following steps:
 
 1. Import the Agora kit and add the `agoraKit` variable. Modify your  `ViewController.swift` as follows:
    
-   <p><codeblock outputclass="language-swift">import <ph keyref="ui-lib"></ph>
+   <pre outputclass="language-swift">import <ph keyref="ui-lib"></ph>
    // Add this line to import the Agora kit 
    import AgoraRtcKit
    class ViewController: <ph keyref="ui-view"></ph>Controller {
@@ -77,7 +75,7 @@ To implement this logic, take the following steps:
    override func viewDidLoad() {
       super.viewDidLoad()
       initView()
-   }</codeblock></p>
+   }</pre>
 
 2. Initialize the app and join the channel.
 
@@ -92,7 +90,7 @@ To implement this logic, take the following steps:
 
    In `ViewController.swift`, add the following lines after the `ViewController` class:
 
-   <p><codeblock outputclass="language-swift">extension ViewController: AgoraRtcEngineDelegate {
+   <pre outputclass="language-swift">extension ViewController: AgoraRtcEngineDelegate {
         // This callback is triggered when a remote <ph keyref="host"></ph> joins the channel
         func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
             let videoCanvas = AgoraRtcVideoCanvas()
@@ -101,7 +99,7 @@ To implement this logic, take the following steps:
             videoCanvas.view = remoteView
             agoraKit?.setupRemoteVideo(videoCanvas)
         }
-   }</codeblock></p>
+   }</pre>
 
 ## Start and stop your app
 

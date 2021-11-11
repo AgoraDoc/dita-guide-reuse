@@ -5,7 +5,7 @@ Choose one of the following methods to integrate a version of the [platform] SDK
 
 ## Method 1: Through CocoaPods
 
-<p conref="conref/integrate-the-sdk-apple.dita#integrate-the-sdk/cocoapods-ios"></p>
+<p conref="conref/integrate-the-sdk-apple.dita#integrate-the-sdk/cocoapods"></p>
 
 ## Method 2: Through your local storage
 
@@ -19,7 +19,7 @@ You need to use different integration methods to integrate different versions of
    <li>If you do not need to use a simulator to run the project, copy the above dynamic libraries under the path of <code>./libs</code> in the SDK package.</li>
    <li>If you need to use a simulator to run the project, copy the above dynamic libraries under the path of <code>./libs/ALL_ARCHITECTURE</code> in the SDK package. The dynamic libraries under this path contains the x86-64 architecture, you need to remove the x86-64 architecture in the libraries before uploading the app to the App Store.
    In Terminal, run the following command to remove the x86-64 architecture. Remember to replace <code>ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit</code> with the path of the dynamic library in your project.
-   <codeblock>lipo -remove x86-64 ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit -output ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit</codeblock>
+   <pre>lipo -remove x86-64 ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit -output ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit</pre>
    </li>
    </ol>
 
@@ -44,7 +44,7 @@ You need to use different integration methods to integrate different versions of
    <li>If you do not need to use a simulator to run the project, copy the above dynamic library under the path of <code>./libs</code> in the SDK package.</li>
    <li>If you need to use a simulator to run the project, copy the above dynamic library under the path of <code>./libs/ALL_ARCHITECTURE</code> in the SDK package. The dynamic library under this path contains the x86-64 architecture, you need to remove the x86-64 architecture in the library before uploading the app to the App Store.
    In Terminal, run the following command to remove the x86-64 architecture. Remember to replace <code>ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit</code> with the path of the dynamic library in your project.
-   <codeblock>lipo -remove x86-64 ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit -output ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit</codeblock>
+   <pre outputclass="shell">lipo -remove x86-64 ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit -output ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit</pre>
    </li>
    </ol>
 

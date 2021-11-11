@@ -17,39 +17,18 @@
                 </note>
                 </p>
         </section>
-         <section>
-             <title>CocoaPods iOS</title>
-             <p id="cocoapods-ios">
-                 <ol>
-                 <li>Install CocoaPods if you have not. See <xref href="https://guides.cocoapods.org/using/getting-started.html#getting-started" scope="external" format="html">Getting Started with CocoaPods</xref>.</li>
-                 <li>In Terminal, navigate to the root of your project folder, and run the <codeph>pod init</codeph> command to create a <codeph>Podfile</codeph> in the project folder.</li>
-                     <li>Open the <codeph>Podfile</codeph>, and replace all contents with the
-                        following code. Remember to replace <codeph>Your App</codeph> with the
-                        target name of your project and replace <codeph>version</codeph> with the
-                        version of the SDK that you want to integrate. For information about the SDK
-                        version, see <xref keyref="release-notes-ios"/>.
-                        <codeblock outputclass="language-swift"># platform :ios, '9.0'
-target 'Your App' do
-pod 'AgoraRtcEngine_iOS', 'version'
-end</codeblock></li>
-                 <li>In Terminal, run the <codeph>pod install</codeph> command to install the SDK. When the SDK is installed successfully, you can see  <codeph>Pod installation complete!</codeph> in Terminal and an <codeph>xcworkspace</codeph> file in the project folder.</li>
-                 <li>Open the <codeph>xcworkspace</codeph> file for any further steps.</li>
-                 </ol>
-                 <note type="attention">For more integration methods, see <xref href="../get-started.md#othermethods">Other approaches to integrate the SDK</xref>.</note>
-                 </p>
-         </section>
         <section>
-            <title>CocoaPods macOS</title>
-            <p id="cocoapods-mac">
+            <title>CocoaPods</title>
+            <p id="cocoapods">
                 <ol>
                     <li>Install CocoaPods if you have not. See <xref href="https://guides.cocoapods.org/using/getting-started.html#getting-started" scope="external" format="html">Getting Started with CocoaPods</xref>.</li>
                     <li>In Terminal, navigate to the root of your project folder, and run the <codeph>pod init</codeph> command to create a <codeph>Podfile</codeph> in the project folder.</li>
-                    <li>Open the <codeph>Podfile</codeph>, and replace all contents with the
-                        following code. Remember to replace <codeph>Your App</codeph> with the
-                        target name of your project and replace <codeph>version</codeph> with the
-                        version of the SDK that you want to integrate. For information about the SDK
-                        version, see <xref keyref="release-notes-mac"/>.
-                        <codeblock outputclass="language-swift"># platform :macos, '10.11'
+                    <li>Open the <codeph>Podfile</codeph>, and replace all contents with the following code. Remember to replace <codeph>Your App</codeph> with the target name of your project and replace <codeph>version</codeph> with the version of the SDK that you want to integrate. For information about the SDK version, see <xref
+                        keyref="release-notes-mac" />. <codeblock outputclass="language-swift" props="ios"># platform :ios, '9.0'
+target 'Your App' do
+pod 'AgoraRtcEngine_iOS', 'version'
+end</codeblock>
+                        <codeblock outputclass="language-swift" props="mac"># platform :macos, '10.11'
 target 'Your App' do
 pod 'AgoraRtcEngine_macOS', 'version'
 end</codeblock></li>

@@ -17,7 +17,7 @@ In addition to integrating the [sdk-name] for <ph keyref="recommended-method"></
 <ph props="ios">through CocoaPods or </ph>by manually copying the SDK files.
 
 <b props="ios">Automatically integrate the SDK with CocoaPods</b>
-<p props="ios" conref="conref/integrate-the-sdk-apple.dita#integrate-the-sdk/cocoapods-ios"></p>
+<p props="ios" conref="conref/integrate-the-sdk-apple.dita#integrate-the-sdk/cocoapods"></p>
 
 <b>Manually copy the SDK files</b>
 

@@ -5,7 +5,7 @@ Choose one of the following methods to integrate a version of the [platform] SDK
 
 ## Method 1: Through CocoaPods
 
-<p conref="conref/integrate-the-sdk-apple.dita#integrate-the-sdk/cocoapods-mac"></p>
+<p conref="conref/integrate-the-sdk-apple.dita#integrate-the-sdk/cocoapods"></p>
 
 ## Method 2: Through your local storage
 
@@ -79,7 +79,7 @@ The paths of the two libraries in the SDK package are as follows:
 
    | SDK | Library |
    | ---------------- | ---------------- |
-   | Voice SDK      |<ul><li>`AgoraRtcKit.framework`</li><li>`Accelerate.framework`</li><li>`CoreWLAN.framework`</li><li>`libc++.tbd`</li><li>`libresolv.9.tbd`</li><li>`SystemConfiguration.framework`</li></ul>|
+   | Voice SDK      | <ul><li>`AgoraRtcKit.framework`</li><li>`Accelerate.framework`</li><li>`CoreWLAN.framework`</li><li>`libc++.tbd`</li><li>`libresolv.9.tbd`</li><li>`SystemConfiguration.framework`</li></ul> |
    | Video SDK | <ul><li>`AgoraRtcKit.framework`</li><li>`Accelerate.framework`</li><li>`CoreWLAN.framework`</li><li>`libc++.tbd`</li><li>`libresolv.9.tbd`</li><li>`SystemConfiguration.framework`</li><li>`VideoToolbox.framework`</li></ul> |
 
    <note type="attention">The Agora SDK uses libc++ (LLVM) by default. Contact support@agora.io if you want to use libstdc++ (GNU). The SDK provides FAT image libraries with multi-architecture support for both 32/64-bit audio emulators and 32/64-bit audio/video real devices.</note>
@@ -91,7 +91,7 @@ The paths of the two libraries in the SDK package are as follows:
 
    | SDK | Library |
    | ---------------- | ---------------- |
-   | Voice SDK      |<ul><li>`AgoraRtcEngineKit.framework`</li><li>`Accelerate.framework`</li><li>`CoreWLAN.framework`</li><li>`libc++.tbd`</li><li>`libresolv.9.tbd`</li><li>`SystemConfiguration.framework`</li></ul>|
+   | Voice SDK      | <ul><li>`AgoraRtcEngineKit.framework`</li><li>`Accelerate.framework`</li><li>`CoreWLAN.framework`</li><li>`libc++.tbd`</li><li>`libresolv.9.tbd`</li><li>`SystemConfiguration.framework`</li></ul> |
    | Video SDK | <ul><li>`AgoraRtcEngineKit.framework`</li><li>`Accelerate.framework`</li><li>`CoreWLAN.framework`</li><li>`libc++.tbd`</li><li>`libresolv.9.tbd`</li><li>`SystemConfiguration.framework`</li><li>`VideoToolbox.framework`</li></ul> |
 
    <note type="attention">The Agora SDK uses libc++ (LLVM) by default. Contact support@agora.io if you want to use libstdc++ (GNU). The SDK provides FAT image libraries with multi-architecture support for both 32/64-bit audio emulators and 32/64-bit audio/video real devices.</note>
