@@ -90,7 +90,28 @@ This section shows how to use the Agora Video SDK to implement video call in you
 
 In the interface, you should have one frame for local video and another for remote video. In `ViewController.swift`, replace any existing content with the following:
 
-\[/dita/topic/topic/topic/body/p/codeblock \{"- topic/codeblock "\}\)import UIKit class ViewController: UIViewController \{ var localView: UIView! var remoteView: UIView! override func viewDidLoad\(\) \{ super.viewDidLoad\(\) initView\(\) \} override func viewDidLayoutSubviews\(\) \{ super.viewDidLayoutSubviews\(\) remoteView.frame = self.view.bounds localView.frame = CGRect\(x: self.view.bounds.width - 90, y: 0, width: 90, height: 160\) \} func initView\(\) \{ remoteView = UIView\(\) self.view.addSubview\(remoteView\) localView = UIView\(\) self.view.addSubview\(localView\) \} \}\(codeblock\]
+```language-swift
+import UIKit
+class ViewController: UIViewController {
+    var localView: UIView!
+    var remoteView: UIView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initView()
+     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        remoteView.frame = self.view.bounds
+        localView.frame = CGRect(x: self.view.bounds.width - 90, y: 0, width: 90, height: 160)
+    }
+    func initView() {
+        remoteView = UIView()
+        self.view.addSubview(remoteView)
+        localView = UIView()
+        self.view.addSubview(localView)
+    }
+}
+```
 
 ### Implement the Video Call logic {#implement-the-product-name-logic}
 
@@ -104,7 +125,21 @@ To implement this logic, take the following steps:
 
 1.  Import the Agora kit and add the `agoraKit` variable. Modify your `ViewController.swift` as follows:
 
-    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)import UIKit // Add this line to import the Agora kit import AgoraRtcKit class ViewController: UIViewController \{ var localView: UIView! var remoteView: UIView! // Add this linke to add the agoraKit variable var agoraKit: AgoraRtcEngineKit? \} override func viewDidLoad\(\) \{ super.viewDidLoad\(\) initView\(\) \}\(codeblock\]
+    ```language-swift
+    import UIKit
+       // Add this line to import the Agora kit 
+       import AgoraRtcKit
+       class ViewController: UIViewController {
+          var localView: UIView!
+          var remoteView: UIView!
+          // Add this linke to add the agoraKit variable
+          var agoraKit: AgoraRtcEngineKit?
+       }
+       override func viewDidLoad() {
+          super.viewDidLoad()
+          initView()
+       }
+    ```
 
 2.  Initialize the app and join the channel.
 
@@ -134,7 +169,18 @@ To implement this logic, take the following steps:
 
     In `ViewController.swift`, add the following lines after the `ViewController` class:
 
-    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)extension ViewController: AgoraRtcEngineDelegate \{ // This callback is triggered when a remote user joins the channel func rtcEngine\(\_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int\) \{ let videoCanvas = AgoraRtcVideoCanvas\(\) videoCanvas.uid = uid videoCanvas.renderMode = .hidden videoCanvas.view = remoteView agoraKit?.setupRemoteVideo\(videoCanvas\) \} \}\(codeblock\]
+    ```language-swift
+    extension ViewController: AgoraRtcEngineDelegate {
+            // This callback is triggered when a remote user joins the channel
+            func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
+                let videoCanvas = AgoraRtcVideoCanvas()
+                videoCanvas.uid = uid
+                videoCanvas.renderMode = .hidden
+                videoCanvas.view = remoteView
+                agoraKit?.setupRemoteVideo(videoCanvas)
+            }
+       }
+    ```
 
 
 ### Start and stop your app {#start-and-stop-your-app}
@@ -340,7 +386,12 @@ You need to use different integration methods to integrate different versions of
 1.  According to your requirements, choose one of the following methods to copy the `AgoraRtcKit.framework`, `Agorafdkaac.framework`, `Agoraffmpeg.framework`,and `AgoraSoundTouch.framework` dynamic libraries to the `./project_name` folder in your project \(`project_name` is an example of your project name\):
 
     1.  If you do not need to use a simulator to run the project, copy the above dynamic libraries under the path of `./libs` in the SDK package.
-    2.  If you need to use a simulator to run the project, copy the above dynamic libraries under the path of `./libs/ALL_ARCHITECTURE` in the SDK package. The dynamic libraries under this path contains the x86-64 architecture, you need to remove the x86-64 architecture in the libraries before uploading the app to the App Store. In Terminal, run the following command to remove the x86-64 architecture. Remember to replace `ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit` with the path of the dynamic library in your project. \[/dita/topic/topic/topic/topic/body/ol/li/ol/li/codeblock \{"- topic/codeblock "\}\)lipo -remove x86-64 ALL\_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit -output ALL\_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit\(codeblock\]
+    2.  If you need to use a simulator to run the project, copy the above dynamic libraries under the path of `./libs/ALL_ARCHITECTURE` in the SDK package. The dynamic libraries under this path contains the x86-64 architecture, you need to remove the x86-64 architecture in the libraries before uploading the app to the App Store. In Terminal, run the following command to remove the x86-64 architecture. Remember to replace `ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit` with the path of the dynamic library in your project.
+
+        ```
+        lipo -remove x86-64 ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit -output ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit
+        ```
+
 2.  Open Xcode, and navigate to **TARGETS \> Project Name \> General \> Frameworks, Libraries, and Embedded Content**.
 
 3.  Click **+** \> **Add Other…** \> **Add Files** to add the `AgoraRtcKit.framework`, `Agorafdkaac.framework`, `Agoraffmpeg.framework`,and `AgoraSoundTouch.framework` dynamic libraries. Ensure that the **Embed** attribute of these dynamic libraries is **Embed & Sign**.
@@ -357,7 +408,12 @@ You need to use different integration methods to integrate different versions of
 1.  According to your requirements, choose one of the following methods to copy the `AgoraRtcKit.framework` dynamic library to the `./project_name` folder in your project \(`project_name` is an example of your project name\):
 
     1.  If you do not need to use a simulator to run the project, copy the above dynamic library under the path of `./libs` in the SDK package.
-    2.  If you need to use a simulator to run the project, copy the above dynamic library under the path of `./libs/ALL_ARCHITECTURE` in the SDK package. The dynamic library under this path contains the x86-64 architecture, you need to remove the x86-64 architecture in the library before uploading the app to the App Store. In Terminal, run the following command to remove the x86-64 architecture. Remember to replace `ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit` with the path of the dynamic library in your project. \[/dita/topic/topic/topic/topic/body/ol/li/ol/li/codeblock \{"- topic/codeblock "\}\)lipo -remove x86-64 ALL\_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit -output ALL\_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit\(codeblock\]
+    2.  If you need to use a simulator to run the project, copy the above dynamic library under the path of `./libs/ALL_ARCHITECTURE` in the SDK package. The dynamic library under this path contains the x86-64 architecture, you need to remove the x86-64 architecture in the library before uploading the app to the App Store. In Terminal, run the following command to remove the x86-64 architecture. Remember to replace `ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit` with the path of the dynamic library in your project.
+
+        ```shell
+        lipo -remove x86-64 ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit -output ALL_ARCHITECTURE/AgoraRtcKit.framework/AgoraRtcKit
+        ```
+
 2.  Open Xcode, and navigate to **TARGETS \> Project Name \> General \> Frameworks, Libraries, and Embedded Content**.
 
 3.  Click **+ \> Add Other… \> Add Files** to add the `AgoraRtcKit.framework` dynamic library. Ensure that the **Embed** attribute of the dynamic library is **Embed & Sign**. Once the dynamic library is added, the project automatically links to other system libraries.

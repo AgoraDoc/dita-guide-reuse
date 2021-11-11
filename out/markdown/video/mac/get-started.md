@@ -103,9 +103,28 @@ This section shows how to use the Agora Video SDK to implement video call in you
 
 In the interface, you should have one frame for local video and another for remote video. In `ViewController.swift`, replace any existing content with the following:
 
-
-
-\[/dita/topic/topic/topic/body/p/codeblock \{"- topic/codeblock "\}\)import AppKit class ViewController: NSViewController \{ var localView: NSView! var remoteView: NSView! override func viewDidLoad\(\) \{ super.viewDidLoad\(\) initView\(\) \} override func viewDidLayout\(\) \{ super.viewDidLayout\(\) remoteView.frame = self.view.bounds localView.frame = CGRect\(x: self.view.bounds.width - 90, y: 0, width: 90, height: 160\) \} func initView\(\) \{ remoteView = NSView\(\) self.view.addSubview\(remoteView\) localView = NSView\(\) self.view.addSubview\(localView\) \} \}\(codeblock\]
+```language-swift
+import AppKit
+class ViewController: NSViewController {
+     var localView: NSView!
+     var remoteView: NSView!
+     override func viewDidLoad() {
+         super.viewDidLoad()
+         initView()
+     }
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        remoteView.frame = self.view.bounds
+        localView.frame = CGRect(x: self.view.bounds.width - 90, y: 0, width: 90, height: 160)
+    }
+    func initView() {
+        remoteView = NSView()
+        self.view.addSubview(remoteView)
+        localView = NSView()
+        self.view.addSubview(localView)
+    }
+}
+```
 
 ### Implement the Video Call logic {#implement-the-product-name-logic}
 
@@ -119,7 +138,21 @@ To implement this logic, take the following steps:
 
 1.  Import the Agora kit and add the `agoraKit` variable. Modify your `ViewController.swift` as follows:
 
-    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)import AppKit // Add this line to import the Agora kit import AgoraRtcKit class ViewController: NSViewController \{ var localView: NSView! var remoteView: NSView! // Add this linke to add the agoraKit variable var agoraKit: AgoraRtcEngineKit? \} override func viewDidLoad\(\) \{ super.viewDidLoad\(\) initView\(\) \}\(codeblock\]
+    ```language-swift
+    import AppKit
+       // Add this line to import the Agora kit 
+       import AgoraRtcKit
+       class ViewController: NSViewController {
+          var localView: NSView!
+          var remoteView: NSView!
+          // Add this linke to add the agoraKit variable
+          var agoraKit: AgoraRtcEngineKit?
+       }
+       override func viewDidLoad() {
+          super.viewDidLoad()
+          initView()
+       }
+    ```
 
 2.  Initialize the app and join the channel.
 
@@ -149,7 +182,18 @@ To implement this logic, take the following steps:
 
     In `ViewController.swift`, add the following lines after the `ViewController` class:
 
-    \[/dita/topic/topic/topic/body/ol/li/p/codeblock \{"- topic/codeblock "\}\)extension ViewController: AgoraRtcEngineDelegate \{ // This callback is triggered when a remote user joins the channel func rtcEngine\(\_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int\) \{ let videoCanvas = AgoraRtcVideoCanvas\(\) videoCanvas.uid = uid videoCanvas.renderMode = .hidden videoCanvas.view = remoteView agoraKit?.setupRemoteVideo\(videoCanvas\) \} \}\(codeblock\]
+    ```language-swift
+    extension ViewController: AgoraRtcEngineDelegate {
+            // This callback is triggered when a remote user joins the channel
+            func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
+                let videoCanvas = AgoraRtcVideoCanvas()
+                videoCanvas.uid = uid
+                videoCanvas.renderMode = .hidden
+                videoCanvas.view = remoteView
+                agoraKit?.setupRemoteVideo(videoCanvas)
+            }
+       }
+    ```
 
 
 ### Start and stop your app {#start-and-stop-your-app}
