@@ -1,10 +1,10 @@
-# Interactive Live Streaming Standard Overview {#product-name-overview}
+# Interactive Live Streaming Premium Overview {#product-name-overview}
 
-Interactive Live Streaming Standard is a product designed for live streaming scenarios featuring “light interaction” between the host and audience. Light interaction in this case refers to situations that require a timely exchange of text messages, comments, or virtual gifts, with less reliance on audio or video communication. Typical scenarios include live online classes, live-stream shopping \(e-commerce\), trivia gaming, or live sports streaming.
+Interactive Live Streaming Premium enables one-to-many and many-to-many audio or video live streaming with the Agora Video SDK.
 
-The product adopts a UDP-based AUT protocol developed by Agora and relies on SD-RTN™, a software-defined real-time network built by Agora, to provide high-quality, low-latency live streaming experiences with good synchronization.
+Interactive Live Streaming Premium is different from [Agora Video Call](https://docs.agora.io/en/Video/product_video?platform=All%20Platforms). In a video call, all users are the same role and can talk to each other freely. In an Interactive Live Streaming Premium, users can be the host or audience, where only the host can talk. For details, see this [FAQ](https://docs.agora.io/en/faq/profile_difference).
 
-![](https://web-cdn.agora.io/docs-files/1612259524092)
+Different from the traditional CDN live broadcast, which only allows one-way communication from the hosts to the audience, the Agora Video SDK empowers the audience to interact with the hosts by [becoming a host](https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#becoming-host), like a viewer jumping onto the stage in the middle of a play to perform.
 
 ## Live streaming solution comparison {#live-streaming-solution-comparison}
 
@@ -40,10 +40,14 @@ The following table shows the differences between Agora live streaming products 
 
 ## Functions and scenarios {#functions-and-scenarios}
 
-Interactive Live Streaming Standard boasts a flexible combination of functions for different scenarios.
+Interactive Live Streaming Premium boasts a flexible combination of functions for different scenarios.
 
 |Function|Description|Scenario|
 |--------|-----------|--------|
+|Co-hosting in a channel|An audience switches to a co-host and interacts with the existing host.|-   Large-scale live streams where hosts can invite the audience to interact with them.
+-   Online games such as Murder Mystery and Werewolf Killing.
+
+|
 |Single Host|Low-latency live streaming by one host. The audience can join the channel and watch the live streaming.|-   Lecture Hall
 -   Showroom
 -   Live-stream Shopping
@@ -60,6 +64,7 @@ Interactive Live Streaming Standard boasts a flexible combination of functions f
 
 |
 |Screen sharing|Hosts share their screens with the audience in the channel. Supports specifying which screen or which window to share, and supports specifying the sharing region.|-   Interactive online classes.
+-   Live streaming of gaming hosts.
 
 |
 |Basic image enhancement|Sets basic beauty effects, including skin smoothening, whitening, and cheek blushing.|Image enhancement in a video call.|
@@ -81,6 +86,25 @@ Interactive Live Streaming Standard boasts a flexible combination of functions f
 -   To allow more people to watch the live stream when the number of audience members in the channel reached the limit.
 
 |
+|Play the sound effect files|Enables developers to play specific sound effect files, adjust the volume, and set the playback position of the sound effect files.|Online chess or card games.|
+|Voice changer and reverberation|Provides multiple presets to easily change the voice and set reverberation effects, also supports adjusting the pitch and using the equalization and reverberation modes flexibly.|-   Online KTV.
+-   To change the voice in an online chatroom.
+
+|
+|Spatial sound effects|Sets the spatial sound effects for remote users to provide immersive experiences.|FPS games.|
+|Enable two-channel/high-quality sound mode|Enables the two-channel and the high-quality sound mode.|-   Online music classes.
+-   FM applications.
+
+|
+
+**Note:** See the following sample code for application scenarios:
+
+-   [PK Hosting](https://github.com/AgoraIO/ARD-Agora-Online-PK/blob/master/README.zh.md)
+-   [Trivia Game](https://github.com/AgoraIO/HQ)
+-   [Online KTV](https://github.com/AgoraIO/Agora-Online-KTV/blob/master/README.zh.md)
+-   [Online Voice Chatroom](https://github.com/AgoraIO-Usecase/Chatroom)
+-   [Clip Doll Machine](https://github.com/AgoraIO/Wawaji)
+-   [Murder Mystery Game](https://github.com/AgoraIO-Usecase/Murder-Mystery-Game)
 
 **Note:**
 
@@ -88,16 +112,18 @@ Interactive Live Streaming Standard boasts a flexible combination of functions f
 -   **Showroom**: In a showroom live streaming, the audience can send virtual gifts to the host. Thanks to the low latency of Interactive Live Streaming Standard, the host can promptly thank the audience for their gifts, and the audience can receive the host's thanks in a timely fashion, which helps to strengthen the emotional connection on both sides.
 -   **Live-stream Shopping**: In a live-stream shopping scenario, customers can ask sellers for product and activity information via real-time messages. The low latency of Interactive Live Streaming Standard allows sellers to quickly respond to customers' questions, and customers can promptly see sellers' answers, thus encouraging transactions. In addition, the high synchronization of Interactive Live Streaming Standard ensures a consistent experience on the audiences' clients for activities such as responding to flash sales, and grabbing time-sensitive offers \(seckilling\) and coupons.
 -   **Live match streaming**: Live streaming sporting events or games in real time, synchronized so that there are no problematic delays.
--   **Trivia Game**: Apart from providing a smooth live streaming experience, the high synchronization of Interactive Live Streaming Standard also ensures that players receive the questions at the same time. This gives the audience members the same amount of time to answer—and an equal chance to win.
+-   **Trivia Game**: Apart from providing a smooth live streaming experience, the high synchronization of Interactive Live Streaming Premium also ensures that players receive the questions at the same time. This gives the audience members the same amount of time to answer—and an equal chance to win.
 
 ## Key Properties {#key-properties}
 
-|Property|Interactive Live Streaming Standard specifications|
-|--------|--------------------------------------------------|
+|Property|Interactive Live Streaming Premium specifications|
+|--------|-------------------------------------------------|
 |SDK package size|4.61 MB to 13.94 MB
 
+ 3.14 MB to 11.28 MB
+
 |
-|Host capacity|17 users|
+|Host capacityCapacity|17 users|
 |Audience capacity|1 million users|
 |Video profile|-   SDK video source: Up to 1080p @ 60 fps
 -   Custom video source: Up to 4K resolution
@@ -107,14 +133,13 @@ Interactive Live Streaming Standard boasts a flexible combination of functions f
 -   Support for mono and stereo sound
 
 |
-|Audio anti-packet-loss rate|70% \(uplink and downlink\)|
+|Audio anti-packet-loss rate|80%70% \(uplink and downlink\)|
+|Latency on the audience's client|400 ms to 800 ms|
+|Latency between the host and the co-host|200 ms to 600 ms|
 
 ## Compatibility {#compatibility}
 
-The platform compatibility of Interactive Live Streaming Standard is as follows:
-
--   For the host's client, Interactive Live Streaming Standard supports platforms including Android, iOS, macOS, Windows, Web, and cross-platform frameworks \(Unity, Electron, React Native, and Flutter\).
--   For the audience's client, Interactive Live Streaming Standard supports platforms including Android, iOS, macOS, Windows, and Web.
+Interactive Live Streaming Premium is supported on platforms such as iOS, Android, Windows, macOS, Electron, Unity, and Web, and allows for cross-platform connections. The following is a list of supported platforms and their versions.
 
 The following is a list of supported platforms and their versions.
 

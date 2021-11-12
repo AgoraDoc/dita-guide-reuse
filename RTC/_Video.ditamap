@@ -19,7 +19,15 @@
         <mapref href="config/keys-cocos-creator.ditamap" props="cocos-creator"/>
         <mapref href="config/keys-unity.ditamap" props="unity"/>
     </topichead>
-    <topichead navtitle="Understand"/>
+    <topichead navtitle="Understand">
+        <topicref href="product-overview.md" format="mdita" chunk="to-content">
+            <topicref href="solution-comparison.md" format="markdown" toc="no" props="live lives"/>
+            <topicref href="functions.md" format="markdown" toc="no"/>
+            <topicref href="key-properties.md" format="markdown" toc="no"/>
+            <topicref href="compatibility.md" format="markdown" toc="no"/>
+            <topicref href="reference.md" format="markdown" toc="no"/>
+        </topicref>
+    </topichead>
     <topichead navtitle="Develop">
         <topicref href="get-started.md" format="mdita" chunk="to-content">
             <topicref href="start-understand-the-tech.md" format="markdown" toc="no"/>

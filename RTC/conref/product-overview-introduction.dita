@@ -3,19 +3,19 @@
 <topic id="product-intro">
     <title>Product Overview Introduction</title>
     <body>
-        <p id="video"><xref keyref="product-name"/> enables easy and convenient one-to-one or one-to-many calls and supports voice-only and video modes with the <xref keyref="sdk-name"/>.</p>
-        <p id="voice"><xref keyref="product-name"/> enables easy and convenient one-to-one or one-to-many <b>voice-only</b> calls with the <xref keyref="sdk-name"/>. With a small SDK package size, the <xref keyref="sdk-name"/> is applicable to a variety of recreational
+        <p id="video"><ph keyref="product-name"/> enables easy and convenient one-to-one or one-to-many calls and supports voice-only and video modes with the <xref keyref="sdk-name"/>.</p>
+        <p id="voice"><ph keyref="product-name"/> enables easy and convenient one-to-one or one-to-many <b>voice-only</b> calls with the <xref keyref="sdk-name"/>. With a small SDK package size, the <xref keyref="sdk-name"/> is applicable to a variety of recreational
             and business activities.</p>
-        <p id="live0"><xref keyref="product-name"/> enables one-to-many and many-to-many audio or video live streaming with the <xref keyref="sdk-name"/>.</p>
-        <p id="live1"><xref keyref="product-name"/> is different from <xref href="https://docs.agora.io/en/Video/product_video?platform=All%20Platforms" format="html" scope="external">Agora Video Call</xref>. In a
-            video call, all users are the same role and can talk to each other freely. In an <xref keyref="product-name"/>, users can be the host or audience, where only the host can talk. For details, see this <xref href="https://docs.agora.io/en/faq/profile_difference" format="html" scope="external">FAQ</xref>.</p>
-        
+        <p id="live0"><ph keyref="product-name"/> enables one-to-many and many-to-many audio or video live streaming with the <xref keyref="sdk-name"/>.</p>
+        <p id="live1"><ph keyref="product-name"/> is different from <xref href="https://docs.agora.io/en/Video/product_video?platform=All%20Platforms" format="html" scope="external">Agora Video Call</xref>. In a
+            video call, all users are the same role and can talk to each other freely. In an <ph keyref="product-name"/>, users can be the host or audience, where only the host can talk. For details, see this <xref href="https://docs.agora.io/en/faq/profile_difference" format="html" scope="external">FAQ</xref>.</p>
+
         <p id="live2">Different from the traditional CDN live broadcast, which only allows one-way communication from the hosts to the audience, the <xref keyref="sdk-name"/> empowers the audience to interact with the hosts by <xref href="https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#becoming-host" format="html" scope="external">becoming a host</xref>, like a viewer jumping onto the stage in the middle of a play to perform.</p>
-        
-        <p id="lives0"><xref keyref="product-name"/> is a product designed for live streaming scenarios featuring “light interaction” between the host and audience. Light interaction in this case refers to situations that require a timely exchange of text messages, comments, or virtual gifts, with less reliance on audio or video communication. Typical scenarios include live online classes, live-stream shopping (e-commerce), trivia gaming, or live sports streaming.</p>
+
+        <p id="lives0"><ph keyref="product-name"/> is a product designed for live streaming scenarios featuring “light interaction” between the host and audience. Light interaction in this case refers to situations that require a timely exchange of text messages, comments, or virtual gifts, with less reliance on audio or video communication. Typical scenarios include live online classes, live-stream shopping (e-commerce), trivia gaming, or live sports streaming.</p>
         <p id="lives1">The product adopts a UDP-based AUT protocol developed by Agora and relies on SD-RTN™, a software-defined real-time network built by Agora, to provide high-quality, low-latency live streaming experiences with good synchronization.
             </p>
-        
+
         <p id="function">
             <table>
                 <tgroup cols="3">
@@ -222,14 +222,14 @@
                     <li><b>Live match streaming</b>: Live streaming sporting events or games in real
                         time, synchronized so that there are no problematic delays.</li>
                     <li><b>Trivia Game</b>: Apart from providing a smooth live streaming experience,
-                        the high synchronization of <xref keyref="product-name"/> also ensures that
+                        the high synchronization of <ph keyref="product-name"/> also ensures that
                         players receive the questions at the same time. This gives the audience
                         members the same amount of time to answer—and an equal chance to win.</li>
                 </ul>
             </note>
-            
+
             </p>
-        
+
         <p id="key-property">
             <table>
                 <tgroup cols="2">
@@ -238,7 +238,7 @@
                     <thead>
                         <row>
                             <entry>Property</entry>
-                            <entry><xref keyref="product-name"/> specifications</entry>
+                            <entry><ph keyref="product-name"/> specifications</entry>
                         </row>
                     </thead>
                     <tbody>
@@ -294,22 +294,21 @@
                 </tgroup>
             </table>
         </p>
-        
-        <p id="compatability0"><xref keyref="product-name"/> is supported on platforms such as iOS,
+        <p id="compatability0"><ph keyref="product-name"/> is supported on platforms such as iOS,
             Android, Windows, macOS, Electron, Unity, and Web, and allows for cross-platform
             connections. The following is a list of supported platforms and their versions.</p>
-        
-        <p id="compatability1">The platform compatibility of <xref keyref="product-name"/> is as follows: 
+
+        <p id="compatability1">The platform compatibility of <ph keyref="product-name"/> is as follows:
             <ul>
-                <li>For the host's client, <xref keyref="product-name"/> supports platforms including Android, iOS,
+                <li>For the host's client, <ph keyref="product-name"/> supports platforms including Android, iOS,
                     macOS, Windows, Web, and cross-platform frameworks (Unity, Electron, React
                     Native, and Flutter).</li>
-                <li>For the audience's client, <xref keyref="product-name"/> supports
+                <li>For the audience's client, <ph keyref="product-name"/> supports
                     platforms including Android, iOS, macOS, Windows, and Web.</li>
             </ul>
             </p>
-        
-        
-        
+
+
+
     </body>
 </topic>
