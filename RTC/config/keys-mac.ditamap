@@ -5,35 +5,70 @@
     <keydef keys="platform">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>macOS</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="ide">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Xcode</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="run-button">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>Run</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="device">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>a macOS device</keyword>
             </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="IRtcEngine">
         <topicmeta>
             <keywords>
-                <keyword/>
+                <keyword>AgoraRtcEngineKit</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ui-library">
+        <topicmeta>
+            <keywords>
+                <keyword>&lt;AppKit/AppKit.h&gt;</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ui-lib">
+        <topicmeta>
+            <keywords>
+                <keyword>AppKit</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="ui-view">
+        <topicmeta>
+            <keywords>
+                <keyword>NSView</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="downloads" href="https://docs.agora.io/en/All/downloads?platform=macOS" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>SDK Downloads</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="recommended-method">
+        <topicmeta>
+            <keywords>
+                <keyword>macOS through CocoaPods</keyword>
             </keywords>
         </topicmeta>
     </keydef>
