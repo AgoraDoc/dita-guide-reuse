@@ -4,9 +4,9 @@
     <title>Variables for Live Streaming Premium</title>
     <topichead navtitle="Figures">
         <keydef keys="start-api-sequence-android"
-            href="https://web-cdn.agora.io/docs-files/1625208380588" scope="external" format="png" navtitle="API seqeunce of live streaming"/>
-        <keydef keys="start-api-sequence-ios"
-            href="https://web-cdn.agora.io/docs-files/1617275439875" scope="external" format="png" navtitle="API seqeunce of live streaming"/>
+            href="https://web-cdn.agora.io/docs-files/1625208380588" scope="external" format="png"/>
+        <keydef keys="start-api-sequence-apple"
+            href="https://web-cdn.agora.io/docs-files/1627888336100" scope="external" format="png" navtitle="API seqeunce of live streaming"/>
         <keydef keys="start-api-sequence-electron"
             href="https://web-cdn.agora.io/docs-files/1628071244738" scope="external" format="png" navtitle="API seqeunce of live streaming"/>
         <keydef keys="start-api-sequence-web" href="https://web-cdn.agora.io/docs-files/1617877252660"
@@ -69,6 +69,27 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="start-sample-project-ios" href="https://github.com/AgoraIO/API-Examples/blob/master/iOS/APIExample/Examples/Basic/JoinChannelVideo/JoinChannelVideo.swift" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>JoinChannelVideo.swift</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-mac" href="https://github.com/AgoraIO/API-Examples/blob/master/macOS/APIExample/Examples/Basic/JoinChannelVideo/JoinChannelVideo.swift" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>JoinChannelVideo.swift</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="host">
+        <topicmeta>
+            <keywords>
+                <keyword>host</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
     <keydef keys="start-demo-web" href="https://webdemo.agora.io/basicLive/index.html"
         scope="external" format="html">
         <topicmeta>
@@ -89,6 +110,17 @@
         <topicmeta>
             <keywords>
                 <keyword>Agora-Unity-Quickstart</keyword>
+    <keydef keys="release-notes-ios" href="https://docs.agora.io/en/Interactive%20Broadcast/release_ios_video?platform=ios" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Release Notes</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="release-notes-mac" href="https://docs.agora.io/en/Interactive%20Broadcast/release_mac_video?platform=macOS" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Release Notes</keyword>
             </keywords>
         </topicmeta>
     </keydef>

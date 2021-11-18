@@ -2,7 +2,6 @@
 <val>
     <prop action="exclude" att="props" val="audio"/>
     <prop action="exclude" att="props" val="live"/>
-    <prop action="exclude" att="props" val="cn"/>
     <prop action="exclude" att="props" val="hide"/>
     <prop action="exclude" att="props" val="lives"/>
     <prop action="include" att="props" val="video"/>
