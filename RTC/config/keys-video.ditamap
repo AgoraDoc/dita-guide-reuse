@@ -15,6 +15,7 @@
             format="png" scope="external" navtitle="Basic workflow"/>
         <keydef keys="start-api-sequence-cocos-creator" href="https://web-cdn.agora.io/docs-files/1606315461579"
             format="png" scope="external"/>
+        <keydef keys="start-api-sequence-unity" href="https://web-cdn.agora.io/docs-files/1576216531722" format="png" scope="external"/>
     </topichead>
     <keydef keys="product-name">
         <topicmeta>
@@ -109,6 +110,14 @@
             <keywords>
                 <keyword>Agora-Electron-Quickstart</keyword>
             </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-unity" href="https://github.com/AgoraIO/Agora-Unity-Quickstart"
+        scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora-Unity-Quickstart</keyword>
+          </keywords>
         </topicmeta>
     </keydef>
     <keydef keys="release-notes-ios" href="https://docs.agora.io/en/Video/release_ios_video?platform=ios" scope="external" format="html">
