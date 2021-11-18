@@ -1,8 +1,8 @@
-# Get Started with Interactive Live Streaming Premium for  {#get-started-with-product-name-for-platform}
+# Get Started with Interactive Live Streaming Premium for Unity {#get-started-with-product-name-for-platform}
 
 The Agora Video SDK enables you to develop rapidly to enhance your social, work, education, and IoT apps with real-time engagements.
 
-This page shows the minimum code you need to add live streaming into your app by using the Agora Video SDK for .
+This page shows the minimum code you need to add live streaming into your app by using the Agora Video SDK for Unity.
 
 ## Understand the tech {#understand-the-tech}
 
@@ -78,11 +78,8 @@ This section shows how to use the Agora Video SDK to implement live streaming in
 
 Agora recommends adding the following elements to the UI:
 
-1.  The view of the host
-2.  An exit button
-
-
-If you use the **Unity Editor** to build your UI, ensure that you bind **VideoSurface.cs** to the **GameObjects** designated for local and remote videos. In the following example, the **VideoSurface.cs** is applied to the cube for the local video and to the cylinder for the remote video.
+-   The view of the host
+-   An exit button
 
 ![](https://web-cdn.agora.io/docs-files/1576216681040)
 
@@ -143,22 +140,22 @@ To implement this logic, take the following steps:
 -   According to your scenarios, you can also listen for callback events, such as when the local user joins the channel, and when the first video frame of a remote user is decoded.
 
     ```c#
-     // Pass an App ID to create and initialize an IRtcEngine object.
-     mRtcEngine = IRtcEngine.GetEngine (appId); 
-     // Listen for the OnJoinChannelSuccessHandler callback.
-     // This callback occurs when the local user successfully joins the channel.
-     mRtcEngine.OnJoinChannelSuccessHandler = OnJoinChannelSuccessHandler; 
-     // Listen for the OnUserJoinedHandler callback.
-     // This callback occurs when the first video frame of a remote user is received and decoded after the remote user successfully joins the channel.
-     // You can call the SetForUser method in this callback to set the remote video.
-     mRtcEngine.OnUserJoinedHandler = OnUserJoinedHandler; 
-     // Listen for the OnUserOfflineHandler callback.
-     // This callback occurs when the remote user leaves the channel or drops offline.
-     mRtcEngine.OnUserOfflineHandler = OnUserOfflineHandler;   
+    // Pass an App ID to create and initialize an IRtcEngine object.
+    mRtcEngine = IRtcEngine.GetEngine (appId); 
+    // Listen for the OnJoinChannelSuccessHandler callback.
+    // This callback occurs when the local user successfully joins the channel.
+    mRtcEngine.OnJoinChannelSuccessHandler = OnJoinChannelSuccessHandler; 
+    // Listen for the OnUserJoinedHandler callback.
+    // This callback occurs when the first video frame of a remote user is received and decoded after the remote user successfully joins the channel.
+    // You can call the SetForUser method in this callback to set the remote video.
+    mRtcEngine.OnUserJoinedHandler = OnUserJoinedHandler; 
+    // Listen for the OnUserOfflineHandler callback.
+    // This callback occurs when the remote user leaves the channel or drops offline.
+    mRtcEngine.OnUserOfflineHandler = OnUserOfflineHandler;   
     ```
 
 
-**Set the channnel profile**
+**Set the channel profile**
 
 -   Call the `SetChannelProfile` method to set the channel profile as `LIVE_BROADCASTING`.
 
@@ -189,27 +186,23 @@ After initializing an `IRtcEngine object`, set the local video before joining a 
 
 -   Call `EnableVideoObserver` to get the local video.
 
-    ```
     ```c#
     // Enable the video module.
     mRtcEngine.EnableVideo();
     // Get the local video and pass it on to Unity.
     mRtcEngine.EnableVideoObserver();
     ```
+
+-   Choose an object to display the local video, and drag the **VideoSurface.cs** file to **Script**, so that you can bind the **VideoSurface.cs** file to the object and see the local video. Unity renders 3D objects by default, such as Cube, Cylinder and Plane. To render the object in other types, modify the renderer in the **VideoSurface.cs** file. ![](https://web-cdn.agora.io/docs-files/1576208681884)
+
+    ```c#
+    // The default renderer is Renderer.
+    Renderer rend = GetComponent(); 
+    rend.material.mainTexture = nativeTexture; 
+    // Change the renderer to RawImage.
+    RawImage rend = GetComponent(); 
+    rend.texture = nativeTexture; 
     ```
-
-    -   Choose an object to display the local video, and drag the **VideoSurface.cs** file to **Script**, so that you can bind the **VideoSurface.cs** file to the object and see the local video. Unity renders 3D objects by default, such as Cube, Cylinder and Plane. To render the object in other types, modify the renderer in the **VideoSurface.cs** file.
-
-        ![](https://web-cdn.agora.io/docs-files/1576208681884)
-
-        ```c#
-        // The default renderer is Renderer.
-        Renderer rend = GetComponent(); 
-        rend.material.mainTexture = nativeTexture; 
-        // Change the renderer to RawImage.
-        RawImage rend = GetComponent(); 
-        rend.texture = nativeTexture; 
-        ```
 
 
 **Join a channel**
@@ -265,7 +258,7 @@ private void OnUserJoinedHandler(uint uid, int elapsed)
     }
 ```
 
-To remove the VideoSurface.cs script from the object, see the following sample codes:
+To remove the **VideoSurface.cs** script from the object, see the following sample codes:
 
 ```c#
 private void OnUserOfflineHandler(uint uid, USER_OFFLINE_REASON reason)
@@ -281,35 +274,34 @@ private void OnUserOfflineHandler(uint uid, USER_OFFLINE_REASON reason)
 
 **Leave the channel and destroy the `IRtcEngine` object**
 
--   According to your scenario, such as when the call ends and when you need to close the app, call `LeaveChannel` to leave the current call, and call `DisableVideoObserver` to disable the video.
+According to your scenario, such as when the call ends and when you need to close the app, call `LeaveChannel` to leave the current call, and call `DisableVideoObserver` to disable the video.
 
-    ```c#
-    public void leave()
-     {
-         Debug.Log ("calling leave");
-         if (mRtcEngine == null)
-             return;
-         // Leave the channel.
-         mRtcEngine.LeaveChannel();
-         // Disable the video.
-         mRtcEngine.DisableVideoObserver();
-     }
-    ```
+```c#
+public void leave()
+ {
+    Debug.Log ("calling leave");
+     if (mRtcEngine == null)
+         return;
+     // Leave the channel.
+     mRtcEngine.LeaveChannel();
+     // Disable the video.
+     mRtcEngine.DisableVideoObserver();
+ }
+```
 
-    -   After leaving the channel, if you want to exit the app or release the memory of `IRtcEngine`, call `Destroy` to destroy the `IRtcEngine` object.
+After leaving the channel, if you want to exit the app or release the memory of `IRtcEngine`, call `Destroy` to destroy the `IRtcEngine` object.
 
-        ```c#
-        void OnApplicationQuit()
-        {
-            if (mRtcEngine != null)
-            {
-            // Destroy the IRtcEngine object.
-            IRtcEngine.Destroy();
-            mRtcEngine = null;
-            }
-        }
-        ```
-
+```c#
+void OnApplicationQuit()
+{
+    if (mRtcEngine != null)
+    {
+    // Destroy the IRtcEngine object.
+    IRtcEngine.Destroy();
+    mRtcEngine = null;
+    }
+}
+```
 
 ## Test your app {#test-your-app}
 
@@ -338,16 +330,17 @@ Generating a token by hand is not helpful in a production context. [Authenticate
 
 This section provides additional information for your reference.
 
--   Agora provides an open source sample project  on GitHub for your reference.
+-   Agora provides an open source sample project [Agora-Unity-Quickstart](https://github.com/AgoraIO/Agora-Unity-Quickstart) on GitHub for your reference.
 
--   In addition to integrating the Agora Video SDK through Unity Asset Store, you can also manually download the Agora Video SDK:
+-   In addition to integrating the SDK through Unity Asset Store, you can also manually download the Agora SDK:
 
-    -   Go to [SDK Downloads](https://docs.agora.io/en/All/downloads?platform=Unity), download the Agora Video SDK. When the download completes, extract the files from the downloaded SDK package.
+    -   Go to [SDK Downloads](https://docs.agora.io/en/All/downloads?platform=Unity), download the Agora SDK. When the download completes, extract the files from the downloaded SDK package.
 
     -   Copy the `Plugins` subfolder from the `samples/Hello-Video-Unity-Agora/Assets/AgoraEngine` directory of the downloaded SDK to the `Assets` subfolder of your project.
 
-    **Note:**
 
-    -   Android or iOS developers using Unity Editor for macOS or Windows must also copy the macOS or the x86/X86\_64 subfolder to the specified directory.
-    -   iOS developers also need to copy the `BL_BuildPostProcess.cs` file from the `samples/Hello-Video-Unity-Agora/Assets/AgoraEngine/Editor` directory.
+**Note:**
+
+-   Android or iOS developers using Unity Editor for macOS or Windows must also copy the macOS or the x86/X86\_64 subfolder to the specified directory.
+-   iOS developers also need to copy the `BL_BuildPostProcess.cs` file from the `samples/Hello-Video-Unity-Agora/Assets/AgoraEngine/Editor` directory.
 

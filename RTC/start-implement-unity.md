@@ -5,14 +5,13 @@ This section shows how to use the [sdk-name] to implement [feature] into your ap
 ## Create the UI
 
 Agora recommends adding the following elements to the UI:
-
+<ul>
 <li props="video">The local video view</li>
 <li props="video">The remote video view</li>
 <li props="video">An end-call button </li>
-
 <li props="video live">The view of the host</li>
 <li props="video live">An exit button</li>
-
+</ul>
 If you use the **Unity Editor** to build your UI, ensure that you bind **VideoSurface.cs** to the **GameObjects** designated for local and remote videos. In the following example, the **VideoSurface.cs** is applied to the cube for the local video and to the cylinder for the remote video.
 
 ![UI]
@@ -72,29 +71,29 @@ To implement this logic, take the following steps:
 - According to your scenarios, you can also listen for callback events, such as when the local user joins the channel, and when the first video frame of a remote user is decoded.
  
   ```c#
-   // Pass an App ID to create and initialize an IRtcEngine object.
-   mRtcEngine = IRtcEngine.GetEngine (appId); 
-   // Listen for the OnJoinChannelSuccessHandler callback.
-   // This callback occurs when the local user successfully joins the channel.
-   mRtcEngine.OnJoinChannelSuccessHandler = OnJoinChannelSuccessHandler; 
-   // Listen for the OnUserJoinedHandler callback.
-   // This callback occurs when the first video frame of a remote user is received and decoded after the remote user successfully joins the channel.
-   // You can call the SetForUser method in this callback to set the remote video.
-   mRtcEngine.OnUserJoinedHandler = OnUserJoinedHandler; 
-   // Listen for the OnUserOfflineHandler callback.
-   // This callback occurs when the remote user leaves the channel or drops offline.
-   mRtcEngine.OnUserOfflineHandler = OnUserOfflineHandler;   
-   ```
+  // Pass an App ID to create and initialize an IRtcEngine object.
+  mRtcEngine = IRtcEngine.GetEngine (appId); 
+  // Listen for the OnJoinChannelSuccessHandler callback.
+  // This callback occurs when the local user successfully joins the channel.
+  mRtcEngine.OnJoinChannelSuccessHandler = OnJoinChannelSuccessHandler; 
+  // Listen for the OnUserJoinedHandler callback.
+  // This callback occurs when the first video frame of a remote user is received and decoded after the remote user successfully joins the channel.
+  // You can call the SetForUser method in this callback to set the remote video.
+  mRtcEngine.OnUserJoinedHandler = OnUserJoinedHandler; 
+  // Listen for the OnUserOfflineHandler callback.
+  // This callback occurs when the remote user leaves the channel or drops offline.
+  mRtcEngine.OnUserOfflineHandler = OnUserOfflineHandler;   
+  ```
       
-<p props="live"><b>Set the channnel profile</b> 
+<p props="live"><b>Set the channel profile</b> 
 
 - Call the <code>SetChannelProfile</code> method to set the channel profile as <code>LIVE_BROADCASTING</code>.
 - One <code>IRtcEngine</code> object uses one profile only. If you want to switch to another profile, destroy the current <code>IRtcEngine</code> object with the <code>Destroy</code> method and create a new one before calling the <code>SetChannelProfile</code> method.
    
-   ```c#
-   // Set the channel profile as LIVE_BROADCASTING.
-   mRtcEngine.SetChannelProfile(CHANNEL_PROFILE.CHANNEL_PROFILE_LIVE_BROADCASTING);
-   ```
+  ```c#
+  // Set the channel profile as LIVE_BROADCASTING.
+  mRtcEngine.SetChannelProfile(CHANNEL_PROFILE.CHANNEL_PROFILE_LIVE_BROADCASTING);
+  ```
 </p>
 
 <p props="live"><b>Set the client role</b> 
@@ -115,23 +114,23 @@ After initializing an `IRtcEngine object`, set the local video before joining a 
 - Call `EnableVideo` to enable the video module.
 - Call `EnableVideoObserver` to get the local video.
    
-      ```c#
-      // Enable the video module.
-      mRtcEngine.EnableVideo();
-      // Get the local video and pass it on to Unity.
-      mRtcEngine.EnableVideoObserver();
-      ```
-    - Choose an object to display the local video, and drag the **VideoSurface.cs** file to **Script**, so that you can bind the **VideoSurface.cs** file to the object and see the local video. Unity renders 3D objects by default, such as Cube, Cylinder and Plane. To render the object in other types, modify the renderer in the **VideoSurface.cs** file.
+  ```c#
+  // Enable the video module.
+  mRtcEngine.EnableVideo();
+  // Get the local video and pass it on to Unity.
+  mRtcEngine.EnableVideoObserver();
+  ```
+- Choose an object to display the local video, and drag the **VideoSurface.cs** file to **Script**, so that you can bind the **VideoSurface.cs** file to the object and see the local video. Unity renders 3D objects by default, such as Cube, Cylinder and Plane. To render the object in other types, modify the renderer in the **VideoSurface.cs** file.
+  ![drag]
   
-      ![drag]
-      ```c#
-      // The default renderer is Renderer.
-      Renderer rend = GetComponent(); 
-      rend.material.mainTexture = nativeTexture; 
-      // Change the renderer to RawImage.
-      RawImage rend = GetComponent(); 
-      rend.texture = nativeTexture; 
-      ``` 
+  ```c#
+  // The default renderer is Renderer.
+  Renderer rend = GetComponent(); 
+  rend.material.mainTexture = nativeTexture; 
+  // Change the renderer to RawImage.
+  RawImage rend = GetComponent(); 
+  rend.texture = nativeTexture; 
+  ``` 
   
 **Join a channel**
 
@@ -188,44 +187,44 @@ private void OnUserJoinedHandler(uint uid, int elapsed)
         mRemotePeer = uid;
     }
 ```
-   To remove the VideoSurface.cs script from the object, see the following sample codes:
-   ```c#
-   private void OnUserOfflineHandler(uint uid, USER_OFFLINE_REASON reason)
-    {
-        // Remove video stream.
-        // Call this in the main thread.
-        GameObject go = GameObject.Find (uid.ToString());
-        if (!ReferenceEquals (go, null)) {
-            Destroy (go);
-        }
-    }
-   ```
+To remove the **VideoSurface.cs** script from the object, see the following sample codes:
+```c#
+private void OnUserOfflineHandler(uint uid, USER_OFFLINE_REASON reason)
+ {
+     // Remove video stream.
+     // Call this in the main thread.
+     GameObject go = GameObject.Find (uid.ToString());
+     if (!ReferenceEquals (go, null)) {
+         Destroy (go);
+     }
+ }
+```
 
 **Leave the channel and destroy the <code>IRtcEngine</code> object**
    
-- According to your scenario, such as when the call ends and when you need to close the app, call `LeaveChannel` to leave the current call, and call `DisableVideoObserver` to disable the video. 
-     ```c#
-     public void leave()
-      {
-          Debug.Log ("calling leave");
-          if (mRtcEngine == null)
-              return;
-          // Leave the channel.
-          mRtcEngine.LeaveChannel();
-          // Disable the video.
-          mRtcEngine.DisableVideoObserver();
-      }
-     ```    
-   - After leaving the channel, if you want to exit the app or release the memory of `IRtcEngine`, call `Destroy` to destroy the `IRtcEngine` object.
-     ```c#
-     void OnApplicationQuit()
-     {
-         if (mRtcEngine != null)
-         {
-         // Destroy the IRtcEngine object.
-         IRtcEngine.Destroy();
-         mRtcEngine = null;
-         }
-     }
-     ```          
+According to your scenario, such as when the call ends and when you need to close the app, call `LeaveChannel` to leave the current call, and call `DisableVideoObserver` to disable the video. 
+```c#
+public void leave()
+ {
+    Debug.Log ("calling leave");
+     if (mRtcEngine == null)
+         return;
+     // Leave the channel.
+     mRtcEngine.LeaveChannel();
+     // Disable the video.
+     mRtcEngine.DisableVideoObserver();
+ }
+```    
+After leaving the channel, if you want to exit the app or release the memory of `IRtcEngine`, call `Destroy` to destroy the `IRtcEngine` object.
+```c#
+void OnApplicationQuit()
+{
+    if (mRtcEngine != null)
+    {
+    // Destroy the IRtcEngine object.
+    IRtcEngine.Destroy();
+    mRtcEngine = null;
+    }
+}
+```          
    

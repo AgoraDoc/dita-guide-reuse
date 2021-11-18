@@ -144,7 +144,6 @@ To implement this logic, take the following steps:
 
 -   According to your scenarios, you can also listen for callback events, such as when the local user joins the channel, and when the first video frame of a remote user is decoded.
 
-    ```
     ```c#
     // Pass an App ID to create and initialize an IRtcEngine object.
     mRtcEngine = IRtcEngine.GetEngine (appId); 
@@ -158,7 +157,6 @@ To implement this logic, take the following steps:
     // Listen for the OnUserOfflineHandler callback.
     // This callback occurs when the remote user leaves the channel or drops offline.
     mRtcEngine.OnUserOfflineHandler = OnUserOfflineHandler;   
-    ```
     ```
 
 
@@ -189,27 +187,23 @@ After initializing an `IRtcEngine object`, set the local video before joining a 
 
 -   Call `EnableVideoObserver` to get the local video.
 
-    ```
     ```c#
     // Enable the video module.
     mRtcEngine.EnableVideo();
     // Get the local video and pass it on to Unity.
     mRtcEngine.EnableVideoObserver();
     ```
+
+-   Choose an object to display the local video, and drag the **VideoSurface.cs** file to **Script**, so that you can bind the **VideoSurface.cs** file to the object and see the local video. Unity renders 3D objects by default, such as Cube, Cylinder and Plane. To render the object in other types, modify the renderer in the **VideoSurface.cs** file. ![](https://web-cdn.agora.io/docs-files/1576208681884)
+
+    ```c#
+    // The default renderer is Renderer.
+    Renderer rend = GetComponent(); 
+    rend.material.mainTexture = nativeTexture; 
+    // Change the renderer to RawImage.
+    RawImage rend = GetComponent(); 
+    rend.texture = nativeTexture; 
     ```
-
-    -   Choose an object to display the local video, and drag the **VideoSurface.cs** file to **Script**, so that you can bind the **VideoSurface.cs** file to the object and see the local video. Unity renders 3D objects by default, such as Cube, Cylinder and Plane. To render the object in other types, modify the renderer in the **VideoSurface.cs** file.
-
-        ![](https://web-cdn.agora.io/docs-files/1576208681884)
-
-        ```c#
-        // The default renderer is Renderer.
-        Renderer rend = GetComponent(); 
-        rend.material.mainTexture = nativeTexture; 
-        // Change the renderer to RawImage.
-        RawImage rend = GetComponent(); 
-        rend.texture = nativeTexture; 
-        ```
 
 
 **Join a channel**
@@ -222,11 +216,9 @@ Call `JoinChannelByKey` to join a channel. Set the following parameters when cal
 -   `channelName`:The unique name of the channel to join. Users that input the same channel name join the same channel.
 -   `uid`:Integer. The unique ID of the local user. If you set `uid` as 0, the SDK automatically assigns one user ID and returns it in the `OnJoinChannelSuccessHandler` callback.
 
-```
-  ```c#
-  // Join a channel. 
-  mRtcEngine.JoinChannelByKey(null, channel, null, 0);
-  ```
+```c#
+// Join a channel. 
+mRtcEngine.JoinChannelByKey(null, channel, null, 0);
 ```
 
 **Set the remote video**
@@ -242,31 +234,29 @@ Follow the steps to set the remote video:
 
 **Note:** The default value of `uid` in the `SetForUser` method is 0. To see the remote user, ensure that you input the uid of the remote user in `SetForUser`. Otherwise, the SDK uses the default value and you can only see the local video.
 
-```
-  ```c#
-  // This callback occurs when the first video frame of a remote user is received and decoded after the remote user successfully joins the channel.
-  // You can call the SetForUser method in this callback to set up the remote video view.
-  private void OnUserJoinedHandler(uint uid, int elapsed)
-   {
-	   Debug.Log ("OnUserJoinedHandler: uid = " + uid)
-	   GameObject go = GameObject.Find (uid.ToString ());
-	   if (!ReferenceEquals (go, null)) {
-		   return; 
-	   }
-	   go = GameObject.CreatePrimitive (PrimitiveType.Plane);
-	   if (!ReferenceEquals (go, null)) {
-		   go.name = uid.ToString ();
-		   VideoSurface remoteVideoSurface = go.AddComponent<VideoSurface> ();
-	     // Set the remote video.
-	     remoteVideoSurface.SetForUser (uid);
-	     // Adjust the video refreshing frame rate. The video capture and render frame rate of Agora Unity SDK is 15 fps by default.
-	     // For example, in the game scenario, the refreshing frame rate of the game is 60 fps, which causes 3 times redundancy compared to the video render frame rate. Call the SetGameFps to adjust the refreshing frame rate of the game to 15 fps.
-	     remoteVideoSurface.SetGameFps (60);
-	     remoteVideoSurface.SetEnable (true);
-	   }
-	   mRemotePeer = uid;
-   }
-  ```
+```c#
+// This callback occurs when the first video frame of a remote user is received and decoded after the remote user successfully joins the channel.
+// You can call the SetForUser method in this callback to set up the remote video view.
+private void OnUserJoinedHandler(uint uid, int elapsed)
+    {
+        Debug.Log ("OnUserJoinedHandler: uid = " + uid)
+        GameObject go = GameObject.Find (uid.ToString ());
+        if (!ReferenceEquals (go, null)) {
+            return; 
+        }
+        go = GameObject.CreatePrimitive (PrimitiveType.Plane);
+        if (!ReferenceEquals (go, null)) {
+            go.name = uid.ToString ();
+            VideoSurface remoteVideoSurface = go.AddComponent<VideoSurface> ();
+          // Set the remote video.
+          remoteVideoSurface.SetForUser (uid);
+          // Adjust the video refreshing frame rate. The video capture and render frame rate of Agora Unity SDK is 15 fps by default.
+          // For example, in the game scenario, the refreshing frame rate of the game is 60 fps, which causes 3 times redundancy compared to the video render frame rate. Call the SetGameFps to adjust the refreshing frame rate of the game to 15 fps.
+          remoteVideoSurface.SetGameFps (60);
+          remoteVideoSurface.SetEnable (true);
+        }
+        mRemotePeer = uid;
+    }
 ```
 
 To remove the VideoSurface.cs script from the object, see the following sample codes:
@@ -300,19 +290,19 @@ private void OnUserOfflineHandler(uint uid, USER_OFFLINE_REASON reason)
      }
     ```
 
-    -   After leaving the channel, if you want to exit the app or release the memory of `IRtcEngine`, call `Destroy` to destroy the `IRtcEngine` object.
+-   After leaving the channel, if you want to exit the app or release the memory of `IRtcEngine`, call `Destroy` to destroy the `IRtcEngine` object.
 
-        ```c#
-        void OnApplicationQuit()
+    ```c#
+    void OnApplicationQuit()
+    {
+        if (mRtcEngine != null)
         {
-            if (mRtcEngine != null)
-            {
-            // Destroy the IRtcEngine object.
-            IRtcEngine.Destroy();
-            mRtcEngine = null;
-            }
+        // Destroy the IRtcEngine object.
+        IRtcEngine.Destroy();
+        mRtcEngine = null;
         }
-        ```
+    }
+    ```
 
 
 ## Test your app {#test-your-app}
@@ -344,9 +334,9 @@ This section provides additional information for your reference.
 
 -   Agora provides an open source sample project [Agora-Unity-Quickstart](https://github.com/AgoraIO/Agora-Unity-Quickstart) on GitHub for your reference.
 
--   In addition to integrating the Agora Video SDK through Unity Asset Store, you can also manually download the Agora Video SDK:
+-   In addition to integrating the SDK through Unity Asset Store, you can also manually download the Agora SDK:
 
-    -   Go to [SDK Downloads](https://docs.agora.io/en/All/downloads?platform=Unity), download the Agora Video SDK. When the download completes, extract the files from the downloaded SDK package.
+    -   Go to [SDK Downloads](https://docs.agora.io/en/All/downloads?platform=Unity), download the Agora SDK. When the download completes, extract the files from the downloaded SDK package.
 
     -   Copy the `Plugins` subfolder from the `samples/Hello-Video-Unity-Agora/Assets/AgoraEngine` directory of the downloaded SDK to the `Assets` subfolder of your project.
 
