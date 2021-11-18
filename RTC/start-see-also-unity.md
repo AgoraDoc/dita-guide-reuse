@@ -7,4 +7,6 @@ This section provides additional information for your reference.
     - Copy the `Plugins` subfolder from the `samples/Hello-Video-Unity-Agora/Assets/AgoraEngine` directory of the downloaded SDK to the `Assets` subfolder of your project.
    
 <note>
-<ul><li>Android or iOS developers using Unity Editor for macOS or Windows must also copy the macOS or the x86/X86_64 subfolder to the specified directory.<li>iOS developers also need to copy the <code>BL_BuildPostProcess.cs</code> file from the <code>samples/Hello-Video-Unity-Agora/Assets/AgoraEngine/Editor</code> directory.</li></note> 
+<ul>
+<li>Android or iOS developers using Unity Editor for macOS or Windows must also copy the macOS or the x86/X86_64 subfolder to the specified directory.</li>
+<li>iOS developers also need to copy the <code>BL_BuildPostProcess.cs</code> file from the <code>samples/Hello-Video-Unity-Agora/Assets/AgoraEngine/Editor</code> directory.</li></note> 
