@@ -7,6 +7,8 @@
             scope="external" format="png" navtitle="API seqeunce of video call"/>
         <keydef keys="start-api-sequence-android" href="https://web-cdn.agora.io/docs-files/1626420550447"
         scope="external" format="png" navtitle="API seqeunce of video call"/>
+        <keydef keys="start-api-sequence-apple" href="https://web-cdn.agora.io/docs-files/1627887317273"
+            scope="external" format="png" navtitle="API seqeunce of video call"/>
         <keydef keys="start-api-sequence-web" href="https://web-cdn.agora.io/docs-files/1617877136130"
         scope="external" format="png" navtitle="API seqeunce of video call"/>
         <keydef keys="start-basic-workflow" href="https://web-cdn.agora.io/docs-files/1627550978702"
@@ -81,6 +83,27 @@
             </keywords>
         </topicmeta>
     </keydef>
+    <keydef keys="start-sample-project-ios" href="https://github.com/AgoraIO/Basic-Video-Call" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Basic-Video-Call</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="start-sample-project-mac" href="https://github.com/AgoraIO/Basic-Video-Call" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Basic-Video-Call</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="host">
+        <topicmeta>
+            <keywords>
+                <keyword>user</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
     <keydef keys="start-sample-project-electron" href="https://github.com/AgoraIO-Community/Agora-Electron-Quickstart"
         scope="external" format="html">
         <topicmeta>
@@ -94,6 +117,20 @@
         <topicmeta>
             <keywords>
                 <keyword>Agora-Unity-Quickstart</keyword>
+          </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="release-notes-ios" href="https://docs.agora.io/en/Video/release_ios_video?platform=ios" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Release Notes</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="release-notes-mac" href="https://docs.agora.io/en/Video/release_mac_video?platform=macOS" scope="external" format="html">
+        <topicmeta>
+            <keywords>
+                <keyword>Release Notes</keyword>
             </keywords>
         </topicmeta>
     </keydef>

@@ -10,6 +10,10 @@
                         <Boolean>true</Boolean>
                     </entry>
                     <entry>
+                        <String>keys.context</String>
+                        <String>${pdu}/RTC/_Live-Streaming-Premium.ditamap</String>
+                    </entry>
+                    <entry>
                         <String>scenario.associations</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>

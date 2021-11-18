@@ -14,7 +14,7 @@
         <mapref href="config/keys-web.ditamap" props="web"/>
         <mapref href="config/keys-electron.ditamap" props="electron"/>
         <mapref href="config/keys-react-native.ditamap" props="rn"/>
-        <mapref href="config/keys-cocos2d.ditamap" props="cocos2d"/>
+        <mapref href="config/keys-cocos2d-x-android.ditamap" props="cocos2d-x-android"/>
         <mapref href="config/keys-flutter.ditamap" props="flutter"/>
         <mapref href="config/keys-cocos-creator.ditamap" props="cocos-creator"/>
         <mapref href="config/keys-unity.ditamap" props="unity"/>
@@ -29,21 +29,21 @@
             <topicref href="start-prerequisites-react-native.md" format="markdown" toc="no" props="rn"/>
             <topicref href="start-prerequisites-electron.md" format="markdown" toc="no" props="electron"/>
             <topicref href="start-prerequisites-unity.md" format="markdown" toc="no" props="unity"/>
+            <topicref href="start-prerequisites-flutter.md" format="markdown" toc="no" props="flutter"/>
+            <topicref href="start-prerequisites-cocos2d-x-android.md" format="markdown" toc="no" props="cocos2d-x-android"/>
             <topicref href="start-project-setup-android.md" format="markdown" toc="no" props="android"/>
-            <topicref href="start-project-setup-ios.md" format="markdown" toc="no" props="ios"/>
-            <topicref href="start-project-setup-mac.md" format="markdown" toc="no" props="mac"/>
+            <topicref href="start-project-setup-apple.md" format="markdown" toc="no" props="apple"/>
             <topicref href="start-project-setup-windows.md" format="markdown" toc="no"
                 props="windows"/>
             <topicref href="start-project-setup-web.md" format="markdown" toc="no" props="web"/>
             <topicref href="start-project-setup-electron.md" format="markdown" toc="no" props="electron"/>
             <topicref href="start-project-setup-react-native.md" format="markdown" toc="no" props="rn"/>
-            <topicref href="start-project-setup-cocos2d.md" format="markdown" toc="no" props="cocos2d"/>
+            <topicref href="start-project-setup-cocos2d-x-android.md" format="markdown" toc="no" props="cocos2d-x-android"/>
             <topicref href="start-project-setup-flutter.md" format="markdown" toc="no" props="flutter"/>
             <topicref href="start-project-setup-cocos-creator.md" format="markdown" toc="no" props="cocos-creator"/>
             <topicref href="start-project-setup-unity.md" format="markdown" toc="no" props="unity"/>
             <topicref href="start-implement-android.md" format="markdown" toc="no" props="android"/>
-            <topicref href="start-implement-ios.md" format="markdown" toc="no" props="ios"/>
-            <topicref href="start-implement-mac.md" format="markdown" toc="no" props="mac"/>
+            <topicref href="start-implement-apple.md" format="markdown" toc="no" props="apple"/>
             <topicref href="start-implement-windows.md" format="markdown" toc="no" props="windows"/>
             <topicref href="start-implement-web.md" format="markdown" toc="no" props="web">
                 <topicref href="integrate-sdk-npm-web.md" format="markdown" props="web"/>
@@ -52,33 +52,33 @@
             </topicref>
             <topicref href="start-implement-electron.md" format="markdown" toc="no" props="electron"/>
             <topicref href="start-implement-react-native.md" format="markdown" toc="no" props="rn"/>
-            <topicref href="start-implement-cocos2d.md" format="markdown" toc="no" props="cocos2d"/>
+            <topicref href="start-implement-cocos2d-x-android.md" format="markdown" toc="no" props="cocos2d-x-android"/>
             <topicref href="start-implement-flutter.md" format="markdown" toc="no" props="flutter"/>
             <topicref href="start-implement-cocos-creator.md" format="markdown" toc="no" props="cocos-creator">
                 <topicref href="initialize-cocos-creator.md" format="markdown" toc="no"/>
                 <topicref href="settings-after-channelprofile-cocos-creator.md" format="markdown" toc="no"/>
             </topicref>
             <topicref href="start-implement-unity.md" format="markdown" toc="no" props="unity"/>
-            <topicref href="start-test-the-app-native.md" format="markdown" toc="no" props="ios mac windows android"/>
+            <topicref href="start-test-the-app-native.md" format="markdown" toc="no" props="ios mac windows android cocos2d-x-android"/>
             <topicref href="start-test-the-app-web.md" format="markdown" toc="no" props="web"/>
             <topicref href="start-test-the-app-electron.md" format="markdown" toc="no" props="electron"/>
             <topicref href="start-test-the-app-react-native.md" format="markdown" toc="no" props="rn"/>
-            <topicref href="start-test-the-app-cocos2d.md" format="markdown" toc="no" props="cocos2d"/>
             <topicref href="start-test-the-app-flutter.md" format="markdown" toc="no" props="flutter"/>
             <topicref href="start-test-the-app-cocos-creator.md" format="markdown" toc="no" props="cocos-creator"/>
             <topicref href="start-test-the-app-unity.md" format="markdown" toc="no" props="unity"/>
             <topicref href="start-next.md" format="markdown" toc="no"/>
             <topicref href="start-see-also-android.md" format="markdown" toc="no" props="android"/>
-            <topicref href="start-see-also-ios.md" format="markdown" toc="no" props="ios"/>
-            <topicref href="start-see-also-mac.md" format="markdown" toc="no" props="mac"/>
+            <topicref href="start-see-also-apple.md" format="markdown" toc="no" props="apple"/>
             <topicref href="start-see-also-windows.md" format="markdown" toc="no" props="windows"/>
             <topicref href="start-see-also-web.md" format="markdown" toc="no" props="web"/>
             <topicref href="start-see-also-electron.md" format="markdown" toc="no" props="electron"/>
             <topicref href="start-see-also-react-native.md" format="markdown" toc="no" props="rn"/>
-            <topicref href="start-see-also-cocos2d.md" format="markdown" toc="no" props="cocos2d"/>
-            <topicref href="start-see-also-flutter.md" format="markdown" toc="no" props="flutter"/>
+            <topicref href="start-common-issues-flutter.md" format="markdown" toc="no" props="flutter"/>
+            <topicref href="start-see-also-cocos2d-x-android.md" format="markdown" toc="no" props="cocos2d-x-android"/>
             <topicref href="start-see-also-cocos-creator.md" format="markdown" toc="no" props="cocos-creator"/>
             <topicref href="start-see-also-unity.md" format="markdown" toc="no" props="unity"/>
+            <topicref href="integrate-earlier-versions-ios.md" format="markdown" toc="no" props="ios"/>
+            <topicref href="integrate-earlier-versions-mac.md" format="markdown" toc="no" props="mac"/>
         </topicref>
     </topichead>
 </map>

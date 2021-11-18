@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://www.dita-ot.org/project">
+  <context name="Video Call Cocos2d-x-Android" id="video-cocos2d-x-android">
+    <input href="../_Video.ditamap"/>
+    <profile>
+      <ditaval href="filter-cocos2d-x-android.ditaval"/>
+    </profile>
+  </context>
+  <deliverable name="Markdown">
+    <context idref="video-cocos2d-x-android"/>
+    <output href="../../out/markdown/video/cocos2d-x-android/"/>
+    <publication transtype="markdown">
+      <param name="clean.temp" value="yes"/>
+      <param name="force-unique" value="true"/>
+    </publication>
+  </deliverable>
+  <deliverable name="HTML">
+    <context idref="video-cocos2d-x-android"/>
+    <output href="../../out/html/video/cocos2d-x-android/"/>
+    <publication transtype="html5">
+      <param name="nav-toc" value="full"/>
+      <param name="clean.temp" value="yes"/>
+      <param name="force-unique" value="true"/>
+    </publication>
+  </deliverable>
+</project>

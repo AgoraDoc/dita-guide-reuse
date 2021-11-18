@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="get-started-sample-code">
+    <title>Get started sample code</title>
+    <body>
+        <section>
+            <title>Video</title>
+            <p id="join-call-channel">
+                <codeblock outputclass="language-java">void HelloWorld::onJoinChannelClicked() {
+  if (editBox == nullptr || strlen(editBox->getText()) == 0) {
+    return;
+  }
+    // Pass in your token and channel name to join the channel.
+    // Set uid as 0, and the SDK assigns a user ID for the local user.
+    engine->joinChannel(AGORA_TOKEN, editBox->getText(), "Cocos2d", 0);
+}</codeblock>
+            </p>
+        </section>
+        <section>
+            <title>Live Streaming Premium</title>
+            <p id="join-live-channel">
+                <codeblock outputclass="language-jave">void HelloWorld::onJoinChannelClicked() {
+  if (editBox == nullptr || strlen(editBox->getText()) == 0) {
+    return;
+  }
+
+    // Set the channel profile as live streaming.
+    engine->setChannelProfile(agora::rtc::CHANNEL_PROFILE_LIVE_BROADCASTING);
+
+    // Set the usr role as host.
+    engine->setClientRole(agora::rtc::CLIENT_ROLE_BROADCASTER);
+
+    // Pass in your token and channel name to join the channel.
+    // Set uid as 0, and the SDK assigns a user ID for the local user.
+    engine->joinChannel(AGORA_TOKEN, editBox->getText(), "Cocos2d", 0);
+}</codeblock>
+            </p>
+        </section>
+    </body>
+</topic>
