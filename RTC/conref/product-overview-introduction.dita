@@ -3,19 +3,6 @@
 <topic id="product-intro">
     <title>Product Overview Introduction</title>
     <body>
-        <p id="video"><ph keyref="product-name"/> enables easy and convenient one-to-one or one-to-many calls and supports voice-only and video modes with the <xref keyref="sdk-name"/>.</p>
-        <p id="voice"><ph keyref="product-name"/> enables easy and convenient one-to-one or one-to-many <b>voice-only</b> calls with the <xref keyref="sdk-name"/>. With a small SDK package size, the <ph keyref="sdk-name"/> is applicable to a variety of recreational
-            and business activities.</p>
-        <p id="live0"><ph keyref="product-name"/> enables one-to-many and many-to-many audio or video live streaming with the <xref keyref="sdk-name"/>.</p>
-        <p id="live1"><ph keyref="product-name"/> is different from <xref href="https://docs.agora.io/en/Video/product_video?platform=All%20Platforms" format="html" scope="external">Agora Video Call</xref>. In a
-            video call, all users are the same role and can talk to each other freely. In an <ph keyref="product-name"/>, users can be the host or audience, where only the host can talk. For details, see this <xref href="https://docs.agora.io/en/faq/profile_difference" format="html" scope="external">FAQ</xref>.</p>
-
-        <p id="live2">Different from the traditional CDN live broadcast, which only allows one-way communication from the hosts to the audience, the <ph keyref="sdk-name"/> empowers the audience to interact with the hosts by <xref href="https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#becoming-host" format="html" scope="external">becoming a host</xref>, like a viewer jumping onto the stage in the middle of a play to perform.</p>
-
-        <p id="lives0"><ph keyref="product-name"/> is a product designed for live streaming scenarios featuring “light interaction” between the host and audience. Light interaction in this case refers to situations that require a timely exchange of text messages, comments, or virtual gifts, with less reliance on audio or video communication. Typical scenarios include live online classes, live-stream shopping (e-commerce), trivia gaming, or live sports streaming.</p>
-        <p id="lives1">The product adopts a UDP-based AUT protocol developed by Agora and relies on SD-RTN™, a software-defined real-time network built by Agora, to provide high-quality, low-latency live streaming experiences with good synchronization.
-            </p>
-
         <p id="function">
             <table>
                 <tgroup cols="3">
@@ -32,20 +19,17 @@
                     <tbody>
                         <row props="live">
                             <entry>Co-hosting in a channel</entry>
-                            <entry>An audience switches to a co-host and interacts with the existing
-                                host.</entry>
+                            <entry>An audience switches to a co-host and interacts with the existing host.</entry>
                             <entry>
                                 <ul>
-                                    <li>Large-scale live streams where hosts can invite the audience to
-                                        interact with them.</li>
+                                    <li>Large-scale live streams where hosts can invite the audience to interact with them.</li>
                                     <li>Online games such as Murder Mystery and Werewolf Killing.</li>
                                 </ul>
                             </entry>
                         </row>
                         <row props="lives">
                             <entry>Single Host</entry>
-                            <entry>Low-latency live streaming by one host. The audience can join the
-                                channel and watch the live streaming.</entry>
+                            <entry>Low-latency live streaming by one host. The audience can join the channel and watch the live streaming.</entry>
                             <entry>
                                 <ul id="ul_skp_1fp_lrb">
                                     <li>Lecture Hall</li>
@@ -59,8 +43,7 @@
                         </row>
                         <row props="lives">
                             <entry>Becoming a host</entry>
-                            <entry>An audience member can switch their user role and become a host.
-                                Then they can interact with other hosts via audio and video.</entry>
+                            <entry>An audience member can switch their user role and become a host. Then they can interact with other hosts via audio and video.</entry>
                             <entry>-</entry>
                         </row>
                         <row props="live lives">
@@ -70,8 +53,7 @@
                         </row>
                         <row>
                             <entry>Audio mixing</entry>
-                            <entry>Sends the local and online audio with the user's voice to other
-                                audience members in the channel.</entry>
+                            <entry>Sends the local and online audio with the user's voice to other audience members in the channel.</entry>
                             <entry>
                                 <ul>
                                     <li>Online KTV.</li>
@@ -81,9 +63,7 @@
                         </row>
                         <row props="live lives video">
                             <entry>Screen sharing</entry>
-                            <entry>Hosts share their screens with the audience in the channel. Supports
-                                specifying which screen or which window to share, and supports
-                                specifying the sharing region.</entry>
+                            <entry>Hosts share their screens with the audience in the channel. Supports specifying which screen or which window to share, and supports specifying the sharing region.</entry>
                             <entry>
                                 <ul>
                                     <li>Interactive online classes.</li>
@@ -93,14 +73,12 @@
                         </row>
                         <row props="live lives video">
                             <entry>Basic image enhancement</entry>
-                            <entry>Sets basic beauty effects, including skin smoothening, whitening, and
-                                cheek blushing.</entry>
+                            <entry>Sets basic beauty effects, including skin smoothening, whitening, and cheek blushing.</entry>
                             <entry>Image enhancement in a video call.</entry>
                         </row>
                         <row>
                             <entry>Modify the raw data</entry>
-                            <entry>Developers obtain and modify the raw voice or video data of the SDK
-                                engine to create special effects, such as a voice change.</entry>
+                            <entry>Developers obtain and modify the raw voice or video data of the SDK engine to create special effects, such as a voice change.</entry>
                             <entry>
                                 <ul>
                                     <li>To change the voice in an online voice chatroom.</li>
@@ -110,49 +88,38 @@
                         </row>
                         <row props="live lives video">
                             <entry>Customize the video source and renderer</entry>
-                            <entry>Users process videos (from self-built cameras, screen sharing, or
-                                files) for image enhancement and filtering.</entry>
+                            <entry>Users process videos (from self-built cameras, screen sharing, or files) for image enhancement and filtering.</entry>
                             <entry>
                                 <ul>
-                                    <li>To use a customized image enhancement library or pre-processing
-                                        library.</li>
-                                    <li>To customize the application's built-in image and video
-                                        modules.</li>
+                                    <li>To use a customized image enhancement library or pre-processing library.</li>
+                                    <li>To customize the application's built-in image and video modules.</li>
                                     <li>To use other video sources, such as a recorded video.</li>
-                                    <li>To provide flexible device management for exclusive video
-                                        capture devices to avoid conflicts with other services.</li>
+                                    <li>To provide flexible device management for exclusive video capture devices to avoid conflicts with other services.</li>
                                 </ul>
                             </entry>
                         </row>
                         <row props="live lives">
                             <entry>Push streams to the CDN</entry>
-                            <entry>Sends the audio and video of your channel to other RTMP servers
-                                through the CDN:<ul>
+                            <entry>Sends the audio and video of your channel to other RTMP servers through the CDN:<ul>
                                     <li>Starts or stops publishing at any time.</li>
-                                    <li>Adds or removes an address while continuously publishing the
-                                        stream.</li>
+                                    <li>Adds or removes an address while continuously publishing the stream.</li>
                                     <li>Adjusts the picture-in-picture layout.</li>
                                 </ul></entry>
                             <entry>
                                 <ul>
                                     <li>To send a live stream to WeChat or Weibo.</li>
-                                    <li>To allow more people to watch the live stream when the number of
-                                        audience members in the channel reached the limit.</li>
+                                    <li>To allow more people to watch the live stream when the number of audience members in the channel reached the limit.</li>
                                 </ul>
                             </entry>
                         </row>
                         <row props="audio">
                             <entry>Play the sound effect files</entry>
-                            <entry>Enables developers to play specific sound effect files, adjust
-                                the volume, and set the playback position of the sound effect
-                                files.</entry>
+                            <entry>Enables developers to play specific sound effect files, adjust the volume, and set the playback position of the sound effect files.</entry>
                             <entry>Online chess or card games.</entry>
                         </row>
                         <row props="audio">
                             <entry>Voice changer and reverberation</entry>
-                            <entry>Provides multiple presets to easily change the voice and set
-                                reverberation effects, also supports adjusting the pitch and using
-                                the equalization and reverberation modes flexibly.</entry>
+                            <entry>Provides multiple presets to easily change the voice and set reverberation effects, also supports adjusting the pitch and using the equalization and reverberation modes flexibly.</entry>
                             <entry>
                                 <ul>
                                     <li>Online KTV.</li>
@@ -162,8 +129,7 @@
                         </row>
                         <row props="audio">
                             <entry>Spatial sound effects</entry>
-                            <entry>Sets the spatial sound effects for remote users to provide
-                                immersive experiences.</entry>
+                            <entry>Sets the spatial sound effects for remote users to provide immersive experiences.</entry>
                             <entry>FPS games.</entry>
                         </row>
                         <row props="audio">
@@ -179,57 +145,16 @@
                     </tbody>
                 </tgroup>
             </table>
-            <note props="live">See the following sample code for application scenarios:
-                <ul>
-                    <li><xref href="https://github.com/AgoraIO/ARD-Agora-Online-PK/blob/master/README.zh.md"
-                            format="html" scope="external">PK Hosting</xref></li>
-                    <li><xref href="https://github.com/AgoraIO/HQ" format="html" scope="external"
-                           >Trivia Game</xref></li>
-                    <li><xref
-                            href="https://github.com/AgoraIO/Agora-Online-KTV/blob/master/README.zh.md"
-                            format="html" scope="external">Online KTV</xref></li>
-                    <li><xref href="https://github.com/AgoraIO-Usecase/Chatroom" format="html"
-                            scope="external">Online Voice Chatroom</xref></li>
-                    <li><xref href="https://github.com/AgoraIO/Wawaji" format="html"
-                            scope="external">Clip Doll Machine</xref></li>
-                    <li><xref href="https://github.com/AgoraIO-Usecase/Murder-Mystery-Game"
-                            format="html" scope="external">Murder Mystery Game</xref></li>
-                </ul>
-            </note>
             <note props="lives">
                 <ul>
-                    <li><b>Lecture Hall</b>: In a large online class, the low latency of Interactive
-                        Live Streaming Standard allows the teacher's audio and video to be quickly
-                        synchronized to the clients of thousands of students. The low latency
-                        between the audio and video of the teacher and the courseware makes
-                        real-time teaching more effective. Students can interact with the teacher
-                        through text messages, online quizzes, and similar means to enhance the
-                        learning experience.</li>
-                    <li><b>Showroom</b>: In a showroom live streaming, the audience can send virtual
-                        gifts to the host. Thanks to the low latency of Interactive Live Streaming
-                        Standard, the host can promptly thank the audience for their gifts, and the
-                        audience can receive the host's thanks in a timely fashion, which helps to
-                        strengthen the emotional connection on both sides.</li>
-                    <li><b>Live-stream Shopping</b>: In a live-stream shopping scenario, customers
-                        can ask sellers for product and activity information via real-time messages.
-                        The low latency of Interactive Live Streaming Standard allows sellers to
-                        quickly respond to customers' questions, and customers can promptly see
-                        sellers' answers, thus encouraging transactions. In addition, the high
-                        synchronization of Interactive Live Streaming Standard ensures a consistent
-                        experience on the audiences' clients for activities such as responding to
-                        flash sales, and grabbing time-sensitive offers (seckilling) and
-                        coupons.</li>
-                    <li><b>Live match streaming</b>: Live streaming sporting events or games in real
-                        time, synchronized so that there are no problematic delays.</li>
-                    <li><b>Trivia Game</b>: Apart from providing a smooth live streaming experience,
-                        the high synchronization of <ph keyref="product-name"/> also ensures that
-                        players receive the questions at the same time. This gives the audience
-                        members the same amount of time to answer—and an equal chance to win.</li>
+                    <li><b>Lecture Hall</b>: In a large online class, the low latency of Interactive Live Streaming Standard allows the teacher's audio and video to be quickly synchronized to the clients of thousands of students. The low latency between the audio and video of the teacher and the courseware makes real-time teaching more effective. Students can interact with the teacher through text messages, online quizzes, and similar means to enhance the learning experience.</li>
+                    <li><b>Showroom</b>: In a showroom live streaming, the audience can send virtual gifts to the host. Thanks to the low latency of Interactive Live Streaming Standard, the host can promptly thank the audience for their gifts, and the audience can receive the host's thanks in a timely fashion, which helps to strengthen the emotional connection on both sides.</li>
+                    <li><b>Live-stream Shopping</b>: In a live-stream shopping scenario, customers can ask sellers for product and activity information via real-time messages. The low latency of Interactive Live Streaming Standard allows sellers to quickly respond to customers' questions, and customers can promptly see sellers' answers, thus encouraging transactions. In addition, the high synchronization of Interactive Live Streaming Standard ensures a consistent experience on the audiences' clients for activities such as responding to flash sales, and grabbing time-sensitive offers (seckilling) and coupons.</li>
+                    <li><b>Live match streaming</b>: Live streaming sporting events or games in real time, synchronized so that there are no problematic delays.</li>
+                    <li><b>Trivia Game</b>: Apart from providing a smooth live streaming experience, the high synchronization of <ph keyref="product-name"/> also ensures that players receive the questions at the same time. This gives the audience members the same amount of time to answer—and an equal chance to win.</li>
                 </ul>
             </note>
-
             </p>
-
         <p id="key-property">
             <table>
                 <tgroup cols="2">
@@ -245,14 +170,13 @@
                         <row>
                             <entry>SDK package size</entry>
                             <entry>
-                                <p props="video live lives">4.61 MB to 13.94 MB </p>
+                                <p props="video live lives">4.61 MB to 13.94 MB</p>
                                 <p props="audio">3.14 MB to 11.28 MB</p>
                             </entry>
                         </row>
                         <row props="live lives video">
-                            <entry><ph props="live lives">Host capacity </ph><ph props="video"
-                                >Capacity</ph></entry>
-                            <entry>17 users </entry>
+                            <entry><p props="live lives">Host capacity </p><p props="video">Capacity</p></entry>
+                            <entry>17 users</entry>
                         </row>
                         <row props="live lives">
                             <entry>Audience capacity</entry>
@@ -278,9 +202,7 @@
                         </row>
                         <row>
                             <entry>Audio anti-packet-loss rate</entry>
-                            <entry>
-                                <ph props="live video audio">80%</ph><ph props="lives">70%</ph>
-                                (uplink and downlink)</entry>
+                            <entry>80% (uplink and downlink)</entry>
                         </row>
                         <row props="live">
                             <entry>Latency on the audience's client</entry>
@@ -294,21 +216,13 @@
                 </tgroup>
             </table>
         </p>
-        <p id="compatability0"><ph keyref="product-name"/> is supported on platforms such as iOS,
-            Android, Windows, macOS, Electron, Unity, and Web, and allows for cross-platform
-            connections. The following is a list of supported platforms and their versions.</p>
+        <p id="compatability0"><ph keyref="product-name"/> is supported on platforms such as iOS, Android, Windows, macOS, Electron, Unity, and Web, and allows for cross-platform connections. The following is a list of supported platforms and their versions.</p>
 
         <p id="compatability1">The platform compatibility of <ph keyref="product-name"/> is as follows:
             <ul>
-                <li>For the host's client, <ph keyref="product-name"/> supports platforms including Android, iOS,
-                    macOS, Windows, Web, and cross-platform frameworks (Unity, Electron, React
-                    Native, and Flutter).</li>
-                <li>For the audience's client, <ph keyref="product-name"/> supports
-                    platforms including Android, iOS, macOS, Windows, and Web.</li>
+                <li>For the host's client, <ph keyref="product-name"/> supports platforms including Android, iOS, macOS, Windows, Web, and cross-platform frameworks (Unity, Electron, React Native, and Flutter).</li>
+                <li>For the audience's client, <ph keyref="product-name"/> supports platforms including Android, iOS, macOS, Windows, and Web.</li>
             </ul>
             </p>
-
-
-
     </body>
 </topic>
