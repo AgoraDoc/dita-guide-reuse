@@ -4,6 +4,7 @@
     <input href="../_Video.ditamap"/>
     <profile>
       <ditaval href="filter-react-native.ditaval"/>
+      <ditaval href="filter-video.ditaval"/>
     </profile>
   </context>
   <deliverable name="Markdown">

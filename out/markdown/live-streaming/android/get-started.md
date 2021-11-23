@@ -200,7 +200,7 @@ When your app opens, you create an RtcEngine instance, enable the video, join a 
 
 The following figure shows the API call sequence of implementing Interactive Live Streaming Premium.
 
-![API seqeunce of live streaming](https://web-cdn.agora.io/docs-files/1625208380588)
+![](https://web-cdn.agora.io/docs-files/1625208380588)
 
 To implement this logic, take the following steps:
 

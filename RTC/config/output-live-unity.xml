@@ -4,6 +4,7 @@
     <input href="../_Live-Streaming-Premium.ditamap"/>
     <profile>
       <ditaval href="filter-unity.ditaval"/>
+      <ditaval href="filter-live.ditaval"/>
     </profile>
   </context>
   <deliverable name="Markdown">

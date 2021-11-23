@@ -48,16 +48,6 @@ Interactive Live Streaming Premium boasts a flexible combination of functions fo
 -   Online games such as Murder Mystery and Werewolf Killing.
 
 |
-|Single Host|Low-latency live streaming by one host. The audience can join the channel and watch the live streaming.|-   Lecture Hall
--   Showroom
--   Live-stream Shopping
--   Live match streaming
--   Trivia Game
-
- For the specific description of the scenarios above, see the note under the table.
-
-|
-|Becoming a host|An audience member can switch their user role and become a host. Then they can interact with other hosts via audio and video.|-|
 |Co-hosting across channels|Hosts interact with each other across channels.|PK Hosting.|
 |Audio mixing|Sends the local and online audio with the user's voice to other audience members in the channel.|-   Online KTV.
 -   Interactive music classes for children.
@@ -86,24 +76,6 @@ Interactive Live Streaming Premium boasts a flexible combination of functions fo
 -   To allow more people to watch the live stream when the number of audience members in the channel reached the limit.
 
 |
-|Play the sound effect files|Enables developers to play specific sound effect files, adjust the volume, and set the playback position of the sound effect files.|Online chess or card games.|
-|Voice changer and reverberation|Provides multiple presets to easily change the voice and set reverberation effects, also supports adjusting the pitch and using the equalization and reverberation modes flexibly.|-   Online KTV.
--   To change the voice in an online chatroom.
-
-|
-|Spatial sound effects|Sets the spatial sound effects for remote users to provide immersive experiences.|FPS games.|
-|Enable two-channel/high-quality sound mode|Enables the two-channel and the high-quality sound mode.|-   Online music classes.
--   FM applications.
-
-|
-
-**Note:**
-
--   **Lecture Hall**: In a large online class, the low latency of Interactive Live Streaming Standard allows the teacher's audio and video to be quickly synchronized to the clients of thousands of students. The low latency between the audio and video of the teacher and the courseware makes real-time teaching more effective. Students can interact with the teacher through text messages, online quizzes, and similar means to enhance the learning experience.
--   **Showroom**: In a showroom live streaming, the audience can send virtual gifts to the host. Thanks to the low latency of Interactive Live Streaming Standard, the host can promptly thank the audience for their gifts, and the audience can receive the host's thanks in a timely fashion, which helps to strengthen the emotional connection on both sides.
--   **Live-stream Shopping**: In a live-stream shopping scenario, customers can ask sellers for product and activity information via real-time messages. The low latency of Interactive Live Streaming Standard allows sellers to quickly respond to customers' questions, and customers can promptly see sellers' answers, thus encouraging transactions. In addition, the high synchronization of Interactive Live Streaming Standard ensures a consistent experience on the audiences' clients for activities such as responding to flash sales, and grabbing time-sensitive offers \(seckilling\) and coupons.
--   **Live match streaming**: Live streaming sporting events or games in real time, synchronized so that there are no problematic delays.
--   **Trivia Game**: Apart from providing a smooth live streaming experience, the high synchronization of Interactive Live Streaming Premium also ensures that players receive the questions at the same time. This gives the audience members the same amount of time to answer—and an equal chance to win.
 
 ## Key Properties {#key-properties}
 
@@ -111,12 +83,8 @@ Interactive Live Streaming Premium boasts a flexible combination of functions fo
 |--------|-------------------------------------------------|
 |SDK package size|4.61 MB to 13.94 MB
 
- 3.14 MB to 11.28 MB
-
 |
 |Host capacity
-
-Capacity
 
 |17 users|
 |Audience capacity|1 million users|

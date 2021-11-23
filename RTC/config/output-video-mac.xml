@@ -4,6 +4,7 @@
     <input href="../_Video.ditamap"/>
     <profile>
       <ditaval href="filter-mac.ditaval"/>
+      <ditaval href="filter-video.ditaval"/>
     </profile>
   </context>
   <deliverable name="Markdown">
