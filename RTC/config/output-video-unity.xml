@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://www.dita-ot.org/project">
+  <context name="Video Call Unity" id="video-unity">
+    <input href="../_Video.ditamap"/>
+    <profile>
+      <ditaval href="filter-unity.ditaval"/>
+    </profile>
+  </context>
+  <deliverable name="Markdown">
+    <context idref="video-unity"/>
+    <output href="../../out/markdown/video/unity/"/>
+    <publication transtype="markdown">
+      <param name="clean.temp" value="yes"/>
+      <param name="force-unique" value="true"/>
+    </publication>
+  </deliverable>
+  <deliverable name="HTML">
+    <context idref="video-unity"/>
+    <output href="../../out/html/video/unity/"/>
+    <publication transtype="html5">
+      <param name="nav-toc" value="full"/>
+      <param name="clean.temp" value="yes"/>
+      <param name="force-unique" value="true"/>
+    </publication>
+  </deliverable>
+</project>
