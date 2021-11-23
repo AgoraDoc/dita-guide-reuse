@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="https://www.dita-ot.org/project">
-  <context name="Video Call Android" id="video-android">
-    <input href="../_Video.ditamap"/>
+  <context name="Live Streaming Standard Android" id="lives-android">
+    <input href="../_Live-Streaming-Standard.ditamap"/>
     <profile>
       <ditaval href="filter-android.ditaval"/>
-      <ditaval href="filter-video.ditaval"/>
+      <ditaval href="filter-lives.ditaval"/>
     </profile>
   </context>
   <deliverable name="Markdown">
-    <context idref="video-android"/>
-    <output href="../../out/markdown/video/android/"/>
+    <context idref="lives-android"/>
+    <output href="../../out/markdown/live-streaming-standard/android/"/>
     <publication transtype="markdown">
       <param name="clean.temp" value="yes"/>
       <param name="force-unique" value="true"/>
     </publication>
   </deliverable>
   <deliverable name="HTML">
-    <context idref="video-android"/>
-    <output href="../../out/html/video/android/"/>
+    <context idref="lives-android"/>
+    <output href="../../out/html/live-streaming-standard/android/"/>
     <publication transtype="html5">
       <param name="nav-toc" value="full"/>
       <param name="clean.temp" value="yes"/>

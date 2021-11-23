@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Interactive Live Streaming Standard</title>
+    <ditavalref href="config/filter-lives.ditaval"/>
+    <topichead navtitle="Configurations" toc="no">
+        <topicref href="config/subject-scheme-rtc.ditamap" format="ditamap" type="subjectScheme"
+            navtitle="Conditional processing attributes"/>
+        <mapref href="config/keys-live-standard.ditamap" format="ditamap"/>
+    </topichead>
+    <topichead navtitle="Understand">
+        <topicref href="product-overview-lives.md" format="mdita" chunk="to-content">
+            <topicref href="product-solution-comparison.md" format="markdown" toc="no"/>
+            <topicref href="product-functions.md" format="markdown" toc="no"/>
+            <topicref href="product-key-properties.md" format="markdown" toc="no"/>
+            <topicref href="product-compatibility.md" format="markdown" toc="no"/>
+            <topicref href="product-reference.md" format="markdown" toc="no"/>
+        </topicref>
+    </topichead>
+    <topichead navtitle="Develop">
+    </topichead>
+</map>

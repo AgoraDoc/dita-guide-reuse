@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Variables for Voice Call</title>
+    <topichead navtitle="Figures">
+        
+    </topichead>
+    <keydef keys="product-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Voice Call</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="sdk-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Agora Voice SDK</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="media-type">
+        <topicmeta>
+            <keywords>
+                <keyword>audio</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="feature">
+        <topicmeta>
+            <keywords>
+                <keyword>voice call</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>
