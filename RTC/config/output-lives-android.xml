@@ -4,6 +4,7 @@
     <input href="../_Live-Streaming-Standard.ditamap"/>
     <profile>
       <ditaval href="filter-android.ditaval"/>
+      <ditaval href="filter-lives.ditaval"/>
     </profile>
   </context>
   <deliverable name="Markdown">
